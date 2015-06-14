@@ -11,14 +11,14 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/MobileDev/SDL/SDL2Project/Project/HelloSDL2/android/libs"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="acra-breakpad"/>
-	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="lib" path="libs/acra-5.0.0-SNAPSHOT.jar"/>
 	<classpathentry kind="src" path="/lib">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="lib/libs"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
