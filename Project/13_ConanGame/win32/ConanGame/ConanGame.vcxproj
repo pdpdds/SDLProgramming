@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED5A550F-EB62-4F5B-9A6A-4BB12645BE3B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConanGame</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\Bin32\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../Class;../../../../SDL2_Module/SDL2/include;../../../../external/zlib-1.2.8;../../../../SDL2_Module/SDL2_image/;../../../../SDL2_Module/SDL2_ttf/;../../../../SDL2_Module/SDL2_Mixer/</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../debug;../../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\crc32.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\deflate.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\gzguts.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inffast.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inffixed.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inflate.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inftrees.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\trees.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zconf.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zlib.h" />
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zutil.h" />
+    <ClInclude Include="..\..\Class\AnimatedGraphic.h" />
+    <ClInclude Include="..\..\Class\base64.h" />
+    <ClInclude Include="..\..\Class\Callback.h" />
+    <ClInclude Include="..\..\Class\Camera.h" />
+    <ClInclude Include="..\..\Class\Collision.h" />
+    <ClInclude Include="..\..\Class\CollisionManager.h" />
+    <ClInclude Include="..\..\Class\Enemy.h" />
+    <ClInclude Include="..\..\Class\Game.h" />
+    <ClInclude Include="..\..\Class\GameObject.h" />
+    <ClInclude Include="..\..\Class\GameObjectFactory.h" />
+    <ClInclude Include="..\..\Class\GameOverState.h" />
+    <ClInclude Include="..\..\Class\GameState.h" />
+    <ClInclude Include="..\..\Class\GameStateMachine.h" />
+    <ClInclude Include="..\..\Class\InputHandler.h" />
+    <ClInclude Include="..\..\Class\Layer.h" />
+    <ClInclude Include="..\..\Class\Level.h" />
+    <ClInclude Include="..\..\Class\LevelParser.h" />
+    <ClInclude Include="..\..\Class\LoaderParams.h" />
+    <ClInclude Include="..\..\Class\MainMenuState.h" />
+    <ClInclude Include="..\..\Class\MapLoader.h" />
+    <ClInclude Include="..\..\Class\MenuButton.h" />
+    <ClInclude Include="..\..\Class\MenuState.h" />
+    <ClInclude Include="..\..\Class\ObjectLayer.h" />
+    <ClInclude Include="..\..\Class\PauseState.h" />
+    <ClInclude Include="..\..\Class\PlatformerObject.h" />
+    <ClInclude Include="..\..\Class\Player.h" />
+    <ClInclude Include="..\..\Class\PlayState.h" />
+    <ClInclude Include="..\..\Class\ScrollingBackground.h" />
+    <ClInclude Include="..\..\Class\Snail.h" />
+    <ClInclude Include="..\..\Class\SoundManager.h" />
+    <ClInclude Include="..\..\Class\StateParser.h" />
+    <ClInclude Include="..\..\Class\TextureManager.h" />
+    <ClInclude Include="..\..\Class\TileLayer.h" />
+    <ClInclude Include="..\..\Class\tinystr.h" />
+    <ClInclude Include="..\..\Class\tinyxml.h" />
+    <ClInclude Include="..\..\Class\Turret.h" />
+    <ClInclude Include="..\..\Class\Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\adler32.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\compress.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\crc32.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\deflate.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzclose.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzlib.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzread.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzwrite.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\infback.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inffast.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inflate.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inftrees.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\trees.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\uncompr.c" />
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\zutil.c" />
+    <ClCompile Include="..\..\Class\AnimatedGraphic.cpp" />
+    <ClCompile Include="..\..\Class\base64.cpp" />
+    <ClCompile Include="..\..\Class\Camera.cpp" />
+    <ClCompile Include="..\..\Class\CollisionManager.cpp" />
+    <ClCompile Include="..\..\Class\Game.cpp" />
+    <ClCompile Include="..\..\Class\GameObjectFactory.cpp" />
+    <ClCompile Include="..\..\Class\GameOverState.cpp" />
+    <ClCompile Include="..\..\Class\GameStateMachine.cpp" />
+    <ClCompile Include="..\..\Class\InputHandler.cpp" />
+    <ClCompile Include="..\..\Class\Level.cpp" />
+    <ClCompile Include="..\..\Class\LevelParser.cpp" />
+    <ClCompile Include="..\..\Class\main.cpp" />
+    <ClCompile Include="..\..\Class\MainMenuState.cpp" />
+    <ClCompile Include="..\..\Class\MapLoader.cpp" />
+    <ClCompile Include="..\..\Class\MenuButton.cpp" />
+    <ClCompile Include="..\..\Class\ObjectLayer.cpp" />
+    <ClCompile Include="..\..\Class\PauseState.cpp" />
+    <ClCompile Include="..\..\Class\PlatformerObject.cpp" />
+    <ClCompile Include="..\..\Class\Player.cpp" />
+    <ClCompile Include="..\..\Class\PlayState.cpp" />
+    <ClCompile Include="..\..\Class\ScrollingBackground.cpp" />
+    <ClCompile Include="..\..\Class\SoundManager.cpp" />
+    <ClCompile Include="..\..\Class\StateParser.cpp" />
+    <ClCompile Include="..\..\Class\TextureManager.cpp" />
+    <ClCompile Include="..\..\Class\TileLayer.cpp" />
+    <ClCompile Include="..\..\Class\tinystr.cpp" />
+    <ClCompile Include="..\..\Class\tinyxml.cpp" />
+    <ClCompile Include="..\..\Class\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\Class\tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Class\NewSDL2Book-Info.plist" />
+    <None Include="..\..\Class\SDLPlatformer-Info.plist" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

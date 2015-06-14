@@ -1,0 +1,306 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Class">
+      <UniqueIdentifier>{d47a9244-7e12-4ad7-8362-7750d0202f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="zlib">
+      <UniqueIdentifier>{262e8e0b-7de9-4dd4-8cae-50259701c7ec}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Class\AnimatedGraphic.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\base64.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Callback.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Camera.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Collision.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\CollisionManager.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Enemy.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Game.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameObject.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameObjectFactory.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameOverState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameStateMachine.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\InputHandler.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Layer.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Level.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\LevelParser.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\LoaderParams.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MainMenuState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MapLoader.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MenuButton.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MenuState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ObjectLayer.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PauseState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PlatformerObject.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Player.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PlayState.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ScrollingBackground.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Snail.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SoundManager.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\StateParser.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TextureManager.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TileLayer.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\tinystr.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\tinyxml.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Turret.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Vector2D.h">
+      <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\crc32.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\deflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\gzguts.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inffast.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inffixed.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inflate.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\inftrees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\trees.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zconf.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zlib.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\external\zlib-1.2.8\zutil.h">
+      <Filter>zlib</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Class\AnimatedGraphic.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\base64.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Camera.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\CollisionManager.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Game.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameObjectFactory.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameOverState.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameStateMachine.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\InputHandler.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Level.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\LevelParser.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MainMenuState.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MapLoader.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MenuButton.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ObjectLayer.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PauseState.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PlatformerObject.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Player.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PlayState.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ScrollingBackground.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\SoundManager.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\StateParser.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TextureManager.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TileLayer.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinystr.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxml.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxmlerror.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxmlparser.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\main.cpp">
+      <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\adler32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\compress.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\crc32.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\deflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzclose.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzlib.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzread.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\gzwrite.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\infback.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inffast.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inflate.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\inftrees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\trees.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\uncompr.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\external\zlib-1.2.8\zutil.c">
+      <Filter>zlib</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Class\NewSDL2Book-Info.plist">
+      <Filter>Class</Filter>
+    </None>
+    <None Include="..\..\Class\SDLPlatformer-Info.plist">
+      <Filter>Class</Filter>
+    </None>
+  </ItemGroup>
+</Project>
