@@ -59,7 +59,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../debug;../../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../debug;../../../../SDL2_Module/prebuilt/win32/x86/lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

@@ -32,9 +32,6 @@ using namespace std;
 #pragma comment(lib, "SDL2_ttf.lib")
 #pragma comment(lib, "SDL2_mixer.lib")
 #pragma comment(lib, "SDL2_image.lib")
-#pragma comment(lib, "guichan.lib")
-#pragma comment(lib, "IMSLibrary.lib")
-#pragma comment(lib, "BaseLib.lib")
 #endif
 
 static void appPutToBackground()

@@ -55,13 +55,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../Class;../../SDL2/SDL2/include;../../SDL2/ThirdParty/zlib-1.2.8;../../SDL2/SDL2_image/;../../SDL2/SDL2_ttf/;../../SDL2/SDL2_Mixer/;./;./Navigation;./Player</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../Class;../../../../SDL2_Module/SDL2/include;../../../../external/zlib-1.2.8;../../../../SDL2_Module/SDL2_image/;../../../../SDL2_Module/SDL2_ttf/;../../../../SDL2_Module/SDL2_Mixer/;./;./Navigation;./Player</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4244;4018</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../debug;../../SDL2/prebuilt/win32/lib/x86;../../SDL2\thirdParty\LIB\zlib\lib\x86\Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../debug;../../../../SDL2_Module/prebuilt/win32/x86/lib;../../../../external\prebuilt\x86\Debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>zlibd.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

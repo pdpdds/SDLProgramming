@@ -58,7 +58,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../Debug;../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../Debug;../../../SDL2_Module/prebuilt/win32/x86/lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

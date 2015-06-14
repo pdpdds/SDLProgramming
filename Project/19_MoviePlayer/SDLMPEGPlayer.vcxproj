@@ -53,13 +53,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../ThirdParty/balor/include;../ThirdParty/SDL2/include;../ThirdParty/ffmpeg/include;../ThirdParty/libao/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../external/balor/include;../../sdl2_module/SDL2/include;../../external/ffmpeg/include;../../external/libao/include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../ThirdParty/sdl2/lib/x86;../ThirdParty/ffmpeg/lib;../ThirdParty/libao/lib/debug;../ThirdParty/balor/lib/x86/debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../sdl2_module/prebuilt/win32/x86/lib;../../external/ffmpeg/lib;../../external/libao/lib/debug;../../external/balor/lib/x86/debug</AdditionalLibraryDirectories>
       <AdditionalDependencies>Winmm.lib;libao-mt-debug.lib;;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>

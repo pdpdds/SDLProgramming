@@ -52,13 +52,13 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../ThirdParty/SDL2/SDL2_ttf;../ThirdParty/SDL2/sdl2_image;../ThirdParty/SDL2/SDL2_net;../ThirdParty/balor/include;../ThirdParty/SDL2/include;../ThirdParty/ffmpeg/include;../ThirdParty/libao/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../sdl2_module/SDL2_ttf;../../sdl2_module/sdl2_image;../../sdl2_module/SDL2/include;../../external/balor/include;../../external/ffmpeg/include;../../external/libao/include;../../sdl2_module/sdl2_net</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../ThirdParty/sdl2/lib/x86;../ThirdParty/ffmpeg/lib;../ThirdParty/libao/lib/debug;../ThirdParty/balor/lib/x86/debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../sdl2_module/prebuilt/win32/x86/lib;../../external/ffmpeg/lib;../../external/libao/lib/debug;../../external/balor/lib/x86/debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

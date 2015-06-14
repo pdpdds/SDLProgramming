@@ -57,7 +57,7 @@
     <ClInclude Include="..\..\Class\trojan.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Class\util.h">
+    <ClInclude Include="util.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
   </ItemGroup>
@@ -101,7 +101,7 @@
     <ClCompile Include="..\..\Class\trojan.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Class\util.cpp">
+    <ClCompile Include="util.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

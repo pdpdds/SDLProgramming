@@ -52,12 +52,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image;./</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/lib/x86;../Debug</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/x86/lib;../Debug</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -92,9 +92,9 @@
     <ClInclude Include="..\..\Class\purdue.h" />
     <ClInclude Include="..\..\Class\SDLSingleton.h" />
     <ClInclude Include="..\..\Class\trojan.h" />
-    <ClInclude Include="..\..\Class\util.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Class\block.cpp" />
@@ -109,11 +109,11 @@
     <ClCompile Include="..\..\Class\purdue.cpp" />
     <ClCompile Include="..\..\Class\SDLSingleton.cpp" />
     <ClCompile Include="..\..\Class\trojan.cpp" />
-    <ClCompile Include="..\..\Class\util.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

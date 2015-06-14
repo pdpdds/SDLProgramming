@@ -51,12 +51,12 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>./;../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/x86/lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -80,50 +80,53 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="GameOverScene.h" />
-    <ClInclude Include="han2unicode.h" />
-    <ClInclude Include="IntroScene.h" />
-    <ClInclude Include="IScene.h" />
-    <ClInclude Include="ISnakeSingleScene.h" />
-    <ClInclude Include="IState.h" />
-    <ClInclude Include="ItemManager.h" />
-    <ClInclude Include="PvPStageScene.h" />
-    <ClInclude Include="SDLSingleton.h" />
-    <ClInclude Include="SnakeGameObject.h" />
-    <ClInclude Include="Point2D.h" />
-    <ClInclude Include="Snake.h" />
-    <ClInclude Include="SnakeMap.h" />
-    <ClInclude Include="Stage01Scene.h" />
-    <ClInclude Include="Stage02Scene.h" />
-    <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="..\..\Class\Game.h" />
+    <ClInclude Include="..\..\Class\GameOverScene.h" />
+    <ClInclude Include="..\..\Class\han2unicode.h" />
+    <ClInclude Include="..\..\Class\IntroScene.h" />
+    <ClInclude Include="..\..\Class\IScene.h" />
+    <ClInclude Include="..\..\Class\ISnakeSingleScene.h" />
+    <ClInclude Include="..\..\Class\IState.h" />
+    <ClInclude Include="..\..\Class\ItemManager.h" />
+    <ClInclude Include="..\..\Class\Point2D.h" />
+    <ClInclude Include="..\..\Class\PvPStageScene.h" />
+    <ClInclude Include="..\..\Class\SDLSingleton.h" />
+    <ClInclude Include="..\..\Class\Snake.h" />
+    <ClInclude Include="..\..\Class\SnakeGameObject.h" />
+    <ClInclude Include="..\..\Class\SnakeMap.h" />
+    <ClInclude Include="..\..\Class\Stage01Scene.h" />
+    <ClInclude Include="..\..\Class\Stage02Scene.h" />
+    <ClInclude Include="..\..\Class\StateMachine.h" />
+    <ClInclude Include="..\..\Class\TextFieldFactory.h" />
+    <ClInclude Include="..\..\Class\Wall.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
-    <ClInclude Include="TextFieldFactory.h" />
-    <ClInclude Include="Wall.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="GameOverScene.cpp" />
-    <ClCompile Include="IntroScene.cpp" />
-    <ClCompile Include="ISnakeSingleScene.cpp" />
-    <ClCompile Include="ItemManager.cpp" />
-    <ClCompile Include="Point2D.cpp" />
-    <ClCompile Include="PvPStageScene.cpp" />
-    <ClCompile Include="SDLSingleton.cpp">
+    <ClCompile Include="..\..\Class\Game.cpp" />
+    <ClCompile Include="..\..\Class\GameOverScene.cpp" />
+    <ClCompile Include="..\..\Class\IntroScene.cpp" />
+    <ClCompile Include="..\..\Class\ISnakeSingleScene.cpp" />
+    <ClCompile Include="..\..\Class\ItemManager.cpp" />
+    <ClCompile Include="..\..\Class\Point2D.cpp" />
+    <ClCompile Include="..\..\Class\PvPStageScene.cpp" />
+    <ClCompile Include="..\..\Class\SDLSingleton.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Snake.cpp" />
-    <ClCompile Include="SnakeMap.cpp" />
-    <ClCompile Include="snake_SDL.cpp" />
-    <ClCompile Include="Stage01Scene.cpp" />
-    <ClCompile Include="Stage02Scene.cpp" />
+    <ClCompile Include="..\..\Class\Snake.cpp" />
+    <ClCompile Include="..\..\Class\SnakeMap.cpp" />
+    <ClCompile Include="..\..\Class\snake_SDL.cpp" />
+    <ClCompile Include="..\..\Class\Stage01Scene.cpp" />
+    <ClCompile Include="..\..\Class\Stage02Scene.cpp" />
+    <ClCompile Include="..\..\Class\TextFieldFactory.cpp" />
+    <ClCompile Include="..\..\Class\Wall.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TextFieldFactory.cpp" />
-    <ClCompile Include="Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Class\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
