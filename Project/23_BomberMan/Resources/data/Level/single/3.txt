@@ -1,0 +1,2 @@
+id_tile:0
+items:10

@@ -1,0 +1,15 @@
+bombas:2
+vidas:0
+alcance:2
+id_tile:2
+items:0
+x_init_player_1:25
+y_init_player_1:50
+x_init_player_2:270
+y_init_player_2:50
+x_init_player_3:25
+y_init_player_3:208
+x_init_player_4:270
+y_init_player_4:208
+x_init_player_5:161
+y_init_player_5:110

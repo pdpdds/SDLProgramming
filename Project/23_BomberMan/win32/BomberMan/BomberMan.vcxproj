@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ED5A550F-EB62-4F5B-9A6A-4BB12645BE3B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ConanGame</RootNamespace>
+    <ProjectName>BomberMan</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\Bin32\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../Class;../../SDL2/SDL2/include;../../SDL2/ThirdParty/zlib-1.2.8;../../SDL2/SDL2_image/;../../SDL2/SDL2_ttf/;../../SDL2/SDL2_Mixer/;./;./Navigation;./Player</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4244;4018</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../debug;../../SDL2/prebuilt/win32/lib/x86;../../SDL2\thirdParty\LIB\zlib\lib\x86\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>zlibd.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../Class;../../SDL2/SDL2/include;../../SDL2/ThirdParty/zlib-1.2.8;../../SDL2/SDL2/SDL2_image/;../../SDL2/SDL2/SDL2_ttf/;../../SDL2/SDL2/SDL2_Mixer/;./</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../release;../../SDL2/SDL2/prebuilt/win32/lib/x86;../../SDL2\thirdParty\LIB\zlib\lib\x86\release</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Class\AnimatedGraphic.cpp" />
+    <ClCompile Include="..\..\Class\base64.cpp" />
+    <ClCompile Include="..\..\Class\Bomb.cpp" />
+    <ClCompile Include="..\..\Class\BreakableLayer.cpp" />
+    <ClCompile Include="..\..\Class\Camera.cpp" />
+    <ClCompile Include="..\..\Class\CollisionManager.cpp" />
+    <ClCompile Include="..\..\Class\CrudeTimer.cpp" />
+    <ClCompile Include="..\..\Class\ExploreGoal_Evaluator.cpp" />
+    <ClCompile Include="..\..\Class\Explosion.cpp" />
+    <ClCompile Include="..\..\Class\FrameCounter.cpp" />
+    <ClCompile Include="..\..\Class\Game.cpp" />
+    <ClCompile Include="..\..\Class\GameMap.cpp" />
+    <ClCompile Include="..\..\Class\GameObjectFactory.cpp" />
+    <ClCompile Include="..\..\Class\GameObjectManager.cpp" />
+    <ClCompile Include="..\..\Class\GameOverState.cpp" />
+    <ClCompile Include="..\..\Class\GameStateMachine.cpp" />
+    <ClCompile Include="..\..\Class\GetBombGoal_Evaluator.cpp" />
+    <ClCompile Include="..\..\Class\Goal_Explore.cpp" />
+    <ClCompile Include="..\..\Class\Goal_FollowPath.cpp" />
+    <ClCompile Include="..\..\Class\Goal_GetItem.cpp" />
+    <ClCompile Include="..\..\Class\Goal_InstallBomb.cpp" />
+    <ClCompile Include="..\..\Class\Goal_MoveToPosition.cpp" />
+    <ClCompile Include="..\..\Class\Goal_SeekToPosition.cpp" />
+    <ClCompile Include="..\..\Class\Goal_SetBomb.cpp" />
+    <ClCompile Include="..\..\Class\Goal_Think.cpp" />
+    <ClCompile Include="..\..\Class\Goal_TraverseEdge.cpp" />
+    <ClCompile Include="..\..\Class\Goal_Wander.cpp" />
+    <ClCompile Include="..\..\Class\GraphEdgeTypes.cpp" />
+    <ClCompile Include="..\..\Class\IDGenerator.cpp" />
+    <ClCompile Include="..\..\Class\iniFileLoaderBase.cpp" />
+    <ClCompile Include="..\..\Class\InputHandler.cpp" />
+    <ClCompile Include="..\..\Class\InstallBombGoal_Evaluator.cpp" />
+    <ClCompile Include="..\..\Class\Item.cpp" />
+    <ClCompile Include="..\..\Class\Level.cpp" />
+    <ClCompile Include="..\..\Class\LevelParser.cpp" />
+    <ClCompile Include="..\..\Class\main.cpp" />
+    <ClCompile Include="..\..\Class\MainMenuState.cpp" />
+    <ClCompile Include="..\..\Class\MapLoader.cpp" />
+    <ClCompile Include="..\..\Class\MenuButton.cpp" />
+    <ClCompile Include="..\..\Class\MessageDispatcher.cpp" />
+    <ClCompile Include="..\..\Class\ObjectLayer.cpp" />
+    <ClCompile Include="..\..\Class\PathPlanner.cpp" />
+    <ClCompile Include="..\..\Class\PauseState.cpp" />
+    <ClCompile Include="..\..\Class\PlatformerObject.cpp" />
+    <ClCompile Include="..\..\Class\Player.cpp" />
+    <ClCompile Include="..\..\Class\PlayState.cpp" />
+    <ClCompile Include="..\..\Class\Regulator.cpp" />
+    <ClCompile Include="..\..\Class\ScrollingBackground.cpp" />
+    <ClCompile Include="..\..\Class\SoundManager.cpp" />
+    <ClCompile Include="..\..\Class\StateParser.cpp" />
+    <ClCompile Include="..\..\Class\stdafx.cpp" />
+    <ClCompile Include="..\..\Class\SteeringBehaviors.cpp" />
+    <ClCompile Include="..\..\Class\TextureManager.cpp" />
+    <ClCompile Include="..\..\Class\TileLayer.cpp" />
+    <ClCompile Include="..\..\Class\tinystr.cpp" />
+    <ClCompile Include="..\..\Class\tinyxml.cpp" />
+    <ClCompile Include="..\..\Class\tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\Class\tinyxmlparser.cpp" />
+    <ClCompile Include="..\..\Class\TriggerGenerator.cpp" />
+    <ClCompile Include="..\..\Class\TriggerItemGiver.cpp" />
+    <ClCompile Include="..\..\Class\Vector2D.cpp" />
+    <ClCompile Include="..\..\Class\Wall.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Class\AnimatedGraphic.h" />
+    <ClInclude Include="..\..\Class\AStarHeuristicPolicies.h" />
+    <ClInclude Include="..\..\Class\autolist.h" />
+    <ClInclude Include="..\..\Class\base64.h" />
+    <ClInclude Include="..\..\Class\Bomb.h" />
+    <ClInclude Include="..\..\Class\BombermanStructure.h" />
+    <ClInclude Include="..\..\Class\BreakableLayer.h" />
+    <ClInclude Include="..\..\Class\C2DMatrix.h" />
+    <ClInclude Include="..\..\Class\Callback.h" />
+    <ClInclude Include="..\..\Class\Camera.h" />
+    <ClInclude Include="..\..\Class\cellspacepartition.h" />
+    <ClInclude Include="..\..\Class\Collision.h" />
+    <ClInclude Include="..\..\Class\CollisionManager.h" />
+    <ClInclude Include="..\..\Class\ConsoleUtils.h" />
+    <ClInclude Include="..\..\Class\CrudeTimer.h" />
+    <ClInclude Include="..\..\Class\Enemy.h" />
+    <ClInclude Include="..\..\Class\ExploreGoal_Evaluator.h" />
+    <ClInclude Include="..\..\Class\Explosion.h" />
+    <ClInclude Include="..\..\Class\FrameCounter.h" />
+    <ClInclude Include="..\..\Class\Game.h" />
+    <ClInclude Include="..\..\Class\GameConstant.h" />
+    <ClInclude Include="..\..\Class\GameMap.h" />
+    <ClInclude Include="..\..\Class\GameObject.h" />
+    <ClInclude Include="..\..\Class\GameObjectFactory.h" />
+    <ClInclude Include="..\..\Class\GameObjectManager.h" />
+    <ClInclude Include="..\..\Class\GameOverState.h" />
+    <ClInclude Include="..\..\Class\GameState.h" />
+    <ClInclude Include="..\..\Class\GameStateMachine.h" />
+    <ClInclude Include="..\..\Class\geometry.h" />
+    <ClInclude Include="..\..\Class\GetBombGoal_Evaluator.h" />
+    <ClInclude Include="..\..\Class\Goal.h" />
+    <ClInclude Include="..\..\Class\Goal_Composite.h" />
+    <ClInclude Include="..\..\Class\Goal_Evaluator.h" />
+    <ClInclude Include="..\..\Class\Goal_Explore.h" />
+    <ClInclude Include="..\..\Class\Goal_FollowPath.h" />
+    <ClInclude Include="..\..\Class\Goal_GetItem.h" />
+    <ClInclude Include="..\..\Class\Goal_InstallBomb.h" />
+    <ClInclude Include="..\..\Class\Goal_MoveToPosition.h" />
+    <ClInclude Include="..\..\Class\Goal_SeekToPosition.h" />
+    <ClInclude Include="..\..\Class\Goal_SetBomb.h" />
+    <ClInclude Include="..\..\Class\Goal_Think.h" />
+    <ClInclude Include="..\..\Class\Goal_TraverseEdge.h" />
+    <ClInclude Include="..\..\Class\Goal_Types.h" />
+    <ClInclude Include="..\..\Class\Goal_Wander.h" />
+    <ClInclude Include="..\..\Class\GraphAlgorithms.h" />
+    <ClInclude Include="..\..\Class\GraphEdgeTypes.h" />
+    <ClInclude Include="..\..\Class\GraphNodeTypes.h" />
+    <ClInclude Include="..\..\Class\HandyGraphFunctions.h" />
+    <ClInclude Include="..\..\Class\IDGenerator.h" />
+    <ClInclude Include="..\..\Class\iniFileLoaderBase.h" />
+    <ClInclude Include="..\..\Class\InputHandler.h" />
+    <ClInclude Include="..\..\Class\InstallBombGoal_Evaluator.h" />
+    <ClInclude Include="..\..\Class\InvertedAABBox2D.h" />
+    <ClInclude Include="..\..\Class\Item.h" />
+    <ClInclude Include="..\..\Class\Layer.h" />
+    <ClInclude Include="..\..\Class\Level.h" />
+    <ClInclude Include="..\..\Class\LevelParser.h" />
+    <ClInclude Include="..\..\Class\LoaderParams.h" />
+    <ClInclude Include="..\..\Class\MainMenuState.h" />
+    <ClInclude Include="..\..\Class\MapLoader.h" />
+    <ClInclude Include="..\..\Class\MenuButton.h" />
+    <ClInclude Include="..\..\Class\MenuState.h" />
+    <ClInclude Include="..\..\Class\MessageDispatcher.h" />
+    <ClInclude Include="..\..\Class\Messages.h" />
+    <ClInclude Include="..\..\Class\NodeTypeEnumerations.h" />
+    <ClInclude Include="..\..\Class\ObjectLayer.h" />
+    <ClInclude Include="..\..\Class\pathedge.h" />
+    <ClInclude Include="..\..\Class\PathManager.h" />
+    <ClInclude Include="..\..\Class\PathPlanner.h" />
+    <ClInclude Include="..\..\Class\PathTarget.h" />
+    <ClInclude Include="..\..\Class\PauseState.h" />
+    <ClInclude Include="..\..\Class\PlatformerObject.h" />
+    <ClInclude Include="..\..\Class\Player.h" />
+    <ClInclude Include="..\..\Class\PlayState.h" />
+    <ClInclude Include="..\..\Class\PriorityQueue.h" />
+    <ClInclude Include="..\..\Class\Regulator.h" />
+    <ClInclude Include="..\..\Class\ResourceConstant.h" />
+    <ClInclude Include="..\..\Class\ScrollingBackground.h" />
+    <ClInclude Include="..\..\Class\SearchTerminationPolicies.h" />
+    <ClInclude Include="..\..\Class\Smoother.h" />
+    <ClInclude Include="..\..\Class\Snail.h" />
+    <ClInclude Include="..\..\Class\SoundManager.h" />
+    <ClInclude Include="..\..\Class\SparseGraph.h" />
+    <ClInclude Include="..\..\Class\StateParser.h" />
+    <ClInclude Include="..\..\Class\stdafx.h" />
+    <ClInclude Include="..\..\Class\SteeringBehaviors.h" />
+    <ClInclude Include="..\..\Class\Stream_Utility_Functions.h" />
+    <ClInclude Include="..\..\Class\targetver.h" />
+    <ClInclude Include="..\..\Class\Telegram.h" />
+    <ClInclude Include="..\..\Class\TextureManager.h" />
+    <ClInclude Include="..\..\Class\TileLayer.h" />
+    <ClInclude Include="..\..\Class\TimeSlicedGraphAlgorithms.h" />
+    <ClInclude Include="..\..\Class\tinystr.h" />
+    <ClInclude Include="..\..\Class\tinyxml.h" />
+    <ClInclude Include="..\..\Class\Transformations.h" />
+    <ClInclude Include="..\..\Class\Trigger.h" />
+    <ClInclude Include="..\..\Class\TriggerGenerator.h" />
+    <ClInclude Include="..\..\Class\TriggerItemGiver.h" />
+    <ClInclude Include="..\..\Class\TriggerLimitedLifeTime.h" />
+    <ClInclude Include="..\..\Class\TriggerRegion.h" />
+    <ClInclude Include="..\..\Class\TriggerSystem.h" />
+    <ClInclude Include="..\..\Class\Turret.h" />
+    <ClInclude Include="..\..\Class\TypeToString.h" />
+    <ClInclude Include="..\..\Class\utils.h" />
+    <ClInclude Include="..\..\Class\Vector2D.h" />
+    <ClInclude Include="..\..\Class\Wall.h" />
+    <ClInclude Include="..\..\Class\Wall2D.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

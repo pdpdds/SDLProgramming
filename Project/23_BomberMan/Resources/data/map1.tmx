@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="tiles2" tilewidth="32" tileheight="32">
+  <image source="image/object/tiles2.bmp" width="128" height="128"/>
+ </tileset>
+ <layer name="Movable" width="20" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYKA+YKYCRgYsVKKRzWOmkB5136j7Rt1HnPuoCQC7bwJ0
+  </data>
+ </layer>
+ <layer name="BreakableBarrier" width="20" height="15">
+  <properties>
+   <property name="breakable" value="true"/>
+   <property name="collidable" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjYKA/YBo1jyJz0Glqm0uJOTBMDfOoDdDdhyxOrnnY9FNiHi5MrnmUuAebeZS4hxoAAH4gAEE=
+  </data>
+ </layer>
+ <layer name="Barrier" width="20" height="15">
+  <properties>
+   <property name="collidable" value="true"/>
+  </properties>
+  <data encoding="base64" compression="zlib">
+   eJxjZGBgYKQSZkCiKQXo5lGbHnXfqPtG3Ucf91GzfAEADP8AcQ==
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1" width="20" height="15">
+  <properties>
+   <property name="PLAYER" value="100"/>
+  </properties>
+  <object name="Player" type="Player" x="32" y="32">
+   <properties>
+    <property name="numFrames" value="12"/>
+    <property name="textureHeight" value="32"/>
+    <property name="textureID" value="data/image/player/player_1.bmp"/>
+    <property name="textureWidth" value="32"/>
+   </properties>
+  </object>
+  <object name="Player" type="Player" x="544" y="416">
+   <properties>
+    <property name="Posessed" value="0"/>
+    <property name="numFrames" value="12"/>
+    <property name="textureHeight" value="32"/>
+    <property name="textureID" value="data/image/player/player_1.bmp"/>
+    <property name="textureWidth" value="32"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>
