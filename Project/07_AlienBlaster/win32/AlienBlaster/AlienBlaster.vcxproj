@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>SDL2Framework</RootNamespace>
+    <ProjectName>AlienBlaster</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)\Bin32\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)\Bin32\</OutDir>
+    <IntDir>$(SolutionDir)/Intermediate/$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819;4305;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/lib/x86;../Debug</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/lib/x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Class\background.cpp" />
+    <ClCompile Include="..\..\Class\banner.cpp" />
+    <ClCompile Include="..\..\Class\banners.cpp" />
+    <ClCompile Include="..\..\Class\boundingBox.cpp" />
+    <ClCompile Include="..\..\Class\enemy.cpp" />
+    <ClCompile Include="..\..\Class\enemys.cpp" />
+    <ClCompile Include="..\..\Class\explosion.cpp" />
+    <ClCompile Include="..\..\Class\explosions.cpp" />
+    <ClCompile Include="..\..\Class\font.cpp" />
+    <ClCompile Include="..\..\Class\formation.cpp" />
+    <ClCompile Include="..\..\Class\game.cpp" />
+    <ClCompile Include="..\..\Class\geometry.cpp" />
+    <ClCompile Include="..\..\Class\global.cpp" />
+    <ClCompile Include="..\..\Class\infoscreen.cpp" />
+    <ClCompile Include="..\..\Class\input.cpp" />
+    <ClCompile Include="..\..\Class\intro.cpp" />
+    <ClCompile Include="..\..\Class\item.cpp" />
+    <ClCompile Include="..\..\Class\items.cpp" />
+    <ClCompile Include="..\..\Class\main.cpp" />
+    <ClCompile Include="..\..\Class\menuArcadeMode.cpp" />
+    <ClCompile Include="..\..\Class\mixer.cpp" />
+    <ClCompile Include="..\..\Class\options.cpp" />
+    <ClCompile Include="..\..\Class\racer.cpp" />
+    <ClCompile Include="..\..\Class\racers.cpp" />
+    <ClCompile Include="..\..\Class\setDifficulty.cpp" />
+    <ClCompile Include="..\..\Class\settings.cpp" />
+    <ClCompile Include="..\..\Class\shieldGlow.cpp" />
+    <ClCompile Include="..\..\Class\shot.cpp" />
+    <ClCompile Include="..\..\Class\shots.cpp" />
+    <ClCompile Include="..\..\Class\smokePuff.cpp" />
+    <ClCompile Include="..\..\Class\smokePuffs.cpp" />
+    <ClCompile Include="..\..\Class\sonic.cpp" />
+    <ClCompile Include="..\..\Class\soundDB.cpp" />
+    <ClCompile Include="..\..\Class\surfaceDB.cpp" />
+    <ClCompile Include="..\..\Class\video.cpp" />
+    <ClCompile Include="..\..\Class\wreck.cpp" />
+    <ClCompile Include="..\..\Class\wrecks.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Class\asstring.h" />
+    <ClInclude Include="..\..\Class\background.h" />
+    <ClInclude Include="..\..\Class\banner.h" />
+    <ClInclude Include="..\..\Class\banners.h" />
+    <ClInclude Include="..\..\Class\boundingBox.h" />
+    <ClInclude Include="..\..\Class\enemy.h" />
+    <ClInclude Include="..\..\Class\enemys.h" />
+    <ClInclude Include="..\..\Class\explosion.h" />
+    <ClInclude Include="..\..\Class\explosions.h" />
+    <ClInclude Include="..\..\Class\font.h" />
+    <ClInclude Include="..\..\Class\formation.h" />
+    <ClInclude Include="..\..\Class\game.h" />
+    <ClInclude Include="..\..\Class\geometry.h" />
+    <ClInclude Include="..\..\Class\global.h" />
+    <ClInclude Include="..\..\Class\infoscreen.h" />
+    <ClInclude Include="..\..\Class\input.h" />
+    <ClInclude Include="..\..\Class\intro.h" />
+    <ClInclude Include="..\..\Class\item.h" />
+    <ClInclude Include="..\..\Class\items.h" />
+    <ClInclude Include="..\..\Class\menuArcadeMode.h" />
+    <ClInclude Include="..\..\Class\mixer.h" />
+    <ClInclude Include="..\..\Class\options.h" />
+    <ClInclude Include="..\..\Class\racer.h" />
+    <ClInclude Include="..\..\Class\racers.h" />
+    <ClInclude Include="..\..\Class\SdlForwardCompat.h" />
+    <ClInclude Include="..\..\Class\setDifficulty.h" />
+    <ClInclude Include="..\..\Class\settings.h" />
+    <ClInclude Include="..\..\Class\shieldGlow.h" />
+    <ClInclude Include="..\..\Class\shot.h" />
+    <ClInclude Include="..\..\Class\shots.h" />
+    <ClInclude Include="..\..\Class\smokePuff.h" />
+    <ClInclude Include="..\..\Class\smokePuffs.h" />
+    <ClInclude Include="..\..\Class\sonic.h" />
+    <ClInclude Include="..\..\Class\soundDB.h" />
+    <ClInclude Include="..\..\Class\surfaceDB.h" />
+    <ClInclude Include="..\..\Class\video.h" />
+    <ClInclude Include="..\..\Class\wreck.h" />
+    <ClInclude Include="..\..\Class\wrecks.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Class\gpl.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Class\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Class\Makefile" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

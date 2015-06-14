@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Background" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAAAAABAAAAAIAACAAAAEgAAAAAAAgEAwQAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\background.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Banner" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgACASAgAICAIAAABAEAAAAABAAAAAEAAE=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\banner.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Banners" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAEAAAAACIAAAAgIAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\banners.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoundingBox" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQCFAgMAAAAAAAAAAAIgAAACAAAABAAAEAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\boundingBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AmAQAoCAgAAlCALIASAgAIAAERQoAAIkQAACKgIEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemys" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wECAowGAAgACAAAgAAAQAAAQAAIAABAAAQABCCAQCAM=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\enemys.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Explosion" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAAAgACAAAACECAIAMIBEQAAAAEAAAAAAEgAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\explosion.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Explosions" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAIAQIAAABAAAAIAAAACEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\explosions.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Font" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAQAEAAAAAAAAAAQGAAAAAAAAAQgAAAAAAACCAAE=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\font.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Formation" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>yQAAACAUECiACAEAAzAAEIAAAAxCACACpEBAAAAEAwA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\formation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Game" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFAiIogohCABCBIIgJQIIARMEUqAIAwAoQAkIIZAMQM=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Vector2D" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAMACAhQAYIUEAAAAAAWASAAACBAAAAABBBgAGAEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circle" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAACAAEAAAAQBAAAAAAgAgCACAADIACAAAAABA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Line" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAIAAEAAQAAAAIAAAASgBRAAAAQBEYQ=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RectangleGeo" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAUAgAAAAIAAACAAAABAAAAAAAARE=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Cone" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAARQABAADAACAQAAgAAAAAAAgAAAABAgAAAAAABA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Infoscreen" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgBoABACABABEAIAAARgAQAAQEAgAAAAAAAABAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\infoscreen.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Input" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAQABAAEgAAAAAAAAAAAAEAAAABAAAAAACAAABAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\input.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Intro" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAiBIAAACABABFAIBAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\intro.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Item" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACgACAAAACIAAIAEARAIAAAgAQACCAAEAAE=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\item.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Items" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAACABAAAqAAAAAIAQAAAAAUAAAAEAEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\items.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuArcadeMode" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAgBIAAACABABEAoAAAQgCAIAAAAgAAAIAgAABAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\menuArcadeMode.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mixer" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAABARgEgQABQAAQEQCAAAACAAAEgAAAAQAAEBAAAAI=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\mixer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Options" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAABAgAAEAAMAEAAACAAAAAEECAAAAQAAAABAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\options.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Racer" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQKQCKWBEEFEgrLnBSZH8JABLBRsAAg0RAENagIAgCw=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\racer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Racers" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQCABAW0gAACBBAAIAQBAIQAEAgAAEBEhAAAAAAAAAQ=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\racers.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetDifficulty" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgBMEAACADABEAohAARgAAAAAAAiAAAAAAAABAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\setDifficulty.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Settings" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACECAADowAABAAIBIAMAIAAAAgMCAAiSiAIAAEAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShieldGlow" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAIgAACBAAAAgAAkQAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\shieldGlow.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shot" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAFAFAAIAASAAAA6AAAJkQABgIAAAQQAACAIABQIA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\shot.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shots" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABkEAAAACAQAAAIECAAAABQAAAAAQAAAAQAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\shots.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmokePuff" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAgACAAAACAAAIAEIBEQAAAAEAAIAACEAIA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\smokePuff.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SmokePuffs" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAEIAAgBAAAAAAAAAAAAAABAGAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\smokePuffs.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sonic" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gBCAAACAAAAAEAAAAAIAAAAACAAIAAAAAAAAIAAAQBI=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\sonic.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SoundDB" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\soundDB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SurfaceDB" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAQAAAAAAAAAABAAAAAQECAAAAAAAAAAAAAAAQEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\surfaceDB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Video" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAQAAAAAIAIAgAACAAAAAAg=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\video.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wreck" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAQCAgAACIAAIAAARAIAAAAAAACAAAEAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\wreck.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Wrecks" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACUAIAAIACAAAAAgBAIAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\wrecks.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="MyRect" Collapsed="true">
+    <Position X="0.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAhgAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\boundingBox.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SdlCompat_AcceleratedSurface" Collapsed="true">
+    <Position X="2.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAQAwAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\SdlForwardCompat.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="AngRad" Collapsed="true">
+    <Position X="2.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="AngDeg" Collapsed="true">
+    <Position X="0.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MixChunks" Collapsed="true">
+    <Position X="5.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\mixer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="Musics" Collapsed="true">
+    <Position X="7.5" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\mixer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SDLKey" Collapsed="true">
+    <Position X="2.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\SdlForwardCompat.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PlayerEventKeys" Collapsed="true">
+    <Position X="9.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PlayerKeys" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PlayerEventName" Collapsed="true">
+    <Position X="11" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DefaultSettings" Collapsed="true">
+    <Position X="4" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="StringSoundMap" Collapsed="true">
+    <Position X="4" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\soundDB.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="StringSurfaceMap" Collapsed="true">
+    <Position X="5.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\surfaceDB.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="GameStates" Collapsed="true">
+    <Position X="7.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABQAgAAEQAAAAAAAAAAEAAAAQAgAAAAAAQAAAAAAIA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\game.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CoordSystemT" Collapsed="true">
+    <Position X="7.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\geometry.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BannerModes" Collapsed="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAgAAAAABBAAIAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BannerTexts" Collapsed="true">
+    <Position X="5.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAFABAAECACBBAAgAAAAABAAAAAAgQAAABAAgAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BannerBoni" Collapsed="true">
+    <Position X="2.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ItemTypes" Collapsed="true">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAgAAAAAADEAAAAAAAwAAAEAAgCAAAgAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ExplosionTypes" Collapsed="true">
+    <Position X="0.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ShipTypes" Collapsed="true">
+    <Position X="9.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAg=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ShotTypes" Collapsed="true">
+    <Position X="11" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEgAQAADAAAwAAJAAAkAAIKAAgAAIAQJBAAAAIACGA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpecialTypes" Collapsed="true">
+    <Position X="2.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAQAAAAAAAEAAAAAAAABAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SmokePuffTypes" Collapsed="true">
+    <Position X="0.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EnemyTypes" Collapsed="true">
+    <Position X="11" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAUAAAAAAAIAAAAAAAAAAAAAAAAgAUAAAAAABAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="WreckTypes" Collapsed="true">
+    <Position X="4" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAABIAAAAAAAAMIAAAAAAAAAAgAAAABIAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FormationTypes" Collapsed="true">
+    <Position X="5.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAEIAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FormationEnemySets" Collapsed="true">
+    <Position X="2.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="FormationShotPatterns" Collapsed="true">
+    <Position X="4" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIgEEgAAAAAAAAAAAAAAAAwUIAAAAAAAAAgAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MusicTracks" Collapsed="true">
+    <Position X="4" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAQAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\global.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="INFOSCREEN_CHOICES" Collapsed="true">
+    <Position X="9.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAABACiAAgAgAAAAAAAAAAEAIIEAAEEAAAAAQAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\infoscreen.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="IntroChoices" Collapsed="true">
+    <Position X="11" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAIAAAAABAAEAAAAAAAAAAACAAAAQAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\intro.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="MENU_ARCADE_CHOICES" Collapsed="true">
+    <Position X="2.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\menuArcadeMode.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0031_1" Collapsed="true">
+    <Position X="0.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\SdlForwardCompat.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DIFFICULTY_CHOICES" Collapsed="true">
+    <Position X="9.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\setDifficulty.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PlayerEvent" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAEAAAQAAAAAgAAAAAAAAAAAAAAAAARBBAAAAAA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SettingsChoices" Collapsed="true">
+    <Position X="7.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAAEAAAAgAAAEAAAAAECAAAgAICEAAAAEABCA=</HashCode>
+      <FileName>D:\MobileDev\SDL\SDL2Project\Project\AlienBlaster\Class\settings.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
