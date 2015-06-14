@@ -1,0 +1,60 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "basic_usage", "basic_usage\basic_usage.vcxproj", "{10F64F73-70FE-4466-9AA1-C3E22E0E15CF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "global_function_as_slot", "global_function_as_slot\global_function_as_slot.vcxproj", "{2652FEF9-A44A-43D8-8D5E-4EDE9C67EDAD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sample_marshaller", "sample_marshaller\sample_marshaller.vcxproj", "{518FE266-4BC1-4782-8625-7604F922DDBA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "signals_with_parameters", "signals_with_parameters\signals_with_parameters.vcxproj", "{76436B2B-6D3D-4CB8-B8EF-D2FDA236C6A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "slot_return_values", "slot_return_values\slot_return_values.vcxproj", "{A2947816-8C58-42E6-9B96-6007F69111C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "static_function_as_slot", "static_function_as_slot\static_function_as_slot.vcxproj", "{30B40070-A6A9-4CCA-ABBE-2CA27E7C9439}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676} = {D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sigc++", "sigc++\sigc++.vcxproj", "{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10F64F73-70FE-4466-9AA1-C3E22E0E15CF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{10F64F73-70FE-4466-9AA1-C3E22E0E15CF}.Debug|Win32.Build.0 = Debug|Win32
+		{10F64F73-70FE-4466-9AA1-C3E22E0E15CF}.Release|Win32.ActiveCfg = Release|Win32
+		{10F64F73-70FE-4466-9AA1-C3E22E0E15CF}.Release|Win32.Build.0 = Release|Win32
+		{2652FEF9-A44A-43D8-8D5E-4EDE9C67EDAD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2652FEF9-A44A-43D8-8D5E-4EDE9C67EDAD}.Debug|Win32.Build.0 = Debug|Win32
+		{2652FEF9-A44A-43D8-8D5E-4EDE9C67EDAD}.Release|Win32.ActiveCfg = Release|Win32
+		{2652FEF9-A44A-43D8-8D5E-4EDE9C67EDAD}.Release|Win32.Build.0 = Release|Win32
+		{518FE266-4BC1-4782-8625-7604F922DDBA}.Debug|Win32.ActiveCfg = Debug|Win32
+		{518FE266-4BC1-4782-8625-7604F922DDBA}.Debug|Win32.Build.0 = Debug|Win32
+		{518FE266-4BC1-4782-8625-7604F922DDBA}.Release|Win32.ActiveCfg = Release|Win32
+		{518FE266-4BC1-4782-8625-7604F922DDBA}.Release|Win32.Build.0 = Release|Win32
+		{76436B2B-6D3D-4CB8-B8EF-D2FDA236C6A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{76436B2B-6D3D-4CB8-B8EF-D2FDA236C6A9}.Debug|Win32.Build.0 = Debug|Win32
+		{76436B2B-6D3D-4CB8-B8EF-D2FDA236C6A9}.Release|Win32.ActiveCfg = Release|Win32
+		{76436B2B-6D3D-4CB8-B8EF-D2FDA236C6A9}.Release|Win32.Build.0 = Release|Win32
+		{A2947816-8C58-42E6-9B96-6007F69111C1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A2947816-8C58-42E6-9B96-6007F69111C1}.Debug|Win32.Build.0 = Debug|Win32
+		{A2947816-8C58-42E6-9B96-6007F69111C1}.Release|Win32.ActiveCfg = Release|Win32
+		{A2947816-8C58-42E6-9B96-6007F69111C1}.Release|Win32.Build.0 = Release|Win32
+		{30B40070-A6A9-4CCA-ABBE-2CA27E7C9439}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30B40070-A6A9-4CCA-ABBE-2CA27E7C9439}.Debug|Win32.Build.0 = Debug|Win32
+		{30B40070-A6A9-4CCA-ABBE-2CA27E7C9439}.Release|Win32.ActiveCfg = Release|Win32
+		{30B40070-A6A9-4CCA-ABBE-2CA27E7C9439}.Release|Win32.Build.0 = Release|Win32
+		{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}.Debug|Win32.Build.0 = Debug|Win32
+		{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}.Release|Win32.ActiveCfg = Release|Win32
+		{D92D5C03-C8E7-49D6-8CC6-5B88BBA1F676}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
