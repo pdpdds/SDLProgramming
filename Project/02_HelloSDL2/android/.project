@@ -32,7 +32,6 @@
 		</buildCommand>
 		<buildCommand>
 			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
-			<triggers>clean,full,incremental,</triggers>
 			<arguments>
 				<dictionary>
 					<key>?children?</key>
@@ -117,11 +116,6 @@
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
 	<linkedResources>
-		<link>
-			<name>acra-breakpad</name>
-			<type>2</type>
-			<location>D:/Dev/WebRTC/CrashReportTest/NewFriends/Acra-breakpad/lib/src</location>
-		</link>
 		<link>
 			<name>scripting</name>
 			<type>2</type>

@@ -6,8 +6,6 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-import name.antonsmirnov.android.acra_breakpad.NativeExceptionHandler;
-
 import android.app.*;
 import android.content.*;
 import android.view.*;
@@ -45,25 +43,11 @@ public class SDLActivity extends Activity {
 
     // Audio
     protected static AudioTrack mAudioTrack;
-
-    private NativeExceptionHandler exceptionHandler = null;
+    
     // Load the .so
     static {
 
-       // System.loadLibrary("iconv");
-        System.loadLibrary("SDL2");
-        System.loadLibrary("mikmod");
-        System.loadLibrary("smpeg2");
-       // System.loadLibrary("png");
-      System.loadLibrary("SDL2_image");
-      System.loadLibrary("SDL2_mixer");
-     //  System.loadLibrary("protobuf");
-     //  System.loadLibrary("SOCKETS");
-        System.loadLibrary("SDL2_net");
-       System.loadLibrary("SDL2_ttf");
-      //  System.loadLibrary("GUIChan");
-
-     //  System.loadLibrary("IMS");
+        System.loadLibrary("SDL2"); 
         System.loadLibrary("main");
         
         
@@ -92,7 +76,7 @@ public class SDLActivity extends Activity {
         Log.v("SDL", "onCreate():" + mSingleton);
         super.onCreate(savedInstanceState);
         
-        exceptionHandler = new NativeExceptionHandler();
+       //exceptionHandler = new NativeExceptionHandler();
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
