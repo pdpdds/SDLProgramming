@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IMSPlayer", "IMSPlayer\IMSPlayer.vcxproj", "{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{51B49E47-1B04-4BDE-9F37-A839747DC8D2} = {51B49E47-1B04-4BDE-9F37-A839747DC8D2}
+		{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9} = {A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}
+		{664BDDF4-D339-473B-9AC3-B048139EA7A0} = {664BDDF4-D339-473B-9AC3-B048139EA7A0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IMSLibrary", "..\..\..\external\IMSLibrary\Win32\IMSLibrary.vcxproj", "{51B49E47-1B04-4BDE-9F37-A839747DC8D2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BaseLib", "..\..\..\external\BaseLib\Win32\BaseLib.vcxproj", "{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "guichan", "..\..\..\external\guichan\guichan.vcxproj", "{664BDDF4-D339-473B-9AC3-B048139EA7A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}.Debug|Win32.Build.0 = Debug|Win32
+		{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}.Release|Win32.ActiveCfg = Release|Win32
+		{C5B94D67-7189-4DE3-A48A-24D8BBAB885A}.Release|Win32.Build.0 = Release|Win32
+		{51B49E47-1B04-4BDE-9F37-A839747DC8D2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{51B49E47-1B04-4BDE-9F37-A839747DC8D2}.Debug|Win32.Build.0 = Debug|Win32
+		{51B49E47-1B04-4BDE-9F37-A839747DC8D2}.Release|Win32.ActiveCfg = Release|Win32
+		{51B49E47-1B04-4BDE-9F37-A839747DC8D2}.Release|Win32.Build.0 = Release|Win32
+		{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}.Debug|Win32.Build.0 = Debug|Win32
+		{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}.Release|Win32.ActiveCfg = Release|Win32
+		{A0E01056-3B7B-44A5-BA9F-AF1AC8D1E2C9}.Release|Win32.Build.0 = Release|Win32
+		{664BDDF4-D339-473B-9AC3-B048139EA7A0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{664BDDF4-D339-473B-9AC3-B048139EA7A0}.Debug|Win32.Build.0 = Debug|Win32
+		{664BDDF4-D339-473B-9AC3-B048139EA7A0}.Release|Win32.ActiveCfg = Release|Win32
+		{664BDDF4-D339-473B-9AC3-B048139EA7A0}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
