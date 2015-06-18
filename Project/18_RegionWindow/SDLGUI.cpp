@@ -19,6 +19,7 @@ Frame* g_pFrame = NULL;
 Panel* g_pPanel = NULL;
 
 static int panelProc(void *arg);
+int running = 1;
 
 int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -27,6 +28,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 {
 	UNREFERENCED_PARAMETER(hPrevInstance);
 	UNREFERENCED_PARAMETER(lpCmdLine);
+	int         threadReturnValue;
 
 	g_pFrame = new Frame(L"SDL With Windows GUI", 640, 480, Frame::Style::dialog);
 	g_pPanel = new Panel(*g_pFrame, 240, 10, 320, 240);
@@ -50,8 +52,12 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 	SDL_FillRect(s, &s->clip_rect, 0xffffffff);
 	SDL_UpdateWindowSurface(sdlWnd);
 
-	SDL_CreateThread(panelProc, "Panel Proc", sdlWnd);
+	SDL_Thread *panalThread = SDL_CreateThread(panelProc, "Panel Proc", sdlWnd);
 	g_pFrame->runMessageLoop();
+
+	running = 0;
+	
+	SDL_WaitThread(panalThread, &threadReturnValue);
 
 	delete g_pPanel;
 	delete g_pFrame;
@@ -61,8 +67,7 @@ int APIENTRY _tWinMain(_In_ HINSTANCE hInstance,
 
 static int panelProc(void *arg)
 {
-	SDL_Window* pWindow = (SDL_Window*)arg;
-	int running = 1;
+	SDL_Window* pWindow = (SDL_Window*)arg;	
 	SDL_Event event;
 	SDL_EventState(SDL_SYSWMEVENT, SDL_ENABLE);
 	SDL_EventState(SDL_WINDOWEVENT, SDL_ENABLE);
