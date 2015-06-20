@@ -37,8 +37,6 @@ INT_PTR CALLBACK	About(HWND, UINT, WPARAM, LPARAM);
 
 #include "StockFacade.h"
 
-#pragma comment(lib, "libStock.lib")
-
 SDL_Window *pWindow;
 SDL_Renderer *pRenderer;
 SDL_Texture* pTexture;
