@@ -39,7 +39,7 @@ bool Regulator::isReady()
 	//never allow the code to flow
 	if (m_dUpdatePeriod < 0) return false;
 
-	DWORD CurrentTime = timeGetTime();
+	unsigned int CurrentTime = timeGetTime();
 
 	//the number of milliseconds the update period can vary per required
 	//update-step. This is here to make sure any multiple clients of this class
@@ -48,7 +48,7 @@ bool Regulator::isReady()
 
 	if (CurrentTime >= m_dwNextUpdateTime)
 	{
-		m_dwNextUpdateTime = (DWORD)(CurrentTime + m_dUpdatePeriod + RandInRange(-UpdatePeriodVariator, UpdatePeriodVariator));
+		m_dwNextUpdateTime = (unsigned int)(CurrentTime + m_dUpdatePeriod + RandInRange(-UpdatePeriodVariator, UpdatePeriodVariator));
 
 		return true;
 	}

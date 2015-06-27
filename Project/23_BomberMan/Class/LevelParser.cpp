@@ -153,7 +153,7 @@ void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>
     
     // create a tileset object
     Tileset tileset;
-	memset(&tileset, 0, sizeof(Tileset));
+	//memset(&tileset, 0, sizeof(Tileset));
     pTilesetRoot->FirstChildElement()->Attribute("width", &tileset.width);
     pTilesetRoot->FirstChildElement()->Attribute("height", &tileset.height);
     pTilesetRoot->Attribute("firstgid", &tileset.firstGridID);
@@ -161,6 +161,7 @@ void LevelParser::parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>
     pTilesetRoot->Attribute("tileheight", &tileset.tileHeight);
     pTilesetRoot->Attribute("spacing", &tileset.spacing);
     pTilesetRoot->Attribute("margin", &tileset.margin);
+
     tileset.name = pTilesetRoot->Attribute("name");
     
     tileset.numColumns = tileset.width / (tileset.tileWidth + tileset.spacing);

@@ -65,32 +65,31 @@ void PlayState::Render()
 
 bool PlayState::OnEnter()
 {
+	
     TheGame::Instance()->setPlayerLives(3);
-    
-	std::ifstream file("data/config/images.txt");
 
 	LevelParser levelParser;
 	//pLevel = levelParser.parseLevel(TheGame::Instance()->getLevelFiles()[TheGame::Instance()->getCurrentLevel() - 1].c_str());
 	pLevel = levelParser.parseLevel("data/map1.tmx");
 
-	if (pLevel != 0)
-	{
-		m_loadingComplete = true;
-	}
-
 	char szFilePath[256] = { 0, };
 	bool keyColor = false;
 
-	if (!file)
+	char* file_contents = NULL;
+
+	if (LevelParser::read_text("data/config/images.txt", &file_contents) != true)
+	{
 		return false;
+	}
+
+	std::istringstream stream(file_contents);
 
 	for (int j = 0; j<_IMAGENES; j++)
 	{
-		file >> szFilePath;
-		file >> keyColor;
+		stream >> szFilePath;
+		stream >> keyColor;
 		TextureManager::Instance()->load(szFilePath, szFilePath, TheGame::Instance()->getRenderer(), keyColor);
 	}
-	file.close();
 		
 	m_loadingComplete = true;    
     

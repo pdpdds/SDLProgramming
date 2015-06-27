@@ -103,11 +103,11 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
         return false; // SDL init fail
     }
 
-	if (false == LoadSound())
+	/*if (false == LoadSound())
 	{
 		cout << "Sound Load Fail\n";
 		return false; 
-	}
+	}*/
 	
 	
 	

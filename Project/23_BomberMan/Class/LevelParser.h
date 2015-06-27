@@ -23,11 +23,11 @@ class LevelParser
 public:
     
     Level* parseLevel(const char* stateFile);
-    
+	static bool read_text(const char* source_file, char** destination);
 private:
     
 
-	bool read_text(const char* source_file, char** destination);
+	
     void parseTextures(TiXmlElement* pTextureRoot);
     void parseTilesets(TiXmlElement* pTilesetRoot, std::vector<Tileset>* pTilesets);
     void parseObjectLayer(TiXmlElement* pObjectElement, std::vector<Layer*> *pLayers, Level* pLevel);

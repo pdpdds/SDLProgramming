@@ -341,8 +341,8 @@ Vector2D Steering::WallAvoidance(const vector<Wall2D*> &walls)
 void Steering::CreateFeelers()
 {
   //feeler pointing straight in front
-	m_Feelers[0] = m_pRaven_Bot->Center() + m_dWallDetectionFeelerLength *
-                 m_pRaven_Bot->Heading() * m_pRaven_Bot->GetSpeed();
+	m_Feelers[0] = m_pRaven_Bot->Center() +
+		m_pRaven_Bot->Heading() * m_pRaven_Bot->GetSpeed() * m_dWallDetectionFeelerLength;
 
   //feeler to left
   Vector2D temp = m_pRaven_Bot->Heading();

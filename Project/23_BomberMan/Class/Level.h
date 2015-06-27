@@ -28,6 +28,17 @@ struct Tileset
     int height;
     int numColumns;
     std::string name;
+
+	Tileset(){
+		firstGridID = 0;
+		tileWidth = 0;
+		tileHeight = 0;
+		spacing = 0;
+		margin = 0;
+		width = 0;
+		height = 0;
+		numColumns = 0;
+	}
 };
 
 class Level

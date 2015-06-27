@@ -290,11 +290,11 @@ inline bool LineIntersection2D(Vector2D   A,
                                Vector2D&  point)
 {
 
-	double rTop = (A.m_y - C.m_y)*(D.m_x - C.m_x) - (A.m_x - C.m_x)*(D.m_y - C.m_y);
-	double rBot = (B.m_x - A.m_x)*(D.m_y - C.m_y) - (B.m_y - A.m_y)*(D.m_x - C.m_x);
+	float rTop = (A.m_y - C.m_y)*(D.m_x - C.m_x) - (A.m_x - C.m_x)*(D.m_y - C.m_y);
+	float rBot = (B.m_x - A.m_x)*(D.m_y - C.m_y) - (B.m_y - A.m_y)*(D.m_x - C.m_x);
 
-	double sTop = (A.m_y - C.m_y)*(B.m_x - A.m_x) - (A.m_x - C.m_x)*(B.m_y - A.m_y);
-	double sBot = (B.m_x - A.m_x)*(D.m_y - C.m_y) - (B.m_y - A.m_y)*(D.m_x - C.m_x);
+	float sTop = (A.m_y - C.m_y)*(B.m_x - A.m_x) - (A.m_x - C.m_x)*(B.m_y - A.m_y);
+	float sBot = (B.m_x - A.m_x)*(D.m_y - C.m_y) - (B.m_y - A.m_y)*(D.m_x - C.m_x);
 
 	if ( (rBot == 0) || (sBot == 0))
 	{
@@ -302,14 +302,14 @@ inline bool LineIntersection2D(Vector2D   A,
 		return false;
 	}
 
-	double r = rTop/rBot;
-	double s = sTop/sBot;
+	float r = rTop / rBot;
+	float s = sTop / sBot;
 
 	if( (r > 0) && (r < 1) && (s > 0) && (s < 1) )
   {
   	dist = Vec2DDistance(A,B) * r;
 
-    point = A + r * (B - A);
+    point = A + (B - A);
 
     return true;
   }
@@ -589,7 +589,8 @@ inline bool GetLineSegmentCircleClosestIntersectionPoint(Vector2D A,
 
   //move the circle into the local space defined by the vector B-A with origin
   //at A
-  Vector2D LocalPos = PointToLocalSpace(pos, toBNorm, toBNorm.Perp(), A);
+  Vector2D perp = toBNorm.Perp();
+  Vector2D LocalPos = PointToLocalSpace(pos, toBNorm, perp, A);
 
   bool ipFound = false;
 

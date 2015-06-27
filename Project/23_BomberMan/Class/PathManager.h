@@ -12,7 +12,7 @@
 //-----------------------------------------------------------------------------
 #include <list>
 #include <cassert>
-
+#include <algorithm>
 
 
 template <typename path_planner>

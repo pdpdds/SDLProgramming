@@ -478,8 +478,8 @@ void Player::HandleInput()
 		//if( m_position.m_x < ((*m_pCollisionLayers->begin())->getMapWidth() * 32) && 
 		//	(TheInputHandler::Instance()->m_fingerX < Game::Instance()->getGameWidth() && TheInputHandler::Instance()->m_fingerX > Game::Instance()->getGameWidth() - 32))
 		{
-			m_bMoveRight = true;
-			m_bMoveLeft = false;
+			//m_bMoveRight = true;
+			//m_bMoveLeft = false;
 		}
 		/*else if(  m_position.m_x < 32 && 
 			(TheInputHandler::Instance()->m_fingerX < Game::Instance()->getGameWidth() && TheInputHandler::Instance()->m_fingerX > 0))

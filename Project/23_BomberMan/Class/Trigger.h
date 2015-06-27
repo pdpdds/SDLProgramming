@@ -1,11 +1,12 @@
 #pragma once
+#include "GameObject.h"
 #include "Vector2D.h"
 #include "TriggerRegion.h"
 #include "BombermanStructure.h"
 
 struct Telegram;
 
-template <typename entity_type>
+template <class entity_type>
 class Trigger : public GameObject
 {
 private:
