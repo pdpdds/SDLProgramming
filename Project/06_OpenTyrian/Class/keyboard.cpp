@@ -148,8 +148,13 @@ void service_SDL_events( JE_boolean clear_new )
 		switch (ev.type)
 		{
 			case SDL_MOUSEMOTION:
-				mouse_x = ev.motion.x * vga_width / scalers[scaler].width;
-				mouse_y = ev.motion.y * vga_height / scalers[scaler].height;
+#ifdef _WIN32
+				mouse_x = ev.motion.x;
+				mouse_y = ev.motion.y;
+#else
+				mouse_x = SDL_REVERSE_RATIO_X(ev.motion.x);
+				mouse_y = SDL_REVERSE_RATIO_Y(ev.motion.y);
+#endif
 				break;
 			case SDL_KEYDOWN:
 				if (handle_pause_key && ev.key.keysym.sym == SDLK_PAUSE)
@@ -230,10 +235,18 @@ void service_SDL_events( JE_boolean clear_new )
 				if (ev.type == SDL_MOUSEBUTTONDOWN)
 				{
 					newmouse = true;
-					lastmouse_but = ev.button.button;
-					lastmouse_x = ev.button.x * vga_width / scalers[scaler].width;
-					lastmouse_y = ev.button.y * vga_height / scalers[scaler].height;
 					mousedown = true;
+					
+					
+
+	
+					ev.button.x = SDL_REVERSE_RATIO_X(ev.motion.x);
+					ev.button.y = SDL_REVERSE_RATIO_X(ev.motion.y);
+
+					lastmouse_x = ev.button.x;
+					lastmouse_y = ev.button.y;
+					lastmouse_but = ev.button.button;
+
 				}
 				else
 				{

@@ -1,5 +1,10 @@
 #pragma once
 #include <SDL.h>
+
+#define SDL_RATIO_X(width) width * ((float)SDLSingleton::GetInstance()->getGameWidth() / (float)320)
+#define SDL_RATIO_Y(height) height * ((float)SDLSingleton::GetInstance()->getGameHeight() / (float)200)
+#define SDL_REVERSE_RATIO_X(width) width * ((float)320 / (float)SDLSingleton::GetInstance()->getGameWidth())
+#define SDL_REVERSE_RATIO_Y(height) height * ((float)200 / (float)SDLSingleton::GetInstance()->getGameHeight())
 class SDLSingleton
 {
 public:
@@ -20,6 +25,9 @@ public:
 	}
 
 	bool InitSystem();
+
+	int getGameWidth() const { return m_winWidth; }
+	int getGameHeight() const { return m_winHeight; }
 
 	int m_winWidth, m_winHeight;
 

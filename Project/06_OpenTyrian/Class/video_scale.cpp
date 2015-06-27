@@ -49,9 +49,6 @@ uint scaler;
 
 const struct Scalers scalers[] =
 {
-#ifdef ANDROID
-	{ vga_width,     vga_height,     no_scale, nn_16,      nn_32,      "None" },
-#endif
 #if defined(TARGET_GP2X) || defined(TARGET_DINGUX)
 	{ 320,           240,            no_scale, nn_16,      nn_32,      "None" },
 #else
@@ -211,8 +208,8 @@ void scale2x_32( SDL_Surface *src_surface, SDL_Surface *dst_surface )
 	    dst_pitch = dst_surface->pitch;
 	const int dst_Bpp = 4;         // dst_surface->format->BytesPerPixel
 	
-	const int height = vga_height, // src_surface->h
-	          width = vga_width;   // src_surface->w
+	const int height = src_surface->h;
+	const int width = src_surface->w;
 	
 	int prevline, nextline;
 	
