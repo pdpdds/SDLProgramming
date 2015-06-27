@@ -101,10 +101,7 @@ void Player::Load(LoaderParams& params)
     
     // time it takes for death explosion
     m_dyingTime = 100;
-    
-	if(isPossessed())
-		TheCamera::Instance()->setTarget(&m_position);
-	
+
 	
 }
 
@@ -474,27 +471,31 @@ void Player::HandleInput()
 	
 #else 
 	if(TheInputHandler::Instance()->m_fingerTouch == true)
-    {
-		//if( m_position.m_x < ((*m_pCollisionLayers->begin())->getMapWidth() * 32) && 
-		//	(TheInputHandler::Instance()->m_fingerX < Game::Instance()->getGameWidth() && TheInputHandler::Instance()->m_fingerX > Game::Instance()->getGameWidth() - 32))
-		{
-			//m_bMoveRight = true;
-			//m_bMoveLeft = false;
-		}
-		/*else if(  m_position.m_x < 32 && 
-			(TheInputHandler::Instance()->m_fingerX < Game::Instance()->getGameWidth() && TheInputHandler::Instance()->m_fingerX > 0))
-		{
-			m_bMoveRight = false;
-			m_bMoveLeft = true;
-		}
-		else
-		{
-			m_bMoveRight = false;
-			m_bMoveLeft = false;
-		}*/
+	{
+		TheInputHandler::Instance()->m_fingerTouch = false;
 
-    }
-   
+		float x = TheInputHandler::Instance()->m_fingerX;
+		float y = TheInputHandler::Instance()->m_fingerY;
+		x *= DESIGNED_SCREEN_SIZE_X;
+		y *= DESIGNED_SCREEN_SIZE_Y;
+
+		Vector2D dest(x,y);
+		Vector2D temp = dest;
+		dest.m_x = temp.m_x + TheCamera::Instance()->getPosition().m_x - ((int)temp.m_x % 32) + 16;
+		dest.m_y = temp.m_y + TheCamera::Instance()->getPosition().m_y - ((int)temp.m_y % 32) + 16;
+
+		if (isPossessed())
+		{
+
+			//clear any current goals
+			GetBrain()->RemoveAllSubgoals();
+			GetBrain()->AddGoal_MoveToPosition(dest);
+		}
+
+
+
+	}
+
 #endif
 }
 

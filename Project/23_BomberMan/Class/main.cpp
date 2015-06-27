@@ -30,7 +30,7 @@ extern "C" int SDL_main(int argc, char *argv[])
 #ifndef WIN32 
 	if (TheGame::Instance()->init("BomberMan", 0, 0, 0, 0, false))
 #else
-	if (TheGame::Instance()->init("BomberMan", 100, 100, 640, 480, false))
+	if (TheGame::Instance()->init("BomberMan", 100, 100, DESIGNED_SCREEN_SIZE_X, DESIGNED_SCREEN_SIZE_Y, false))
 #endif
 	{
 		std::cout << "game init success!\n";

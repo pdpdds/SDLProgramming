@@ -299,15 +299,17 @@ void InputHandler::onMouseButtonUp(SDL_Event &event)
 
 void InputHandler::onTouchDown(SDL_Event &event)
 {
-	m_fingerTouch = true;
-	m_fingerX = event.tfinger.x;
-	m_fingerY = event.tfinger.y;
+	//m_fingerTouch = true;
+	//m_fingerX = event.tfinger.x;
+	//m_fingerY = event.tfinger.y;
 	
 }
 
 void InputHandler::onTouchUp(SDL_Event &event)
 {
-	m_fingerTouch = false;
+	m_fingerX = event.tfinger.x;
+	m_fingerY = event.tfinger.y;
+	m_fingerTouch = true;
 }
 
 void InputHandler::onJoystickAxisMove(SDL_Event &event)

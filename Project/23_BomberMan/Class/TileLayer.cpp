@@ -49,7 +49,8 @@ void TileLayer::Render()
                 continue;
             }
             
-            if(((j * m_tileSize) - x2) - TheCamera::Instance()->getPosition().m_x < -m_tileSize || ((j * m_tileSize) - x2) - TheCamera::Instance()->getPosition().m_x > 640)
+            if(((j * m_tileSize) - x2) - TheCamera::Instance()->getPosition().m_x < -m_tileSize ||
+				((j * m_tileSize) - x2) - TheCamera::Instance()->getPosition().m_x > 640)
             {
                 continue;
             }

@@ -85,7 +85,11 @@ void Level::Update()
 bool Level::AddPlayers(Player* pPlayer)
 {
 	if (m_players.size() == 0)
-		pPlayer->SetPossessed(true);
+	{
+		pPlayer->SetPossessed(true);	
+		Vector2D& pos = pPlayer->getPosition();
+		TheCamera::Instance()->setTarget(&pos);
+	}
 	else
 		pPlayer->SetPossessed(false);
 
@@ -163,13 +167,10 @@ void Level::UpdateObject()
 	{
 		for (std::vector<GameObject*>::iterator it = m_gameObjects.begin(); it != m_gameObjects.end();)// < m_gameObjects.size(); i++)
 		{
-			if ((*it)->getPosition().getX() <= TheCamera::Instance()->getPosition().m_x + 640)
-			{
-				(*it)->setUpdating(true);
-				(*it)->Update();
-			}
+			(*it)->setUpdating(true);
+			(*it)->Update();
 
-			if ((*it)->dead() || (*it)->getPosition().m_y > 480)
+			if ((*it)->dead())
 			{
 				std::cout << "deleting";
 				delete * it;

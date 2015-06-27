@@ -62,8 +62,8 @@ public:
 	void SetMousePressed(bool mouseButtonPressed){ m_mouseButtonPressed = mouseButtonPressed; }
 
 	bool m_fingerTouch;
-	int m_fingerX;
-	int m_fingerY;
+	float m_fingerX;
+	float m_fingerY;
     
 private:
     

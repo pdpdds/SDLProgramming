@@ -13,8 +13,11 @@
 #include "Vector2D.h"
 #include <vector>
 
-#define SDL_RATIO_X(width) width * ((float)TheGame::Instance()->getGameWidth() / (float)640)
-#define SDL_RATIO_Y(height) height * ((float)TheGame::Instance()->getGameHeight() / (float)480)
+#define DESIGNED_SCREEN_SIZE_X 640
+#define DESIGNED_SCREEN_SIZE_Y 480
+
+#define SDL_RATIO_X(width) width * ((float)TheGame::Instance()->getGameWidth() / (float)DESIGNED_SCREEN_SIZE_X)
+#define SDL_RATIO_Y(height) height * ((float)TheGame::Instance()->getGameHeight() / (float)DESIGNED_SCREEN_SIZE_Y)
 
 class Game
 {

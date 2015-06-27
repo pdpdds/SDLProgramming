@@ -9,37 +9,10 @@ LOCAL_MODULE := main
 
 SDL_PATH := ../../../../../SDL2_Module
 DEFALUT_PATH := ../../../../..
-					
-LOCAL_SRC_FILES := $(SDL_PATH)/SDL2/src/main/android/SDL_android_main.c \
-					../../../Class/main.cpp \
-					../../../Class/tinyxmlparser.cpp \
-					../../../Class/tinyxmlerror.cpp \
-					../../../Class/tinyxml.cpp \
-					../../../Class/tinystr.cpp \
-					../../../Class/base64.cpp \
-					../../../Class/Camera.cpp \
-					../../../Class/CollisionManager.cpp \
-					../../../Class/Game.cpp \
-					../../../Class/GameObjectFactory.cpp \
-					../../../Class/AnimatedGraphic.cpp \
-					../../../Class/GameOverState.cpp \
-					../../../Class/GameStateMachine.cpp \
-					../../../Class/InputHandler.cpp \
-					../../../Class/Level.cpp \
-					../../../Class/LevelParser.cpp \
-					../../../Class/MainMenuState.cpp \
-					../../../Class/MapLoader.cpp \
-					../../../Class/MenuButton.cpp \
-					../../../Class/ObjectLayer.cpp \
-					../../../Class/PauseState.cpp \
-					../../../Class/PlatformerObject.cpp \
-					../../../Class/Player.cpp \
-					../../../Class/PlayState.cpp \
-					../../../Class/ScrollingBackground.cpp \
-					../../../Class/SoundManager.cpp \
-					../../../Class/StateParser.cpp \
-					../../../Class/TextureManager.cpp \
-					../../../Class/TileLayer.cpp
+FILE_LIST := $(wildcard $(LOCAL_PATH)/../../../Class/*.cpp)
+
+LOCAL_SRC_FILES := $(SDL_PATH)/SDL2/src/main/android/SDL_android_main.c
+LOCAL_SRC_FILES += $(FILE_LIST:$(LOCAL_PATH)/%=%)
 
 LCOAL_C_INCLUDES := $(LOCAL_PATH)
 LOCAL_C_INCLUDES += $(SDL_PATH)/SDL2_ttf
