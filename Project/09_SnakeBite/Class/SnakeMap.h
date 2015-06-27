@@ -6,6 +6,7 @@
 */
 
 #pragma once
+#include "common.h"
 class SnakeMap
 {
 private:

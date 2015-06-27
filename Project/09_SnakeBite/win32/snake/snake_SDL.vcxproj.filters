@@ -87,6 +87,9 @@
     <ClInclude Include="..\..\Class\IScene.h">
       <Filter>소스 파일\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Class\Common.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -135,6 +138,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Class\ItemManager.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Common.cpp">
       <Filter>소스 파일\SnakeGame</Filter>
     </ClCompile>
   </ItemGroup>

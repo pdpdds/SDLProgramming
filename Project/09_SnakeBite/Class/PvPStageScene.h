@@ -6,7 +6,7 @@
 */
 
 #pragma once
-
+#include "common.h"
 #include "IScene.h"
 class Game;
 class SnakeMap;

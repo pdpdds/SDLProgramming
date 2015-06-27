@@ -6,6 +6,7 @@
 */
 
 #include "stdafx.h"
+#include "common.h"
 #include "Game.h"
 #include "SDLSingleton.h"
 

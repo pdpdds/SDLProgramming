@@ -6,6 +6,7 @@
 */
 
 #pragma once
+#include "common.h"
 #include "SnakeGameObject.h"
 #include <vector>
 class ItemManager;

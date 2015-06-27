@@ -80,6 +80,7 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Class\Common.h" />
     <ClInclude Include="..\..\Class\Game.h" />
     <ClInclude Include="..\..\Class\GameOverScene.h" />
     <ClInclude Include="..\..\Class\han2unicode.h" />
@@ -103,6 +104,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Class\Common.cpp" />
     <ClCompile Include="..\..\Class\Game.cpp" />
     <ClCompile Include="..\..\Class\GameOverScene.cpp" />
     <ClCompile Include="..\..\Class\IntroScene.cpp" />
