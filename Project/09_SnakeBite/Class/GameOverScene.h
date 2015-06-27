@@ -6,6 +6,8 @@
 */
 
 #pragma once
+#include <sdl.h>
+#include <sdl_image.h>
 #include "IScene.h"
 class Game;
 class GameOverScene : public IScene<Game*>
