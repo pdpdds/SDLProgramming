@@ -117,7 +117,6 @@
     <ClCompile Include="..\..\Class\Goal_Wander.cpp" />
     <ClCompile Include="..\..\Class\GraphEdgeTypes.cpp" />
     <ClCompile Include="..\..\Class\IDGenerator.cpp" />
-    <ClCompile Include="..\..\Class\iniFileLoaderBase.cpp" />
     <ClCompile Include="..\..\Class\InputHandler.cpp" />
     <ClCompile Include="..\..\Class\InstallBombGoal_Evaluator.cpp" />
     <ClCompile Include="..\..\Class\Item.cpp" />
@@ -138,7 +137,6 @@
     <ClCompile Include="..\..\Class\ScrollingBackground.cpp" />
     <ClCompile Include="..\..\Class\SoundManager.cpp" />
     <ClCompile Include="..\..\Class\StateParser.cpp" />
-    <ClCompile Include="..\..\Class\stdafx.cpp" />
     <ClCompile Include="..\..\Class\SteeringBehaviors.cpp" />
     <ClCompile Include="..\..\Class\TextureManager.cpp" />
     <ClCompile Include="..\..\Class\TileLayer.cpp" />
@@ -150,6 +148,7 @@
     <ClCompile Include="..\..\Class\TriggerItemGiver.cpp" />
     <ClCompile Include="..\..\Class\Vector2D.cpp" />
     <ClCompile Include="..\..\Class\Wall.cpp" />
+    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Class\AnimatedGraphic.h" />
@@ -201,7 +200,6 @@
     <ClInclude Include="..\..\Class\GraphNodeTypes.h" />
     <ClInclude Include="..\..\Class\HandyGraphFunctions.h" />
     <ClInclude Include="..\..\Class\IDGenerator.h" />
-    <ClInclude Include="..\..\Class\iniFileLoaderBase.h" />
     <ClInclude Include="..\..\Class\InputHandler.h" />
     <ClInclude Include="..\..\Class\InstallBombGoal_Evaluator.h" />
     <ClInclude Include="..\..\Class\InvertedAABBox2D.h" />
@@ -236,10 +234,8 @@
     <ClInclude Include="..\..\Class\SoundManager.h" />
     <ClInclude Include="..\..\Class\SparseGraph.h" />
     <ClInclude Include="..\..\Class\StateParser.h" />
-    <ClInclude Include="..\..\Class\stdafx.h" />
     <ClInclude Include="..\..\Class\SteeringBehaviors.h" />
     <ClInclude Include="..\..\Class\Stream_Utility_Functions.h" />
-    <ClInclude Include="..\..\Class\targetver.h" />
     <ClInclude Include="..\..\Class\Telegram.h" />
     <ClInclude Include="..\..\Class\TextureManager.h" />
     <ClInclude Include="..\..\Class\TileLayer.h" />
@@ -259,6 +255,8 @@
     <ClInclude Include="..\..\Class\Vector2D.h" />
     <ClInclude Include="..\..\Class\Wall.h" />
     <ClInclude Include="..\..\Class\Wall2D.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

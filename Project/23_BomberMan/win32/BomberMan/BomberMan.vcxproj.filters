@@ -8,6 +8,9 @@
     <Filter Include="Class">
       <UniqueIdentifier>{b65077e6-26da-4126-9c46-34b5b9fd816a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="win32">
+      <UniqueIdentifier>{b7973abc-a1cb-40bc-87c3-87547b07deea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -100,9 +103,6 @@
     <ClCompile Include="..\..\Class\IDGenerator.cpp">
       <Filter>Class</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Class\iniFileLoaderBase.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Class\InputHandler.cpp">
       <Filter>Class</Filter>
     </ClCompile>
@@ -160,9 +160,6 @@
     <ClCompile Include="..\..\Class\StateParser.cpp">
       <Filter>Class</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Class\stdafx.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Class\SteeringBehaviors.cpp">
       <Filter>Class</Filter>
     </ClCompile>
@@ -198,6 +195,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Class\main.cpp">
       <Filter>Class</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>win32</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -348,9 +348,6 @@
     <ClInclude Include="..\..\Class\IDGenerator.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Class\iniFileLoaderBase.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Class\InputHandler.h">
       <Filter>Class</Filter>
     </ClInclude>
@@ -453,16 +450,10 @@
     <ClInclude Include="..\..\Class\StateParser.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Class\stdafx.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Class\SteeringBehaviors.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Class\Stream_Utility_Functions.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\targetver.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Class\Telegram.h">
@@ -521,6 +512,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Class\Wall2D.h">
       <Filter>Class</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>win32</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
