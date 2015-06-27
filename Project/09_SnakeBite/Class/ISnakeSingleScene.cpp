@@ -8,7 +8,7 @@
 #include "StdAfx.h"
 
 #include "ISnakeSingleScene.h"
-
+#include "SDLSingleton.h"
 #include "Game.h"
 #include "SnakeMap.h"
 #include "Wall.h"
@@ -48,8 +48,8 @@ void ISnakeSingleScene::Input(Game* owner)
 			float fingerX = event.tfinger.x;
 			float fingerY = event.tfinger.y;
 
-			fingerX *= GAME_WIDTH;
-			fingerY *= GAME_HEIGHT;
+			fingerX *= SDLSingleton::GetInstance()->m_winWidth;
+			fingerY *= SDLSingleton::GetInstance()->m_winHeight;
 
 			if (fingerX < (GAME_WIDTH / 4))
 				snake->SetDir(Snake::kLEFT);

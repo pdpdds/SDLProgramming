@@ -11,8 +11,10 @@
 #include "SDLSingleton.h"
 
 #ifdef WIN32
+#ifdef VLD_DEFINE
 #include <vld.h>
 #pragma comment(lib, "vld.lib")
+#endif
 #pragma comment(lib, "SDL2.lib")
 #pragma comment(lib, "SDL2_ttf.lib")
 #pragma comment(lib, "SDL2_image.lib")
