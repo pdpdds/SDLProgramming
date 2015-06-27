@@ -9,7 +9,6 @@
 #ifndef __SDL_Game_Programming_Book__Vector2D__
 #define __SDL_Game_Programming_Book__Vector2D__
 
-#include <iostream>
 #include <math.h>
 #include "utils.h"
 
@@ -112,7 +111,7 @@ public:
         }
     }
 
-	Vector2D Vector2D::Perp()const
+	Vector2D Perp() const
 	{
 		return Vector2D(-m_y, m_x);
 	}
@@ -207,17 +206,25 @@ public:
 
 inline Vector2D operator*(const Vector2D &lhs, float rhs);
 inline Vector2D operator*(float lhs, Vector2D &rhs);
+inline Vector2D operator*(double lhs, Vector2D &rhs);
 inline Vector2D operator-(const Vector2D &lhs, const Vector2D &rhs);
 inline Vector2D operator+(const Vector2D &lhs, const Vector2D &rhs);
 inline Vector2D operator/(const Vector2D &lhs, float val);
-std::ostream& operator<<(std::ostream& os, const Vector2D& rhs);
-std::ifstream& operator>>(std::ifstream& is, Vector2D& lhs);
 
 //------------------------------------------------------------------------operator overloads
 inline Vector2D operator*(const Vector2D &lhs, float rhs)
 {
 	Vector2D result(lhs);
-	result *= rhs;
+	result.m_x *= rhs;
+	result.m_y *= rhs;
+	return result;
+}
+
+inline Vector2D operator*(double lhs, Vector2D &rhs)
+{
+	Vector2D result(rhs);
+	result.m_x *= lhs;
+	result.m_y *= lhs;
 	return result;
 }
 
@@ -260,7 +267,8 @@ inline Vector2D operator/(const Vector2D &lhs, float val)
 
 inline void Vector2D::Reflect(const Vector2D& norm)
 {
-	*this += 2.0 * this->Dot(norm) * norm.GetReverse();
+	Vector2D reverse = norm.GetReverse();
+	*this += 2.0f * this->Dot(norm) * reverse;
 }
 
 inline float Vec2DDistanceSq(const Vector2D &v1, const Vector2D &v2)
@@ -272,11 +280,11 @@ inline float Vec2DDistanceSq(const Vector2D &v1, const Vector2D &v2)
 	return ySeparation*ySeparation + xSeparation*xSeparation;
 }
 
-inline double Vec2DDistance(const Vector2D &v1, const Vector2D &v2)
+inline float Vec2DDistance(const Vector2D &v1, const Vector2D &v2)
 {
 
-	double ySeparation = v2.m_y - v1.m_y;
-	double xSeparation = v2.m_x - v1.m_x;
+	float ySeparation = v2.m_y - v1.m_y;
+	float xSeparation = v2.m_x - v1.m_x;
 
 	return sqrt(ySeparation*ySeparation + xSeparation*xSeparation);
 }
@@ -285,9 +293,9 @@ inline Vector2D Vec2DNormalize(const Vector2D &v)
 {
 	Vector2D vec = v;
 
-	double vector_length = vec.Length();
+	float vector_length = vec.Length();
 
-	if (vector_length > std::numeric_limits<double>::epsilon())
+	if (vector_length > std::numeric_limits<float>::epsilon())
 	{
 		vec.m_x /= vector_length;
 		vec.m_y /= vector_length;

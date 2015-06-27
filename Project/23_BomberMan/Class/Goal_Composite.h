@@ -12,7 +12,7 @@
 #include "Goal.h"
 
 
-template <class entity_type>
+template <typename entity_type>
 class Goal_Composite : public Goal<entity_type>
 {
 private:
@@ -72,10 +72,10 @@ public:
 
 //---------------------- RemoveAllSubgoals ------------------------------------
 //-----------------------------------------------------------------------------
-template <class entity_type>
+template <typename entity_type>
 void Goal_Composite<entity_type>::RemoveAllSubgoals()
 {
-  for (SubgoalList::iterator it = m_SubGoals.begin();
+	for (typename SubgoalList::iterator it = m_SubGoals.begin();
        it != m_SubGoals.end();
        ++it)
   {  
@@ -93,7 +93,7 @@ void Goal_Composite<entity_type>::RemoveAllSubgoals()
 //  this method first removes any completed goals from the front of the
 //  subgoal list. It then processes the next goal in the list (if there is one)
 //-----------------------------------------------------------------------------
-template <class entity_type>
+template <typename entity_type>
 int Goal_Composite<entity_type>::ProcessSubgoals()
 { 
   //remove all completed and failed goals from the front of the subgoal list
@@ -131,7 +131,7 @@ int Goal_Composite<entity_type>::ProcessSubgoals()
 }
 
 //----------------------------- AddSubgoal ------------------------------------
-template <class entity_type>
+template <typename entity_type>
 void Goal_Composite<entity_type>::AddSubgoal(Goal<entity_type>* g)
 {   
   //add the new goal to the front of the list
@@ -144,7 +144,7 @@ void Goal_Composite<entity_type>::AddSubgoal(Goal<entity_type>* g)
 //
 //  passes the message to the goal at the front of the queue
 //-----------------------------------------------------------------------------
-template <class entity_type>
+template <typename entity_type>
 bool Goal_Composite<entity_type>::ForwardMessageToFrontMostSubgoal(const Telegram& msg)
 {
   if (!m_SubGoals.empty())
@@ -157,7 +157,7 @@ bool Goal_Composite<entity_type>::ForwardMessageToFrontMostSubgoal(const Telegra
 }
 
 
-template <class entity_type>
+template <typename entity_type>
 void  Goal_Composite<entity_type>::Render()
 {
   if (!m_SubGoals.empty())

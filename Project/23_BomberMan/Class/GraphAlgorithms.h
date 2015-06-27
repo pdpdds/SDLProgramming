@@ -101,7 +101,7 @@ public:
 };
 
 //-----------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 bool Graph_SearchDFS<graph_type>::Search()
 {
   //create a std stack of edges
@@ -142,7 +142,7 @@ bool Graph_SearchDFS<graph_type>::Search()
     //push the edges leading from the node this edge points to onto
     //the stack (provided the edge does not point to a previously 
     //visited node)
-    graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, Next->To());
+	typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, Next->To());
 
     for (const Edge* pE=ConstEdgeItr.begin();
         !ConstEdgeItr.end();
@@ -160,7 +160,7 @@ bool Graph_SearchDFS<graph_type>::Search()
 }
 
 //-----------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 std::list<int> Graph_SearchDFS<graph_type>::GetPathToTarget()const 
 {
   std::list<int> path;
@@ -258,7 +258,7 @@ public:
 
 //-----------------------------------------------------------------------------
 
-template <class graph_type>
+template <typename graph_type>
 bool Graph_SearchBFS<graph_type>::Search()
 {
   //create a std queue of edges
@@ -297,7 +297,7 @@ bool Graph_SearchBFS<graph_type>::Search()
 
     //push the edges leading from the node at the end of this edge 
     //onto the queue
-    graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, Next->To());
+	typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, Next->To());
 
     for (const Edge* pE=ConstEdgeItr.begin();
         !ConstEdgeItr.end();
@@ -321,7 +321,7 @@ bool Graph_SearchBFS<graph_type>::Search()
 
 
 //-----------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 std::list<int> Graph_SearchBFS<graph_type>::GetPathToTarget()const 
 {
   std::list<int> path;
@@ -358,7 +358,7 @@ std::list<int> Graph_SearchBFS<graph_type>::GetPathToTarget()const
 //  
 //  double NewCost = m_CostToThisNode[best] + pE->Cost;
 //------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 class Graph_SearchDijkstra
 {
 private:
@@ -426,7 +426,7 @@ public:
 
 
 //-----------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 void Graph_SearchDijkstra<graph_type>::Search()
 {
   //create an indexed priority queue that sorts smallest to largest
@@ -453,7 +453,7 @@ void Graph_SearchDijkstra<graph_type>::Search()
     if (NextClosestNode == m_iTarget) return;
 
     //now to relax the edges.
-    graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+	typename  graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
 
     //for each edge connected to the next closest node
     for (const Edge* pE=ConstEdgeItr.begin();
@@ -497,7 +497,7 @@ void Graph_SearchDijkstra<graph_type>::Search()
 }
 
 //-----------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 std::list<int> Graph_SearchDijkstra<graph_type>::GetPathToTarget()const
 {
   std::list<int> path;
@@ -526,7 +526,7 @@ std::list<int> Graph_SearchDijkstra<graph_type>::GetPathToTarget()const
 //
 //  This search is more commonly known as A* (pronounced Ay-Star)
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, class heuristic>
 class Graph_SearchAStar
 {
 private:
@@ -582,7 +582,7 @@ public:
 };
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, class heuristic>
 void Graph_SearchAStar<graph_type, heuristic>::Search()
 {
   //create an indexed priority queue of nodes. The nodes with the
@@ -605,7 +605,7 @@ void Graph_SearchAStar<graph_type, heuristic>::Search()
     if (NextClosestNode == m_iTarget) return;
 
     //now to test all the edges attached to this node
-    graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+	typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
 
     for (const Edge* pE=ConstEdgeItr.begin();
         !ConstEdgeItr.end(); 
@@ -646,7 +646,7 @@ void Graph_SearchAStar<graph_type, heuristic>::Search()
 }
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, class heuristic>
 std::list<int> Graph_SearchAStar<graph_type, heuristic>::GetPathToTarget()const
 {
   std::list<int> path;
@@ -678,7 +678,7 @@ std::list<int> Graph_SearchAStar<graph_type, heuristic>::GetPathToTarget()const
 //
 //  It uses a priority first queue implementation of Prims algorithm
 //------------------------------------------------------------------------
-template <class graph_type>
+template <typename graph_type>
 class Graph_MinSpanningTree
 {
 private:
@@ -711,7 +711,7 @@ private:
       m_SpanningTree[best] = m_Fringe[best];
 
       //now to test the edges attached to this node
-      graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, best);
+      typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, best);
 
       for (const Edge* pE=ConstEdgeItr.beg(); !ConstEdgeItr.end(); pE=ConstEdgeItr.nxt())
       {

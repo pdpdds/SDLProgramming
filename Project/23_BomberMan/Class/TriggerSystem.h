@@ -1,7 +1,7 @@
 #ifndef TRIGGERSYSTEM_H
 #define TRIGGERSYSTEM_H
 
-template <class trigger_type>
+template <typename trigger_type>
 class TriggerSystem
 {
 public:
@@ -14,7 +14,7 @@ private:
 
 	void UpdateTriggers()
 	{
-		TriggerList::iterator curTrg = m_Triggers.begin();
+		typename TriggerList::iterator curTrg = m_Triggers.begin();
 		while (curTrg != m_Triggers.end())
 		{
 			//remove trigger if dead
@@ -33,24 +33,24 @@ private:
 		}
 	}
 
-	template <class ContainerOfEntities>
+	template <typename ContainerOfEntities>
 	void TryTriggers(ContainerOfEntities& entities)
 	{
 		//test each entity against the triggers
-		ContainerOfEntities::iterator curEnt = entities.begin();
+		typename ContainerOfEntities::iterator curEnt = entities.begin();
 		for (curEnt; curEnt != entities.end(); ++curEnt)
 		{
 			//an entity must be ready for its next trigger update and it must be 
 			//alive before it is tested against each trigger.
 			//if ((*curEnt)->isReadyForTriggerUpdate() && (*curEnt)->isAlive())
-			if (!(*curEnt)->dead() && !(*curEnt)->dying())
+			/*if (!(*curEnt)->dead() && !(*curEnt)->dying())
 			{
 				TriggerList::const_iterator curTrg;
 				for (curTrg = m_Triggers.begin(); curTrg != m_Triggers.end(); ++curTrg)
 				{
 					(*curTrg)->Try(*curEnt);
 				}
-			}
+			}*/
 		}
 	}
 
@@ -65,7 +65,7 @@ public:
 	//this deletes any current triggers and empties the trigger list
 	void Clear()
 	{
-		TriggerList::iterator curTrg;
+		typename TriggerList::iterator curTrg;
 		for (curTrg = m_Triggers.begin(); curTrg != m_Triggers.end(); ++curTrg)
 		{
 			delete *curTrg;
@@ -77,7 +77,7 @@ public:
 	//This method should be called each update-step of the game. It will first
 	//update the internal state odf the triggers and then try each entity against
 	//each active trigger to test if any should be triggered.
-	template <class ContainerOfEntities>
+	template <typename ContainerOfEntities>
 	void Update(ContainerOfEntities& entities)
 	{
 		UpdateTriggers();
@@ -94,7 +94,7 @@ public:
 	//some triggers are required to be rendered (like giver-triggers for example)
 	void Render()
 	{
-		TriggerList::iterator curTrg;
+		typename TriggerList::iterator curTrg;
 		for (curTrg = m_Triggers.begin(); curTrg != m_Triggers.end(); ++curTrg)
 		{
 			(*curTrg)->Draw();

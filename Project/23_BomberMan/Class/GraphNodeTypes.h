@@ -9,8 +9,6 @@
 //  Desc:   Node classes to be used with graphs
 //-----------------------------------------------------------------------------
 #include <list>
-#include <ostream>
-#include <fstream>
 #include "Vector2D.h"
 #include "NodeTypeEnumerations.h"
 
@@ -28,20 +26,11 @@ public:
   
   GraphNode():m_iIndex(invalid_node_index){}
   GraphNode(int idx):m_iIndex(idx){}
-  GraphNode(std::ifstream& stream){char buffer[50]; stream >> buffer >> m_iIndex;}
 
   virtual ~GraphNode(){}
 
   int  Index()const{return m_iIndex;}
   void SetIndex(int NewIndex){m_iIndex = NewIndex;}
-  
-
-
-  //for reading and writing to streams.
-  friend std::ostream& operator<<(std::ostream& os, const GraphNode& n)
-  {
-    os << "Index: " << n.m_iIndex << std::endl; return os;
-  }
 
 };   
 
@@ -53,7 +42,7 @@ public:
 //  the position of the node and a pointer to a BaseGameEntity... useful
 //  if you want your nodes to represent health packs, gold mines and the like
 //-----------------------------------------------------------------------------
-template <class extra_info = void*>
+template <typename extra_info = void*>
 class NavGraphNode : public GraphNode
 {
 protected:
@@ -81,14 +70,6 @@ public:
                              m_ExtraInfo(extra_info())
   {}
 
-  //stream constructor
-  NavGraphNode(std::ifstream& stream):m_ExtraInfo(extra_info())
-  {
-    char buffer[50];
-    stream >> buffer >> m_iIndex >> buffer >> m_vPosition.x >> buffer >> m_vPosition.y;
-  }
- 
-
   virtual ~NavGraphNode(){}
 
   Vector2D   Pos()const{return m_vPosition;}
@@ -97,14 +78,6 @@ public:
   extra_info ExtraInfo()const{return m_ExtraInfo;}
   void       SetExtraInfo(extra_info info){m_ExtraInfo = info;}
 
-  //for reading and writing to streams.
-  friend std::ostream& operator<<(std::ostream& os, const NavGraphNode& n)
-  {
-    os << "Index: " << n.m_iIndex << " PosX: " << n.m_vPosition.x << " PosY: " << n.m_vPosition.y << std::endl;
-
-    return os;
-  }
-  
 };
 
 

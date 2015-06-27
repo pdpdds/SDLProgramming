@@ -30,18 +30,16 @@
 //these enums are used as return values from each search update method
 enum {target_found, target_not_found, search_incomplete};
 
-
+enum SearchType{ AStar, Dijkstra };
 
 //------------------------ Graph_SearchTimeSliced -----------------------------
 //
 // base class to define a common interface for graph search algorithms
 //-----------------------------------------------------------------------------
-template <class edge_type>
+template <typename edge_type>
 class Graph_SearchTimeSliced
 {
 public:
-
-  enum SearchType{AStar, Dijkstra};
 
 private:
 
@@ -83,7 +81,7 @@ public:
 //
 //  a A* class that enables a search to be completed over multiple update-steps
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, typename heuristic>
 class Graph_SearchAStar_TS : public Graph_SearchTimeSliced<typename graph_type::EdgeType>
 {
 private:
@@ -159,7 +157,7 @@ public:
 };
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, typename heuristic>
 int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
 {
   //if the PQ is empty the target has not been found
@@ -181,7 +179,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
   }
 
   //now to test all the edges attached to this node
-  graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+  typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
   for (const Edge* pE=ConstEdgeItr.begin();
       !ConstEdgeItr.end();
        pE=ConstEdgeItr.next())
@@ -223,7 +221,7 @@ int Graph_SearchAStar_TS<graph_type, heuristic>::CycleOnce()
 }
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, typename heuristic>
 std::list<int> 
 Graph_SearchAStar_TS<graph_type, heuristic>::GetPathToTarget()const
 {
@@ -251,7 +249,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetPathToTarget()const
 //
 //  returns the path as a list of PathEdges
 //-----------------------------------------------------------------------------
-template <class graph_type, class heuristic>
+template <typename graph_type, typename heuristic>
 std::list<PathEdge> 
 Graph_SearchAStar_TS<graph_type, heuristic>::GetPathAsPathEdges()const
 {
@@ -280,7 +278,7 @@ Graph_SearchAStar_TS<graph_type, heuristic>::GetPathAsPathEdges()const
 //  Dijkstra's algorithm class modified to spread a search over multiple
 //  update-steps
 //-----------------------------------------------------------------------------
-template <class graph_type, class termination_condition>
+template <typename graph_type, typename termination_condition>
 class Graph_SearchDijkstras_TS : public Graph_SearchTimeSliced<typename graph_type::EdgeType>
 {
 private:
@@ -357,7 +355,7 @@ public:
 };
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class termination_condition>
+template <typename graph_type, typename termination_condition>
 int Graph_SearchDijkstras_TS<graph_type, termination_condition>::CycleOnce()
 {
   //if the PQ is empty the target has not been found
@@ -384,7 +382,7 @@ int Graph_SearchDijkstras_TS<graph_type, termination_condition>::CycleOnce()
   }
 
   //now to test all the edges attached to this node
-  graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
+  typename graph_type::ConstEdgeIterator ConstEdgeItr(m_Graph, NextClosestNode);
   for (const Edge* pE=ConstEdgeItr.begin();
       !ConstEdgeItr.end();
        pE=ConstEdgeItr.next())
@@ -428,7 +426,7 @@ int Graph_SearchDijkstras_TS<graph_type, termination_condition>::CycleOnce()
 }
 
 //-----------------------------------------------------------------------------
-template <class graph_type, class termination_condition>
+template <typename graph_type, typename termination_condition>
 std::list<int> 
 Graph_SearchDijkstras_TS<graph_type, termination_condition>::GetPathToTarget()const
 {
@@ -456,7 +454,7 @@ Graph_SearchDijkstras_TS<graph_type, termination_condition>::GetPathToTarget()co
 //
 //  returns the path as a list of PathEdges
 //-----------------------------------------------------------------------------
-template <class graph_type, class termination_condition>
+template <typename graph_type, typename termination_condition>
 std::list<PathEdge> 
 Graph_SearchDijkstras_TS<graph_type, termination_condition>::GetPathAsPathEdges()const
 {

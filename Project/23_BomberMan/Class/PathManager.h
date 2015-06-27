@@ -15,7 +15,7 @@
 
 
 
-template <class path_planner>
+template <typename path_planner>
 class PathManager
 {
 private:
@@ -58,14 +58,14 @@ public:
 //  If a path is found or the search is unsuccessful the relevant agent is
 //  notified accordingly by Telegram
 //-----------------------------------------------------------------------------
-template <class path_planner>
+template <typename path_planner>
 inline void PathManager<path_planner>::UpdateSearches()
 {
   int NumCyclesRemaining = m_iNumSearchCyclesPerUpdate;
 
   //iterate through the search requests until either all requests have been
   //fulfilled or there are no search cycles remaining for this update-step.
-  std::list<path_planner*>::iterator curPath = m_SearchRequests.begin();
+  typename std::list<path_planner*>::iterator curPath = m_SearchRequests.begin();
   while (NumCyclesRemaining-- && !m_SearchRequests.empty())
   {
     //make one search cycle of this path request
@@ -97,7 +97,7 @@ inline void PathManager<path_planner>::UpdateSearches()
 //
 //  this is called to register a search with the manager.
 //-----------------------------------------------------------------------------
-template <class path_planner>
+template <typename path_planner>
 inline void PathManager<path_planner>::Register(path_planner* pPathPlanner)
 {
   //make sure the bot does not already have a current search in the queue
@@ -112,7 +112,7 @@ inline void PathManager<path_planner>::Register(path_planner* pPathPlanner)
 
 //----------------------------- UnRegister ------------------------------------
 //-----------------------------------------------------------------------------
-template <class path_planner>
+template <typename path_planner>
 inline void PathManager<path_planner>::UnRegister(path_planner* pPathPlanner)
 {
   m_SearchRequests.remove(pPathPlanner);

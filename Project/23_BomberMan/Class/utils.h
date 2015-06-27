@@ -17,7 +17,15 @@
 #include <cassert>
 #include <iomanip>
 
+#ifdef _WIN32
+#else
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
+unsigned int timeGetTime();
+
+#endif
 
 //a few useful constants
 const int     MaxInt    = (std::numeric_limits<int>::max)();
@@ -68,7 +76,7 @@ inline bool InRange(double start, double end, double val)
   }
 }
 
-template <class T>
+template <typename T>
 T Maximum(const T& v1, const T& v2)
 {
   return v1 > v2 ? v1 : v2;
@@ -81,7 +89,14 @@ T Maximum(const T& v1, const T& v2)
 //----------------------------------------------------------------------------
 
 //returns a random integer between x and y
-inline int   RandInt(int x,int y) {return rand()%(y-x+1)+x;}
+inline int   RandInt(int x,int y) 
+{
+#ifdef _WIN32
+	return rand()%(y-x+1)+x;
+#else
+	return rand()%(y-x+1)+x;
+#endif
+}
 
 //returns a random double between zero and 1
 inline double RandFloat()      {return ((rand())/(RAND_MAX+1.0));}
@@ -150,14 +165,14 @@ inline double Sigmoid(double input, double response = 1.0)
 
 
 //returns the maximum of two values
-template <class T>
+template <typename T>
 inline T MaxOf(const T& a, const T& b)
 {
   if (a>b) return a; return b;
 }
 
 //returns the minimum of two values
-template <class T>
+template <typename T>
 inline T MinOf(const T& a, const T& b)
 {
   if (a<b) return a; return b;
@@ -165,7 +180,7 @@ inline T MinOf(const T& a, const T& b)
 
 
 //clamps the first argument between the second two
-template <class T, class U, class V>
+template <typename T, typename U, typename V>
 inline void Clamp(T& arg, const U& minVal, const V& maxVal)
 {
   assert ( (minVal < maxVal) && "<Clamp>MaxVal < MinVal!");
@@ -239,7 +254,7 @@ inline bool isEqual(double a, double b)
 }
 
 
-template <class T>
+template <typename T>
 inline double Average(const std::vector<T>& v)
 {
   double average = 0.0;
@@ -269,20 +284,20 @@ inline double StandardDeviation(const std::vector<double>& v)
 }
 
 
-template <class container>
+template <typename container>
 inline void DeleteSTLContainer(container& c)
 {
-  for (container::iterator it = c.begin(); it!=c.end(); ++it)
+	for (typename container::iterator it = c.begin(); it != c.end(); ++it)
   {
     delete *it;
     *it = NULL;
   }
 }
 
-template <class map>
+template <typename map>
 inline void DeleteSTLMap(map& m)
 {
-  for (map::iterator it = m.begin(); it!=m.end(); ++it)
+	for (typename map::iterator it = m.begin(); it != m.end(); ++it)
   {
     delete it->second;
     it->second = NULL;
