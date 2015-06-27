@@ -18,6 +18,7 @@ CrudeTimer::CrudeTimer()
 { 
 	m_dStartTime = timeGetTime() * 0.001; 
 }
+
 double CrudeTimer::GetCurTime()
 {
 	return timeGetTime() * 0.001 - m_dStartTime;

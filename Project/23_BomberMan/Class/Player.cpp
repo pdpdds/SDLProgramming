@@ -350,11 +350,6 @@ bool Player::handleMovement()
     Vector2D newPos = m_position;
 	Vector2D oldPos = m_position;
 
-	if (m_velocity.m_x > 0)
-		m_velocity.m_x += 1.0f;
-	if (m_velocity.m_x < 0)
-		m_velocity.m_x -= 1.0f;
-    
     // add velocity to the x position
 	newPos.m_x = m_position.m_x + m_velocity.m_x;
 	newPos.m_y = m_position.m_y + m_velocity.m_y;

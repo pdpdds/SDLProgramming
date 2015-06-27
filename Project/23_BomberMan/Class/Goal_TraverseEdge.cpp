@@ -49,7 +49,7 @@ void Goal_TraverseEdge::Activate()
 
 
 	//record the time the bot starts this goal
-	m_dStartTime = Clock->GetCurrentTime();
+	m_dStartTime = Clock->GetCurTime();
 
 	//calculate the expected time required to reach the this waypoint. This value
 	//is used to determine if the bot becomes stuck 
@@ -111,7 +111,7 @@ int Goal_TraverseEdge::Process()
 //-----------------------------------------------------------------------------
 bool Goal_TraverseEdge::isStuck()const
 {
-	double TimeTaken = Clock->GetCurrentTime() - m_dStartTime;
+	double TimeTaken = Clock->GetCurTime() - m_dStartTime;
 
 	if (TimeTaken > m_dTimeExpected)
 	{

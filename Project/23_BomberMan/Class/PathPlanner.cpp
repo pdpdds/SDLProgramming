@@ -105,7 +105,7 @@ PathPlanner::Path PathPlanner::GetPath()
   
   //if the bot requested a path to a location then an edge leading to the
   //destination must be added
-  if (m_pCurrentSearch->GetType() == Graph_SearchTimeSliced<EdgeType>::AStar)
+  if (m_pCurrentSearch->GetType() == SearchType::AStar)
   {   
     path.push_back(PathEdge(path.back().Destination(),
                             m_vDestinationPos,

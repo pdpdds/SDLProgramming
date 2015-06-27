@@ -5,7 +5,7 @@
 
 struct Telegram;
 
-template <class entity_type>
+template <typename entity_type>
 class Trigger : public GameObject
 {
 private:

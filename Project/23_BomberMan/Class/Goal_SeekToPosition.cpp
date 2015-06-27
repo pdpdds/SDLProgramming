@@ -25,7 +25,7 @@ void Goal_SeekToPosition::Activate()
   m_iStatus = active;
   
   //record the time the bot starts this goal
-  m_dStartTime = Clock->GetCurrentTime();    
+  m_dStartTime = Clock->GetCurTime();
   
   //This value is used to determine if the bot becomes stuck 
   m_dTimeToReachPos = m_pOwner->CalculateTimeToReachPosition(m_vPosition);
@@ -74,7 +74,7 @@ int Goal_SeekToPosition::Process()
 //-----------------------------------------------------------------------------
 bool Goal_SeekToPosition::isStuck()const
 {  
-  double TimeTaken = Clock->GetCurrentTime() - m_dStartTime;
+	double TimeTaken = Clock->GetCurTime() - m_dStartTime;
   return false;
   if (TimeTaken > m_dTimeToReachPos)
   {

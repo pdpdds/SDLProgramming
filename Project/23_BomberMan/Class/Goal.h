@@ -13,14 +13,14 @@ struct Telegram;
 //#include "misc/cgdi.h"
 //#include "misc/TypeToString.h"
 #include"Vector2D.h"
+#include <stdexcept>
 
+enum GoalState{ active, inactive, completed, failed };
 
 template <class entity_type>
 class Goal
 {
 public:
-
-   enum {active, inactive, completed, failed};
   
 protected:
 
