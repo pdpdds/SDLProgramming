@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" width="20" height="15" tilewidth="32" tileheight="32">
  <tileset firstgid="1" name="tiles2" tilewidth="32" tileheight="32">
-  <image source="image/object/tiles2.bmp" width="128" height="128"/>
+  <image source="tiles2.png" width="128" height="128"/>
  </tileset>
  <layer name="Movable" width="20" height="15">
   <data encoding="base64" compression="zlib">
