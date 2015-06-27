@@ -13,9 +13,11 @@ class Wall : public SnakeGameObject
 private:
 	std::vector<std::vector<char>> blocks; ///< 벽, 장애물의 정보. blocks[h][w]
 	SDL_Surface* bg;
+	SDL_Surface* block;
 
 public:
 	Wall(const char* mapFileName);
+	~Wall();
 
 	virtual void Init();	
 	virtual void Update();	

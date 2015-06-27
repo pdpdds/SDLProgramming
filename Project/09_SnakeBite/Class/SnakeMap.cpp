@@ -13,6 +13,12 @@
 	@param width 타일의 너비
 	@param height 타일의 높이
 */
+
+SnakeMap::~SnakeMap()
+{
+	tilesInfo_.clear();
+}
+
 SnakeMap::SnakeMap(int width, int height)
 	: width_(width), height_(height), tilesInfo_(NULL)
 {

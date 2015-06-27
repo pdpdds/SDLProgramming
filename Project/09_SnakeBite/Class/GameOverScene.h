@@ -34,6 +34,6 @@ public:
 	virtual void Rendder(Game* owner);
 
 private:
-	GameOverScene() {}
+	GameOverScene();
 	~GameOverScene() {}
 };

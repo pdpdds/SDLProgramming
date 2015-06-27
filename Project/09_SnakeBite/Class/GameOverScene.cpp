@@ -16,6 +16,11 @@
 */
 void GameOverScene::Init(Game* owner)
 {
+	
+}
+
+GameOverScene::GameOverScene()
+{
 	bg = IMG_Load("GameOverBG.bmp");
 }
 
@@ -38,6 +43,7 @@ void GameOverScene::Execute(Game* owner)
 void GameOverScene:: Exit(Game* owner) 
 {
 	SDL_FreeSurface(bg);
+	bg = NULL;
 }
 
 /**
@@ -52,7 +58,14 @@ void GameOverScene::Input(Game* owner)
 		case SDL_KEYUP: ///< 아무키나 누르면 메뉴 화면으로 돌아감
 			owner->FSM()->ChangeState(IntroScene::Shaerd());
 			break;
+		case SDL_FINGERUP:
+		{
+
+			owner->FSM()->ChangeState(IntroScene::Shaerd());
 		}
+		break;
+		}
+
 	}
 }
 

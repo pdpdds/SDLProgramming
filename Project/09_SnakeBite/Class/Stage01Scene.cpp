@@ -21,6 +21,7 @@
 	@brief Scene 의 초기화 함수
 	@param owner Scene을 관리하는 StateMachine을 가지고있는 Game 객체
 */
+
 void Stage01Scene::Init(Game* owner)
 {
 	snakeMap = new SnakeMap(30, 20); ///< 타일 정보 생성

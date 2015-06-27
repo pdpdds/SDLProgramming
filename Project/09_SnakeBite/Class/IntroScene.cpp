@@ -16,9 +16,14 @@
 	@brief Scene 의 초기화 함수
 	@param owner Scene을 관리하는 StateMachine을 가지고있는 Game 객체
 */
-void IntroScene::Init(Game* owner)
+
+IntroScene::IntroScene()
 {
 	bg = IMG_Load("introBG.bmp");
+}
+
+void IntroScene::Init(Game* owner)
+{	
 	owner->SetLife(3); ///< 총 Life 설정
 }
 
@@ -47,24 +52,33 @@ void IntroScene:: Exit(Game* owner) {}
 */
 void IntroScene::Input(Game* owner)
 {
-	if(SDL_PollEvent(&event)) {
-		switch(event.type) {
+	if (SDL_PollEvent(&event)) {
+		switch (event.type)
+		{
 		case SDL_QUIT: break;
 		case SDL_KEYUP:
-			if(event.key.keysym.sym == SDLK_1) ///< 1번 키를 누르면 싱글모드로
+			if (event.key.keysym.sym == SDLK_1) ///< 1번 키를 누르면 싱글모드로
 			{
 				owner->FSM()->ChangeState(Stage01Scene::Shaerd());
 			}
-			if(event.key.keysym.sym == SDLK_2) ///< 2번 키를 누르면 2인모드로
+			if (event.key.keysym.sym == SDLK_2) ///< 2번 키를 누르면 2인모드로
 			{
 				owner->FSM()->ChangeState(PvPStageScene::Shaerd());
 			}
-			if(event.key.keysym.sym == SDLK_ESCAPE) ///< esc키를 누르면 프로그램 종료
+			if (event.key.keysym.sym == SDLK_ESCAPE) ///< esc키를 누르면 프로그램 종료
 			{
 				exit(1);
 			}
 			break;
+		case SDL_FINGERUP:
+		{
+
+			owner->FSM()->ChangeState(Stage01Scene::Shaerd());
 		}
+		break;
+
+		}
+
 	}
 }
 

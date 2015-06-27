@@ -26,11 +26,11 @@
 */
 void ISnakeSingleScene::DrawTextFiledLabelWithValue(SDL_Surface* screen, std::string label, int value, int posx, int posy)
 {
-	std::string str = TextFieldFactory::Shared()->StringAndInt(label, value);
+	/*std::string str = TextFieldFactory::Shared()->StringAndInt(label, value);
 	char *ch = const_cast<char*>(str.c_str());
 	SDL_Surface *textField = TextFieldFactory::Shared()->CreateTextFieldSurface(ch);
 	DrawSurface(screen , posx, posy, textField);
-	SDL_FreeSurface(textField);
+	SDL_FreeSurface(textField);*/
 }
 
 /**
@@ -40,9 +40,27 @@ void ISnakeSingleScene::DrawTextFiledLabelWithValue(SDL_Surface* screen, std::st
 */
 void ISnakeSingleScene::Input(Game* owner)
 {	
-	if(SDL_PollEvent(&event)) {
+	while(SDL_PollEvent(&event)) {
 		switch(event.type) {
 		case SDL_QUIT: break;
+		case SDL_FINGERUP:
+		{
+			float fingerX = event.tfinger.x;
+			float fingerY = event.tfinger.y;
+
+			fingerX *= GAME_WIDTH;
+			fingerY *= GAME_HEIGHT;
+
+			if (fingerX < (GAME_WIDTH / 4))
+				snake->SetDir(Snake::kLEFT);
+			else if (fingerX >(GAME_WIDTH - (GAME_WIDTH / 4)))
+				snake->SetDir(Snake::kRIGHT);
+			else if (fingerY < (GAME_HEIGHT / 4))
+				snake->SetDir(Snake::kUP);
+			else if (fingerY >(GAME_HEIGHT - (GAME_HEIGHT / 4)))
+				snake->SetDir(Snake::kDOWN);
+		}
+		break;
 		case SDL_KEYUP: 
 			if(event.key.keysym.sym == SDLK_UP) ///< snake ¿òÁ÷ÀÓ
 			{

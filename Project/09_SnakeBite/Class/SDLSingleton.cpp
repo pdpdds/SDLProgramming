@@ -22,7 +22,7 @@ bool SDLSingleton::InitSystem()
 #ifndef WIN32 
 	if (SDL_CreateWindowAndRenderer(0, 0, SDL_WINDOW_FULLSCREEN, &m_pWindow, &m_pRenderer) < 0)
 #else
-	if (SDL_CreateWindowAndRenderer(640, 480, 0, &m_pWindow, &m_pRenderer) < 0)
+	if (SDL_CreateWindowAndRenderer(800, 600, 0, &m_pWindow, &m_pRenderer) < 0)
 #endif
 	{
 		return false;

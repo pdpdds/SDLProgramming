@@ -16,6 +16,7 @@ private:
 
 public:
 	SnakeMap(int width, int height);
+	~SnakeMap();
 
 	char TilesInfoOfIndex(int x, int y) const;
 	void SetTilesInfoOfIndex(int x, int y, char ch);

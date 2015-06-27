@@ -13,12 +13,30 @@
 /**
 	@brief 오브젝트 초기화 함수
 */
+
+ItemManager::ItemManager()
+{
+	speedItem = IMG_Load("speed_item.bmp"); ///< 스피드업 아이템 이미지 로드
+	tailItem = IMG_Load("tail_item.bmp");  ///< 꼬리 증가 아이템 이미지 로드
+}
+
+ItemManager::~ItemManager()
+{
+	if (pos != NULL)
+		delete pos;
+
+	SDL_FreeSurface(speedItem);
+	SDL_FreeSurface(tailItem);
+}
+
 void ItemManager::Init() 
 {
 	pos = new Point2D(0,0);		///< 좌표 초기화
 	inc = 0;					///< 아이템 종류 초기화
 	
 	this->CreateItem();			///< 아이템 생성
+
+	
 }	
 
 /**
@@ -41,11 +59,10 @@ void ItemManager::Draw()
 
 	SDL_Surface* item;
 
-	if(ch=='0')		item = IMG_Load("speed_item.bmp"); ///< 스피드업 아이템 이미지 로드
-	else			item = IMG_Load("tail_item.bmp");  ///< 꼬리 증가 아이템 이미지 로드
+	if (ch == '0')		item = speedItem; ///< 스피드업 아이템 이미지 로드
+	else			item = tailItem;  ///< 꼬리 증가 아이템 이미지 로드
 
 	DrawSurface(screen_, pos->x * 20, pos->y * 20, item);
-	SDL_FreeSurface(item);
 }	
 
 /**

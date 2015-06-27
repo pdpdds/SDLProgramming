@@ -21,13 +21,30 @@ Snake::Snake(int startPosX, int startPosY)
 	body.push_back( new Point2D(startPosX, startPosY) );
 	body.push_back( new Point2D(startPosX, startPosY) );
 	body.push_back( new Point2D(startPosX, startPosY) );
+
+	tail = IMG_Load("tail.bmp");
+	head = IMG_Load("head.bmp"); ///< 머리 그림
 }
 
+Snake::~Snake()
+{
+	SDL_FreeSurface(tail);
+	SDL_FreeSurface(head);
+
+	for (auto iter : body)
+	{
+		delete iter;
+	}
+
+	body.clear();
+}
 /**
 	@brief 오브젝트 초기화 함수
 */
 void Snake::Init() 
 {
+	
+
 	isArrive = true;
 
 	dir = kRIGHT;	///< 초기 진행방향 : 오른쪽
@@ -76,15 +93,11 @@ void Snake::Update()
 void Snake::Draw() 
 {
 	for(int i=body.size()-1; i>0; i--) ///< 꼬리 그림
-	{
-		SDL_Surface *tail = IMG_Load("tail.bmp");
+	{		
 		DrawSurface(screen_, body[i]->x * 20, body[i]->y * 20, tail);
-		SDL_FreeSurface(tail);
 	}
 
-	SDL_Surface *head = IMG_Load("head.bmp"); ///< 머리 그림
 	DrawSurface(screen_, body[0]->x*20, body[0]->y*20, head);
-	SDL_FreeSurface(head);
 }
 
 /**

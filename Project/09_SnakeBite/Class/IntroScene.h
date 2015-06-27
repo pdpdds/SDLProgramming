@@ -31,4 +31,7 @@ public:
 	virtual void Input(Game* owner);
 	virtual void Update(Game* owner);
 	virtual void Rendder(Game* owner);
+
+private:
+	IntroScene();
 };

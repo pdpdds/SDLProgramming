@@ -29,6 +29,7 @@ private:
 
 public:
 	Snake(int startPosX, int startPosY);
+	~Snake();
 
 	typedef enum {
 		kLEFT,
@@ -47,6 +48,9 @@ public:
 	int Speed() const;
 	bool IsArrive() const;
 	void SetItemManager(ItemManager* itemmanger);
+
+	SDL_Surface *tail;
+	SDL_Surface *head; ///< 머리 그림
 
 	
 };

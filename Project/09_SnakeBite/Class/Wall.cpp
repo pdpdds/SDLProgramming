@@ -14,14 +14,21 @@
 	@brief 생성자. 정보가 담긴 txt 파일을 읽어와 벽과 장애물을 구성한다.
 	@param mapFileName 맵 정보가 담긴 txt파일의 이름.
 */
-Wall::Wall(const char* mapFileName)
-{
-	FILE *file = fopen(mapFileName, "rt"); ///< 스트림 시작 읽기모드 
 
+Wall::~Wall()
+{
+	SDL_FreeSurface(bg);
+	SDL_FreeSurface(block);
+	blocks.clear();
+}
+
+Wall::Wall(const char* mapFileName)
+{	
+	SDL_RWops *file = SDL_RWFromFile(mapFileName, "rb");
 	char ch;
 	int w=0, h=0;
 	std::vector<char> horizontal;	 ///< 맵의 가로한줄의 정보를 담기위한 벡터 지역변수.
-	while( (ch=fgetc(file)) != EOF ) ///< 파일의 끝이 나올때 까지 한 문자씩 읽어옴
+	while (1 == SDL_RWread(file, &ch, sizeof(char), 1))
 	{
 		if(ch=='\n') ///< 줄바꿈이 나오면,
 		{
@@ -35,7 +42,12 @@ Wall::Wall(const char* mapFileName)
 		w++;						///< 가로 index 증가
 	}
 
-	fclose(file);	///< 스트림 종료
+	horizontal.clear();
+
+	SDL_RWclose(file);
+
+	bg = IMG_Load("gameBG.bmp");
+	block = IMG_Load("block.bmp");
 }
 
 /**
@@ -43,7 +55,7 @@ Wall::Wall(const char* mapFileName)
 */
 void Wall::Init()
 {
-	bg = IMG_Load("gameBG.bmp");
+	
 }
 
 /**
@@ -74,10 +86,8 @@ void Wall::Draw()
 		for(int w=0; w<blocks.at(h).size(); w++)
 		{
 			if(blocks.at(h).at(w)=='#') ///< 타일의 정보가 #이면 
-			{
-				SDL_Surface* block = IMG_Load("block.bmp");  
+			{				
 				DrawSurface(screen_, w*20, h*20, block); ///< 블록 이미지 출력
-				SDL_FreeSurface(block);
 			}
 		}
 	}

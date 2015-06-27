@@ -23,10 +23,12 @@ public:
 
 	void CreateItem();	///< 아이템을 만드는 함수
 
-	~ItemManager() 
-	{
-		if(pos!=NULL)
-			delete pos;
-	}
+	SDL_Surface* speedItem;
+	SDL_Surface* tailItem;
+
+	ItemManager();
+
+	~ItemManager();
+	
 };
 
