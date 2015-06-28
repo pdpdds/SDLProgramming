@@ -10,6 +10,13 @@
       <Platform>Win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Class\projS.cpp" />
+    <ClCompile Include="..\..\Class\SDLSingleton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Class\SDLSingleton.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F01DB01A-FF1E-4893-A6E5-E7021BF5D547}</ProjectGuid>
     <RootNamespace>xui</RootNamespace>
@@ -67,13 +74,6 @@
       <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="projS.cpp" />
-    <ClCompile Include="SDLSingleton.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="SDLSingleton.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
