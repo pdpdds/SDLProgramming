@@ -1,5 +1,12 @@
 #pragma once
 #include <SDL.h>
+
+/* Constants */
+const int WINDOW_WIDTH = 500;
+const int WINDOW_HEIGHT = 600; //575
+#define SDL_RATIO_X(width) width * ((float)SDLSingleton::GetInstance()->m_winWidth / (float)WINDOW_WIDTH)
+#define SDL_RATIO_Y(height) height * ((float)SDLSingleton::GetInstance()->m_winHeight / (float)WINDOW_HEIGHT)
+
 class SDLSingleton
 {
 public:

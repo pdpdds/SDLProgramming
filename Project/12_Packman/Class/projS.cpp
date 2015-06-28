@@ -1,10 +1,10 @@
+#include "SDLSingleton.h"
+#include <SDL.h>
+#include <SDL_mixer.h>
+#include <SDL_ttf.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <SDL.h>
-#include <SDL_ttf.h>
-#include <SDL_mixer.h>
-#include "SDLSingleton.h"
 
 #ifdef WIN32
 #include <Windows.h>
@@ -14,9 +14,13 @@
 #pragma comment(lib, "SDL2_mixer.lib")
 #endif
 
-/* Constants */
-const int WINDOW_WIDTH = 500;
-const int WINDOW_HEIGHT = 600; //575
+#ifdef WIN32
+#ifdef VLD_DEFINE
+#include <vld.h>
+#pragma comment(lib, "vld.lib")
+#endif
+#endif
+
 const char *CAPTION = "CSCI X070 - projS - jiva";
 const char *IMG_bg = "data/background2.bmp";
 const char *IMG_pacman_up = "data/pacman-U.bmp";
@@ -779,24 +783,24 @@ void shutdown()
 void text(char *str, int x, int y, int mode)
 {
 	/* Draw text to surface */
-	SDL_Color fontcolor = {0xff, 0xff, 0xff, 0};
-	SDL_Surface *txt;
-	txt = TTF_RenderText_Solid(font, str, fontcolor);
+	//SDL_Color fontcolor = {0xff, 0xff, 0xff, 0};
+	//SDL_Surface *txt;
+	//txt = TTF_RenderText_Solid(font, str, fontcolor);
 
 	/* Draw surface to screen */
-	draw(txt, x, y, mode);
+	//draw(txt, x, y, mode);
 }
 
 /* Render text to screen */
 void text2(char *str, int x, int y, int mode)
 {
 	/* Draw text to surface */
-	SDL_Color fontcolor = {0xff, 0xff, 0xff, 0};
-	SDL_Surface *txt;
-	txt = TTF_RenderText_Solid(font2, str, fontcolor);
+	//SDL_Color fontcolor = {0xff, 0xff, 0xff, 0};
+	//SDL_Surface *txt;
+	//txt = TTF_RenderText_Solid(font2, str, fontcolor);
 
 	/* Draw surface to screen */
-	draw(txt, x, y, mode);
+	//draw(txt, x, y, mode);
 }
 
 /* Draw function */
@@ -812,12 +816,12 @@ void draw(SDL_Surface *sur, int x, int y, int mode)
 	}
 	if(mode == 2) //just flip
 	{
-		SDLSingleton::GetInstance()->DoRender();
+		
 	}
 	if(mode == 3) //blit and flip
 	{
 		SDL_BlitSurface(sur, NULL, sur_screen, &dest);
-		SDLSingleton::GetInstance()->DoRender();
+		
 	}
 }
 
@@ -883,7 +887,6 @@ void clear(SDL_Surface *sur, int x, int y, int w, int h, int flip = 0)
 	SDL_FillRect(sur, &dest, 0);
 	if(flip)
 	{
-		SDLSingleton::GetInstance()->DoRender();
 		//SDL_Flip(sur);
 	}
 }
@@ -893,8 +896,7 @@ void clear(SDL_Surface *sur, SDL_Rect &dest, int flip = 0)
 {
 	SDL_FillRect(sur, &dest, 0);
 	if(flip)
-	{
-		SDLSingleton::GetInstance()->DoRender();
+	{		
 		//SDL_Flip(sur);
 	}
 }
@@ -1585,6 +1587,24 @@ void drawg(int ghostnum)
 	}
 }
 
+void RemoveAllTimer()
+{
+	if (timer_moveghosts)
+		SDL_RemoveTimer(timer_moveghosts);
+	if (timer_movepacman)
+		SDL_RemoveTimer(timer_movepacman);
+	if (timer_updategstat)
+		SDL_RemoveTimer(timer_updategstat);
+	if (timer_vulntimer)
+		SDL_RemoveTimer(timer_vulntimer);
+
+	timer_moveghosts = 0;
+	timer_movepacman = 0;
+	timer_updategstat = 0;
+	timer_vulntimer = 0;
+
+}
+
 /* Move Pacman */
 Uint32 move(Uint32 interval, void *param)
 {
@@ -1620,10 +1640,9 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+
+							RemoveAllTimer();
+							
 							return(interval);
 						}
 					}
@@ -1668,10 +1687,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1716,10 +1732,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1764,10 +1777,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1825,10 +1835,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1883,10 +1890,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1933,10 +1937,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -1983,10 +1984,7 @@ Uint32 move(Uint32 interval, void *param)
 							levelup = true;
 							updatestatus();
 							playsound(0, 1);
-							SDL_RemoveTimer(timer_moveghosts);
-							SDL_RemoveTimer(timer_movepacman);
-							SDL_RemoveTimer(timer_updategstat);
-							SDL_RemoveTimer(timer_vulntimer);
+							RemoveAllTimer();
 							return(interval);
 						}
 					}
@@ -2056,7 +2054,8 @@ Uint32 updategstat(Uint32 interval, void *param)
 /* Turn on vulnerable ghosts */
 void vulnOn()
 {
-	timer_vulntimer = SDL_AddTimer(10000, vulntimer, NULL);
+	if(!timer_vulntimer)
+		timer_vulntimer = SDL_AddTimer(10000, vulntimer, NULL);
 	for(int i = 0; i < 3; i++)
 	{
 		if(ghosts[i].w == 1 || ghosts[i].w == 3)
@@ -2083,6 +2082,7 @@ Uint32 vulntimer(Uint32 interval, void *param)
 {
 	vulnOff();
 	SDL_RemoveTimer(timer_vulntimer);
+	timer_vulntimer = 0;
 	return(interval);
 }
 
@@ -2105,13 +2105,15 @@ void game()
 	int speed = 5;
 	
 	/* Start ghost timer */
-	timer_moveghosts = SDL_AddTimer(speed, moveghosts, NULL);
+	if (!timer_moveghosts)
+		timer_moveghosts = SDL_AddTimer(speed, moveghosts, NULL);
 	
+	if (!timer_movepacman)
 	/* Start pacman timer */
-	timer_movepacman = SDL_AddTimer(speed, move, NULL);
-	
+		timer_movepacman = SDL_AddTimer(speed, move, NULL);
+	if (!timer_updategstat)
 	/* Start ghost status update timer */
-	timer_updategstat = SDL_AddTimer(5000, updategstat, NULL);
+		timer_updategstat = SDL_AddTimer(5000, updategstat, NULL);
 	
 	/* Start chomping sound */
 	playsound(2, 0);
@@ -2122,10 +2124,7 @@ void game()
 	{
 		if(killed)
 		{
-			SDL_RemoveTimer(timer_moveghosts);
-			SDL_RemoveTimer(timer_movepacman);
-			SDL_RemoveTimer(timer_updategstat);
-			SDL_RemoveTimer(timer_vulntimer);
+			RemoveAllTimer();			
 			lives--;
 			done = true;
 			break;
@@ -2135,10 +2134,27 @@ void game()
 			done = true;
 			break;
 		}
-		if(SDL_WaitEvent(&event)) //quit being a fucking CPU hog
+		while(SDL_PollEvent(&event)) //quit being a fucking CPU hog
 		{
 			switch(event.type)
 			{
+			case SDL_FINGERUP:
+			{
+				float fingerX = event.tfinger.x;
+				float fingerY = event.tfinger.y;
+
+				fingerX *= SDLSingleton::GetInstance()->m_winWidth;
+				fingerY *= SDLSingleton::GetInstance()->m_winHeight;
+
+				if (fingerX < (SDLSingleton::GetInstance()->m_winWidth / 4))
+					movewanted = L;
+				if (fingerX > (SDLSingleton::GetInstance()->m_winWidth - (SDLSingleton::GetInstance()->m_winWidth /4)))
+					movewanted = R;
+				if (fingerY < (SDLSingleton::GetInstance()->m_winHeight / 4))
+					movewanted = U;
+				if (fingerY >(SDLSingleton::GetInstance()->m_winHeight - (SDLSingleton::GetInstance()->m_winHeight / 4)))
+					movewanted = D;
+				}
 				case SDL_KEYDOWN:
 					switch(event.key.keysym.sym)
 					{
@@ -2172,6 +2188,9 @@ void game()
 					break;
 			}
 		}
+
+		SDLSingleton::GetInstance()->DoRender();
+
 	}
 }
 
@@ -2186,6 +2205,7 @@ extern "C" int SDL_main(int argc, char *argv[])
 	score = 0;
 	init_clerical();
 	init_game();
+	SDLSingleton::GetInstance()->DoRender();
 	int chan = playsound(1, 0);
 	while(Mix_Playing(chan) != 0);
 	while(true)

@@ -8,5 +8,5 @@ APP_OPTIM := release
 APP_ABI := armeabi
 APP_PLATFORM := android-9
 APP_STL := gnustl_static
-APP_CPPFLAGS += -fexceptions
+APP_CPPFLAGS += -fexceptions -std=c++11 -frtti
 LOCAL_CFLAGS += -O3

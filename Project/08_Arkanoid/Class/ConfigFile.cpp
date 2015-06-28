@@ -8,6 +8,9 @@
 
 #include "ConfigFile.h"
 #include <algorithm>
+#include <string>
+#include <sdl.h>
+#include <vector>
 
 ConfigFile::ConfigFile(string filename){
     ConfigFile::filename = filename;
@@ -57,7 +60,7 @@ bool ConfigFile::IsValidLine(string &line) const{
     
     //removing spaces
     //line.erase( remove( line.begin(), line.end(), ' ' ), line.end() );
-	line.erase(remove_if(line.begin(), line.end(), isspace), line.end());
+	line.erase(remove_if(line.begin(), line.end(), ::isspace), line.end());
     
     //counting comma's
     for(size_t i=0; i<line.length(); i++)
@@ -127,24 +130,37 @@ void ConfigFile::ExtractContents(string &line, size_t line_number){
 }
 
 void ConfigFile::Parse(){
-    ifstream file;
-    file.open(filename.c_str());
+	SDL_RWops *file = SDL_RWFromFile(filename.c_str(), "rb");
     
     if(!file)
         ExitWithError("ConfigFile: File" + filename + "couldn't be found!\n");
     
-    string line ;
+ 
     size_t line_number = 0;
-    while(getline(file, line)){
-        ++line_number;
-        
-        RemoveComment(line);
-        if(HasOnlyWhiteSpace(line)) // empty line so we continue
-            continue;
-        if(!IsValidLine(line))
-            ExitWithError("ConfigFile: Found invalid line at " + line_number);
-        ExtractContents(line, line_number);
+	std::vector<char> horizontal;
+	char ch;
+	while (1 == SDL_RWread(file, &ch, sizeof(char), 1))
+	{
+		if (ch == '\n')
+		{
+			++line_number;
+			std::string line(horizontal.begin(), horizontal.end());
+			RemoveComment(line);
+			if (HasOnlyWhiteSpace(line)) // empty line so we continue
+			{
+				horizontal.clear();
+				continue;
+			}
+			if (!IsValidLine(line))
+				ExitWithError("ConfigFile: Found invalid line at " + line_number);
+			ExtractContents(line, line_number);
+
+			horizontal.clear();
+			continue;
+		}
+
+		horizontal.push_back(ch);        
     }
 
-    file.close();
+	SDL_RWclose(file);
 }

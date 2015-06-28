@@ -10,7 +10,7 @@ class IMSListModel : public gcn::ListModel
 public:
 	int getNumberOfElements()
 	{
-		return 3;
+		return 2;
 	}
 
 	std::string getElementAt(int i)
@@ -21,8 +21,6 @@ public:
 			return std::string("1.ims");
 		case 1:
 			return std::string("2.ims");
-		case 2:
-			return std::string("3.ims");
 		default: // Just to keep warnings away
 			return std::string("");
 		}

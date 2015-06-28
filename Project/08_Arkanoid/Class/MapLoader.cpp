@@ -7,6 +7,7 @@
 //
 
 #include "MapLoader.h"
+#include <vector>
 // offsets for placing blocks properly on screen such that its edges are aligned with screen edges
 #define offsetX g_Game.GetScreen_W()/(float)BASE_SCREEN_X*value.frameWidth/2.0
 #define offsetY g_Game.GetScreen_H()/(float)BASE_SCREEN_Y*value.frameHeight/2.0
@@ -32,57 +33,65 @@ list<GameObject*> MapLoader::LoadMap(string filename){
     list<GameObject*> return_val;
     
     // opening map file
-    ifstream file;
-    file.open(filename.c_str());
+	SDL_RWops *file = SDL_RWFromFile(filename.c_str(), "rb");
     
-    // buffer
-    string line;
-    
+ 
     // setting y-coordinate starting position
     float posY =0;
     
     // loading bitmaps to a map 
     LoadBitmaps();
-    
+	std::vector<char> horizontal;
+	char ch;
     // iterating through lines of map file
-    while(getline(file, line)){
-        
-        // if line is empty then we continue
-        if(!line.length()){
-            posY += g_Game.GetScreen_H()/20;
-            continue;
-        }
-        
-        // setting x-coordinate starting position
-        float posX = 0;
-        
-        //iterating through characters in line
-        for(int i=0; i<20; i++){
-            
-            //if we have an empty symbol we continue in a row and move posX
-            if(line[i] == ' '){
-                posX += g_Game.GetScreen_W()/20;
-                continue;
-            }
-            
-            //Receiving value from config file map
-            Value value = configfile->GetValue_at_Key(line[i]);
-            
-            Block* g_object = new Block(bitmaps.find(line[i])->second , value.maxFrame, value.frameDelay, value.frameWidth, value.frameHeight,
-                                             value.animationColumns, value.animationDirection);
-            
-            g_object->Init(posX+offsetX, posY+offsetY, value.speed, value.dirX, value.health);
-            
-            return_val.push_back(g_object);
-            
-            posX += g_Game.GetScreen_W()/20; // calculating X coordinate
-            
-        }
-        
-        posY += g_Game.GetScreen_H()/20;     // calculating y coordinate
+	while (1 == SDL_RWread(file, &ch, sizeof(char), 1))
+	{
+		if (ch == '\n')
+		{
+			std::string line(horizontal.begin(), horizontal.end());
+
+			// if line is empty then we continue
+			if (!line.length()){
+				posY += g_Game.GetScreen_H() / 20;
+				horizontal.clear();
+				continue;
+			}
+
+			// setting x-coordinate starting position
+			float posX = 0;
+
+			//iterating through characters in line
+			for (int i = 0; i < 20; i++){
+
+				//if we have an empty symbol we continue in a row and move posX
+				if (line[i] == ' '){
+					posX += g_Game.GetScreen_W() / 20;					
+					continue;
+				}
+
+				//Receiving value from config file map
+				Value value = configfile->GetValue_at_Key(line[i]);
+
+				Block* g_object = new Block(bitmaps.find(line[i])->second, value.maxFrame, value.frameDelay, value.frameWidth, value.frameHeight,
+					value.animationColumns, value.animationDirection);
+
+				g_object->Init(posX + offsetX, posY + offsetY, value.speed, value.dirX, value.health);
+
+				return_val.push_back(g_object);
+
+				posX += g_Game.GetScreen_W() / 20; // calculating X coordinate
+
+			}
+
+			posY += g_Game.GetScreen_H() / 20;     // calculating y coordinate
+			horizontal.clear();
+			continue;
+		}
+
+		horizontal.push_back(ch);
     }
     
-    
+	SDL_RWclose(file);
     
     return return_val;
 }
