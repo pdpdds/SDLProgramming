@@ -11,44 +11,29 @@
     <Filter Include="win32">
       <UniqueIdentifier>{b7973abc-a1cb-40bc-87c3-87547b07deea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Library">
+      <UniqueIdentifier>{6a45ae4c-fa93-4c3f-b603-fa8e7d5c45d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Goal">
+      <UniqueIdentifier>{7d3c32c1-22ea-4cd4-8300-1b3b6992029c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{1fc316f3-406f-459e-84b6-a1c586218bae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tile">
+      <UniqueIdentifier>{c2a1b94b-0f0e-483b-984a-d4de7f671f94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AI">
+      <UniqueIdentifier>{d48e7f38-ff0f-42a8-be58-6ca160d58479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{23c8e851-9cb3-44b1-b0c3-6d163332378c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Class\AnimatedGraphic.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\base64.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Bomb.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\BreakableLayer.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Camera.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\CollisionManager.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\CrudeTimer.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\ExploreGoal_Evaluator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Explosion.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\FrameCounter.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Game.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Class\GameMap.cpp">
       <Filter>Class</Filter>
     </ClCompile>
@@ -58,216 +43,186 @@
     <ClCompile Include="..\..\Class\GameObjectManager.cpp">
       <Filter>Class</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Class\GameOverState.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\GameStateMachine.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\GetBombGoal_Evaluator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_Explore.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_FollowPath.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_GetItem.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_InstallBomb.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_MoveToPosition.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_SeekToPosition.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_SetBomb.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_Think.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_TraverseEdge.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Goal_Wander.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\GraphEdgeTypes.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\IDGenerator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\InputHandler.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\InstallBombGoal_Evaluator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Item.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Class\Level.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\LevelParser.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\MainMenuState.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\MapLoader.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\MenuButton.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\MessageDispatcher.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\ObjectLayer.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\PathPlanner.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\PauseState.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\PlatformerObject.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Player.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\PlayState.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Regulator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\ScrollingBackground.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\SoundManager.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\StateParser.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\SteeringBehaviors.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\TextureManager.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\TileLayer.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\tinystr.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\tinyxml.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\tinyxmlerror.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\tinyxmlparser.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\TriggerGenerator.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\TriggerItemGiver.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Vector2D.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\Wall.cpp">
-      <Filter>Class</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Class\main.cpp">
       <Filter>Class</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
       <Filter>win32</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Class\base64.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxmlparser.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxmlerror.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinyxml.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\tinystr.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\CrudeTimer.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\FrameCounter.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Vector2D.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TextureManager.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\SoundManager.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\IDGenerator.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_Explore.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_FollowPath.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_GetItem.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_InstallBomb.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_MoveToPosition.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_SeekToPosition.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_SetBomb.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_Think.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_TraverseEdge.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Goal_Wander.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ExploreGoal_Evaluator.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Regulator.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MessageDispatcher.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MainMenuState.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\main.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\InstallBombGoal_Evaluator.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Wall.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TriggerItemGiver.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TriggerGenerator.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\AnimatedGraphic.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Camera.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\InputHandler.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PauseState.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PlatformerObject.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\SteeringBehaviors.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PathPlanner.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\MenuButton.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GraphEdgeTypes.cpp">
+      <Filter>AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TileLayer.cpp">
+      <Filter>Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ObjectLayer.cpp">
+      <Filter>Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ScrollingBackground.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\StateParser.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PlayState.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\LevelParser.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameStateMachine.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameOverState.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\BreakableLayer.cpp">
+      <Filter>Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\CollisionManager.cpp">
+      <Filter>Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GetBombGoal_Evaluator.cpp">
+      <Filter>Goal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Bomb.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Explosion.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Item.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Player.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Game.cpp">
+      <Filter>Library</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Class\AnimatedGraphic.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\AStarHeuristicPolicies.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\autolist.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\base64.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Bomb.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Class\BombermanStructure.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\BreakableLayer.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\C2DMatrix.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Callback.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Camera.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Class\cellspacepartition.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Class\Collision.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\CollisionManager.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\ConsoleUtils.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\CrudeTimer.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Enemy.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\ExploreGoal_Evaluator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Explosion.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\FrameCounter.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Game.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GameConstant.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Class\GameMap.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GameObject.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Class\GameObjectFactory.h">
@@ -276,241 +231,10 @@
     <ClInclude Include="..\..\Class\GameObjectManager.h">
       <Filter>Class</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Class\GameOverState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GameState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GameStateMachine.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\geometry.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GetBombGoal_Evaluator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Composite.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Evaluator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Explore.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_FollowPath.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_GetItem.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_InstallBomb.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_MoveToPosition.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_SeekToPosition.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_SetBomb.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Think.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_TraverseEdge.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Types.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Goal_Wander.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GraphAlgorithms.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GraphEdgeTypes.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\GraphNodeTypes.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\HandyGraphFunctions.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\IDGenerator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\InputHandler.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\InstallBombGoal_Evaluator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\InvertedAABBox2D.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Item.h">
-      <Filter>Class</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Class\Layer.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Class\Level.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\LevelParser.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\LoaderParams.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\MainMenuState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\MapLoader.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\MenuButton.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\MenuState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\MessageDispatcher.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Messages.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\NodeTypeEnumerations.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\ObjectLayer.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\pathedge.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PathManager.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PathPlanner.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PathTarget.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PauseState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PlatformerObject.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Player.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PlayState.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\PriorityQueue.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Regulator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\ResourceConstant.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\ScrollingBackground.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\SearchTerminationPolicies.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Smoother.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Snail.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\SoundManager.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\SparseGraph.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\StateParser.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\SteeringBehaviors.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Stream_Utility_Functions.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Telegram.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TextureManager.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TileLayer.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TimeSlicedGraphAlgorithms.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\tinystr.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\tinyxml.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Transformations.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Trigger.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TriggerGenerator.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TriggerItemGiver.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TriggerLimitedLifeTime.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TriggerRegion.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TriggerSystem.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Turret.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\TypeToString.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\utils.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Vector2D.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Wall.h">
-      <Filter>Class</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Class\Wall2D.h">
       <Filter>Class</Filter>
     </ClInclude>
     <ClInclude Include="stdafx.h">
@@ -518,6 +242,285 @@
     </ClInclude>
     <ClInclude Include="targetver.h">
       <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\autolist.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\base64.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\C2DMatrix.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\tinyxml.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\tinystr.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\utils.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\CrudeTimer.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ConsoleUtils.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\FrameCounter.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Transformations.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Vector2D.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TextureManager.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SoundManager.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\IDGenerator.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Composite.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Evaluator.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Explore.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_FollowPath.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_GetItem.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_InstallBomb.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_MoveToPosition.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_SeekToPosition.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_SetBomb.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Think.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_TraverseEdge.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Types.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Goal_Wander.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ExploreGoal_Evaluator.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Regulator.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PriorityQueue.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Messages.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MessageDispatcher.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MainMenuState.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\InstallBombGoal_Evaluator.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Wall2D.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Wall.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Turret.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TriggerSystem.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TriggerRegion.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TriggerLimitedLifeTime.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TriggerGenerator.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TriggerItemGiver.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Trigger.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\AnimatedGraphic.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Camera.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\InputHandler.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\InvertedAABBox2D.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PauseState.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PlatformerObject.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Smoother.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Stream_Utility_Functions.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Telegram.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SearchTerminationPolicies.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SparseGraph.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SteeringBehaviors.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TimeSlicedGraphAlgorithms.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PathTarget.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\pathedge.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PathManager.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PathPlanner.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MenuState.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\MenuButton.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ResourceConstant.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\AStarHeuristicPolicies.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\geometry.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GraphAlgorithms.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GraphEdgeTypes.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GraphNodeTypes.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\HandyGraphFunctions.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\NodeTypeEnumerations.h">
+      <Filter>AI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TileLayer.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ObjectLayer.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ScrollingBackground.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\StateParser.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PlayState.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\LoaderParams.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\LevelParser.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameStateMachine.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameOverState.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameState.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\BreakableLayer.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\CollisionManager.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Collision.h">
+      <Filter>Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GetBombGoal_Evaluator.h">
+      <Filter>Goal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Bomb.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Enemy.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Explosion.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Item.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Player.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Game.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameConstant.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameObject.h">
+      <Filter>GameObject</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

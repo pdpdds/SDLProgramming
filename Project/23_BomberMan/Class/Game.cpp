@@ -15,7 +15,6 @@
 #include "ScrollingBackground.h"
 #include "SoundManager.h"
 #include "GameOverState.h"
-#include "Snail.h"
 #include "Bomb.h"
 #include "Wall.h"
 #include "Explosion.h"
@@ -124,8 +123,7 @@ bool Game::init(const char* title, int xpos, int ypos, int width, int height, bo
     // register the types for the game
     TheGameObjectFactory::Instance()->registerType("MenuButton", new MenuButtonCreator());
     TheGameObjectFactory::Instance()->registerType("AnimatedGraphic", new AnimatedGraphicCreator());
-    TheGameObjectFactory::Instance()->registerType("ScrollingBackground", new ScrollingBackgroundCreator());
-    TheGameObjectFactory::Instance()->registerType("Snail", new SnailCreator());
+    TheGameObjectFactory::Instance()->registerType("ScrollingBackground", new ScrollingBackgroundCreator());    
 	TheGameObjectFactory::Instance()->registerType("Wall", new WallCreator());
 	TheGameObjectFactory::Instance()->registerType("Explosion", new ExplosionCreator());
     

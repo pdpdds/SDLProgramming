@@ -124,7 +124,6 @@
     <ClCompile Include="..\..\Class\LevelParser.cpp" />
     <ClCompile Include="..\..\Class\main.cpp" />
     <ClCompile Include="..\..\Class\MainMenuState.cpp" />
-    <ClCompile Include="..\..\Class\MapLoader.cpp" />
     <ClCompile Include="..\..\Class\MenuButton.cpp" />
     <ClCompile Include="..\..\Class\MessageDispatcher.cpp" />
     <ClCompile Include="..\..\Class\ObjectLayer.cpp" />
@@ -159,7 +158,6 @@
     <ClInclude Include="..\..\Class\BombermanStructure.h" />
     <ClInclude Include="..\..\Class\BreakableLayer.h" />
     <ClInclude Include="..\..\Class\C2DMatrix.h" />
-    <ClInclude Include="..\..\Class\Callback.h" />
     <ClInclude Include="..\..\Class\Camera.h" />
     <ClInclude Include="..\..\Class\cellspacepartition.h" />
     <ClInclude Include="..\..\Class\Collision.h" />
@@ -209,7 +207,6 @@
     <ClInclude Include="..\..\Class\LevelParser.h" />
     <ClInclude Include="..\..\Class\LoaderParams.h" />
     <ClInclude Include="..\..\Class\MainMenuState.h" />
-    <ClInclude Include="..\..\Class\MapLoader.h" />
     <ClInclude Include="..\..\Class\MenuButton.h" />
     <ClInclude Include="..\..\Class\MenuState.h" />
     <ClInclude Include="..\..\Class\MessageDispatcher.h" />
@@ -230,7 +227,6 @@
     <ClInclude Include="..\..\Class\ScrollingBackground.h" />
     <ClInclude Include="..\..\Class\SearchTerminationPolicies.h" />
     <ClInclude Include="..\..\Class\Smoother.h" />
-    <ClInclude Include="..\..\Class\Snail.h" />
     <ClInclude Include="..\..\Class\SoundManager.h" />
     <ClInclude Include="..\..\Class\SparseGraph.h" />
     <ClInclude Include="..\..\Class\StateParser.h" />
@@ -250,7 +246,6 @@
     <ClInclude Include="..\..\Class\TriggerRegion.h" />
     <ClInclude Include="..\..\Class\TriggerSystem.h" />
     <ClInclude Include="..\..\Class\Turret.h" />
-    <ClInclude Include="..\..\Class\TypeToString.h" />
     <ClInclude Include="..\..\Class\utils.h" />
     <ClInclude Include="..\..\Class\Vector2D.h" />
     <ClInclude Include="..\..\Class\Wall.h" />

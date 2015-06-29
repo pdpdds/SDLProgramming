@@ -10,8 +10,6 @@
 //-----------------------------------------------------------------------------
 
 struct Telegram;
-//#include "misc/cgdi.h"
-//#include "misc/TypeToString.h"
 #include"Vector2D.h"
 #include <stdexcept>
 

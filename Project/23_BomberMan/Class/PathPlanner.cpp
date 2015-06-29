@@ -436,7 +436,7 @@ bool PathPlanner::RequestPathToPosition(Vector2D TargetPos)
 #endif
 
 	typedef FindNodeIndex t_con;
-	typedef Graph_SearchDijkstras_TS<GameMap::NavGraph, t_con> DijSearch;
+	typedef Graph_SearchDijkstras_TS< SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>, t_con> DijSearch;
 
 	m_pCurrentSearch = new DijSearch(*m_NavGraph,
 		ClosestNodeToBot,
@@ -478,7 +478,7 @@ bool PathPlanner::RequestPathToItem(unsigned int ItemType)
 
   //create an instance of the search algorithm
   typedef FindActiveTrigger<Trigger<GameObject> > t_con; 
-  typedef Graph_SearchDijkstras_TS<GameMap::NavGraph, t_con> DijSearch;
+  typedef Graph_SearchDijkstras_TS< SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>, t_con> DijSearch;
   
   m_pCurrentSearch = new DijSearch(*m_NavGraph,
                                    ClosestNodeToBot,

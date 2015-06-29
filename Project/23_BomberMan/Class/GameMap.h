@@ -19,14 +19,14 @@ class GameMap
 {
 public:
 
-	typedef NavGraphNode<Trigger<GameObject>*>         GraphNode;
-	typedef SparseGraph<GraphNode, BombermanGraphEdge>      NavGraph;
-  typedef CellSpacePartition<NavGraph::NodeType*>   CellSpace;
+	//typedef NavGraphNode<Trigger<GameObject>*>         GraphNode;
+	//typedef SparseGraph<GraphNode, BombermanGraphEdge>      NavGraph;
+	typedef CellSpacePartition<SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType*>   CellSpace;
   
 private:
 
   //this map's accompanying navigation graph
-  NavGraph*                          m_pNavGraph;  
+	SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>*                          m_pNavGraph;
 
   //the graph nodes will be partitioned enabling fast lookup
   CellSpace*                        m_pSpacePartition;
@@ -61,7 +61,7 @@ public:
   Vector2D GetRandomNodeLocation()const;
   
   
-  NavGraph*                          GetNavGraph()const{return m_pNavGraph;}
+  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>*                          GetNavGraph()const{ return m_pNavGraph; }
  
   CellSpace* const                   GetCellSpace()const{return m_pSpacePartition;}
   

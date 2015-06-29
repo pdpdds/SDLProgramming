@@ -32,8 +32,8 @@ bool GameMap::AddNavigationNode(int tileRow, int tileColumn)
 
 	if (nodeIndex >= 0)
 	{
-		NavGraph::NodeIterator NodeItr(*m_pNavGraph);
-		for (NavGraph::NodeType* pN = NodeItr.begin(); !NodeItr.end(); pN = NodeItr.next())
+		SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeIterator NodeItr(*m_pNavGraph);
+		for (SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType* pN = NodeItr.begin(); !NodeItr.end(); pN = NodeItr.next())
 		{
 			if (pN->Index() == nodeIndex)
 			{
@@ -53,7 +53,7 @@ bool GameMap::CreateNaviGraph(std::vector<Vector2D> vecNavi)
 {
 	Clear();
 
-	m_pNavGraph = new NavGraph(false);
+	m_pNavGraph = new  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>(false);
 
 	m_pNavGraph->Load(vecNavi);
 
@@ -97,15 +97,15 @@ void GameMap::PartitionNavGraph()
 
   m_iSizeX = 32 * 20;
   m_iSizeY = 32 * 20;
-  m_pSpacePartition = new CellSpacePartition<NavGraph::NodeType*>(m_iSizeX,
+  m_pSpacePartition = new CellSpacePartition< SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType*>(m_iSizeX,
                                                                   m_iSizeY,
                                                                   20,
                                                                   20,
                                                                   m_pNavGraph->NumNodes());
 
   //add the graph nodes to the space partition
-  NavGraph::NodeIterator NodeItr(*m_pNavGraph);
-  for (NavGraph::NodeType* pN=NodeItr.begin();!NodeItr.end();pN=NodeItr.next())
+  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeIterator NodeItr(*m_pNavGraph);
+  for (SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType* pN = NodeItr.begin(); !NodeItr.end(); pN = NodeItr.next())
   {
     m_pSpacePartition->AddEntity(pN);
   }   
@@ -118,9 +118,9 @@ void GameMap::PartitionNavGraph()
 //-----------------------------------------------------------------------------
 Vector2D GameMap::GetRandomNodeLocation()const
 {
-  NavGraph::ConstNodeIterator NodeItr(*m_pNavGraph);
+	SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::ConstNodeIterator NodeItr(*m_pNavGraph);
   int RandIndex = RandInt(0, m_pNavGraph->NumActiveNodes()-1);
-  const NavGraph::NodeType* pN = NodeItr.begin();
+  const  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType* pN = NodeItr.begin();
   while (--RandIndex > 0)
   {
     pN = NodeItr.next();

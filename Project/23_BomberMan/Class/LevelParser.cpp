@@ -70,11 +70,7 @@ Level* LevelParser::parseLevel(const char *levelFile)
 #ifndef WIN32
 	delete[] file_contents;
 #endif  
-    
-    // create the level object
-    Level* pLevel = new Level();
-	Dispatcher->SetLevel(pLevel);
-    
+        
     // get the root node and display some values
     TiXmlElement* pRoot = levelDocument.RootElement();
     
@@ -86,7 +82,9 @@ Level* LevelParser::parseLevel(const char *levelFile)
     pRoot->Attribute("width", &m_width);
     pRoot->Attribute("height", &m_height);
 
-	pLevel->SetWorldBoundary(m_width*m_tileSize, m_height*m_tileSize);
+	// create the level object
+	Level* pLevel = new Level(m_width*m_tileSize, m_height*m_tileSize);
+	Dispatcher->SetLevel(pLevel);
 	
     //we know that properties is the first child of the root
     TiXmlElement* pProperties = pRoot->FirstChildElement();

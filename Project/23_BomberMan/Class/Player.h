@@ -112,7 +112,8 @@ private:
 	//AI의 목적을 중재하여 상황에 따른 목적을 설정하고 해당 목적을 수행한다.
 	Goal_Think* m_pBrain;
 
-	Regulator*                         m_pGoalArbitrationRegulator;
+	//목표 판단
+	Regulator*  m_pGoalArbitrationRegulator;
 };
 
 #endif

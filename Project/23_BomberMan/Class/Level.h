@@ -44,7 +44,7 @@ struct Tileset
 class Level
 {
 public:
-    
+	Level(int width, int height);
 	~Level();
     
 	void Update();
@@ -110,17 +110,10 @@ public:
 	Vector2D GetCloseWallPos(Vector2D& source);
 	
 	bool isPathObstructed(Vector2D A, Vector2D B, double    BoundingRadius)const;
-
-	void SetWorldBoundary(int width, int height){ m_mapWidth = width; m_mapHeight = height; }
-
-	Vector2D                           GetRandomSpawnPoint(){ return m_SpawnPoints[RandInt(0, m_SpawnPoints.size() - 1)]; }
+	
+	Vector2D GetRandomSpawnPoint(){ return m_SpawnPoints[RandInt(0, m_SpawnPoints.size() - 1)]; }
 	
 private:
-    
-    friend class LevelParser;
-    
-	Level();
-    
 	std::vector<Player*> m_players;
     
     std::vector<Layer*> m_layers;
@@ -137,7 +130,6 @@ private:
 	TriggerGenerator m_TriggerGenerator;
 
 	std::vector<Vector2D>  m_SpawnPoints;
-
 	PathManager<PathPlanner>*  m_pPathManager;
 	GameMap*  m_pMap;
 };

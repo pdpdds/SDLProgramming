@@ -1,11 +1,3 @@
-//
-//  Player.cpp
-//  SDL Game Programming Book
-//
-//  Created by shaun mitchell on 12/01/2013.
-//  Copyright (c) 2013 shaun mitchell. All rights reserved.
-//
-
 #include "Player.h"
 #include "Game.h"
 #include "InputHandler.h"
@@ -566,67 +558,14 @@ bool Player::HandleMessage(const Telegram& msg)
 	switch (msg.Msg)
 	{
 	case Msg_NavigationChanged:
-
 		m_pLevel->GetPathManager()->UpdateSearches();
-
-		return true; //msg handled
-
-	/*case Msg_TakeThatMF:
-
-		//just return if already dead or spawning
-		if (isDead() || isSpawning()) return true;
-
-		//the extra info field of the telegram carries the amount of damage
-		ReduceHealth(DereferenceToType<int>(msg.ExtraInfo));
-
-		//if this bot is now dead let the shooter know
-		if (isDead())
-		{
-			Dispatcher->DispatchMsg(SEND_MSG_IMMEDIATELY,
-				ID(),
-				msg.Sender,
-				Msg_YouGotMeYouSOB,
-				NO_ADDITIONAL_INFO);
-		}
-
 		return true;
 
-	case Msg_YouGotMeYouSOB:
-
-		IncrementScore();
-
-		//the bot this bot has just killed should be removed as the target
-		m_pTargSys->ClearTarget();
-
-		return true;
-
-	case Msg_GunshotSound:
-
-		//add the source of this sound to the bot's percepts
-		GetSensoryMem()->UpdateWithSoundSource((Raven_Bot*)msg.ExtraInfo);
-
-		return true;
-
-	case Msg_UserHasRemovedBot:
-	{
-
-		Raven_Bot* pRemovedBot = (Raven_Bot*)msg.ExtraInfo;
-
-		GetSensoryMem()->RemoveBotFromMemory(pRemovedBot);
-
-		//if the removed bot is the target, make sure the target is cleared
-		if (pRemovedBot == GetTargetSys()->GetTarget())
-		{
-			GetTargetSys()->ClearTarget();
-		}
-
-		return true;
-	}*/
 	case Msg_BombExplosion:
 	{
 		m_playerStat.currentBombCount--;
 
-		for (std::vector<int>::iterator it = m_installedBomb.begin(); it != m_installedBomb.end(); ++it)// < m_gameObjects.size(); i++)
+		for (auto it = m_installedBomb.begin(); it != m_installedBomb.end(); ++it)
 		{
 			if (*it == msg.Sender)
 			{

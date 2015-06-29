@@ -22,8 +22,8 @@ private:
 public:
 
   //for ease of use typdef the graph edge/node types used by the navgraph
-	typedef GameMap::NavGraph::EdgeType           EdgeType;
-	typedef GameMap::NavGraph::NodeType           NodeType;
+	typedef  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::EdgeType           EdgeType;
+	typedef  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>::NodeType           NodeType;
   typedef std::list<PathEdge>                     Path;
   
 private:
@@ -34,7 +34,7 @@ private:
 	GameMap* m_pMap;
 
   //a reference to the navgraph
-	const GameMap::NavGraph*          m_NavGraph;
+	const  SparseGraph<NavGraphNode<Trigger<GameObject>*>, BombermanGraphEdge>*          m_NavGraph;
 
   //a pointer to an instance of the current graph search algorithm.
   Graph_SearchTimeSliced<EdgeType>*  m_pCurrentSearch;

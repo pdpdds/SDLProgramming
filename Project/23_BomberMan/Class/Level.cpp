@@ -18,7 +18,9 @@
 #include "MessageDispatcher.h"
 #include "Messages.h"
 
-Level::Level()
+Level::Level(int width, int height)
+: m_mapWidth(width)
+, m_mapHeight(height)
 {
 	m_pPathManager = new PathManager<PathPlanner>(30);
 	m_pMap = new GameMap();
