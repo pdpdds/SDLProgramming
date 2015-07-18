@@ -17,15 +17,15 @@
 
 MenuState::MenuState() : State(){
     
-    bgs.push_back(new Background("./data/graphics/background2.jpg", 1366, 768));
+    bgs.push_back(new Background("data/graphics/background2.jpg", 1366, 768));
     //bgs.push_back(new Background("./data/graphics/starsback.png", 1700, 900));
     //bgs.push_back(new Background("./data/graphics/starsmidground.png", 1800, 1050));
-    bgs.push_back(new Background("./data/graphics/starsforeground.png", 1550, 950));
-    bgs.push_back(new Background("./data/graphics/starsforeforeground.png", 1800, 1050));
+    bgs.push_back(new Background("data/graphics/starsforeground.png", 1550, 950));
+    bgs.push_back(new Background("data/graphics/starsforeforeground.png", 1800, 1050));
     
     curMenu = MAIN_MENU;        // setting first visible menu as MAIN MENU
     
-    font = TTF_OpenFont("./data/font.ttf", 28);        // loading menu font
+    font = TTF_OpenFont("data/font.ttf", 28);        // loading menu font
     if(!font) {
         cerr << "Could not load font " << TTF_GetError << endl;
         exit(1);

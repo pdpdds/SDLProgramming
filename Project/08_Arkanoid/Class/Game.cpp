@@ -20,14 +20,14 @@ Game::~Game(){
 
 Game::Game(){
     
-    music = Mix_LoadMUS("./data/sounds/music.mp3");
-    sound = Mix_LoadWAV("./data/sounds/sfx.wav");
+    music = Mix_LoadMUS("data/sounds/music.mp3");
+    sound = Mix_LoadWAV("data/sounds/sfx.wav");
    // SDL_WM_SetCaption("ARKANOID", NULL);
         
     if(initSystems() == -1)
         cerr << "Problem occured while initializing SDL systems" << endl;
     
-    font = TTF_OpenFont("./data/mainfont.ttf", 35);
+    font = TTF_OpenFont("data/mainfont.ttf", 35);
     if(!font) {
         cerr << "Could not load font " << TTF_GetError << endl;
         exit(1);
@@ -239,7 +239,7 @@ string IntToStr(int n){
 
 void DisplayFinishText(int ms, const char* text){
     
-    TTF_Font* font = TTF_OpenFont("./data/font.ttf", 70);
+    TTF_Font* font = TTF_OpenFont("data/font.ttf", 70);
     
     int posX = g_GamePtr->GetScreen_W()/2;
     int posY = g_GamePtr->GetScreen_H()/2;

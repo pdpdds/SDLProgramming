@@ -15,7 +15,7 @@
 State::State(){
     //ifstream file;
     //file.open("./data/highscores");
-	SDL_RWops *file = SDL_RWFromFile("./data/highscores", "rb");
+	SDL_RWops *file = SDL_RWFromFile("data/highscores", "rb");
     
 	std::vector<char> horizontal;
 	char ch;

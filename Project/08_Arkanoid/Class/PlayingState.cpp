@@ -12,10 +12,10 @@ PlayingState::PlayingState() : State(){
     
     changingstate = false;
     
-    platform = new Platform("./data/graphics/platformw.png", 3, 0, 66, 18, 4, 0);
+    platform = new Platform("data/graphics/platformw.png", 3, 0, 66, 18, 4, 0);
   
-    ball = new Ball("./data/graphics/ball.png", 0, 1, 16, 16, 1, 1);
-    second_ball = new Ball("./data/graphics/ball.png", 0, 1, 16, 16, 1, 1);
+    ball = new Ball("data/graphics/ball.png", 0, 1, 16, 16, 1, 1);
+    second_ball = new Ball("data/graphics/ball.png", 0, 1, 16, 16, 1, 1);
     
     //pushing ball and platform on the list
     gobjects.push_back(platform);
@@ -23,23 +23,23 @@ PlayingState::PlayingState() : State(){
     
     
     //loading blocks
-    map_loader = new MapLoader("./data/config");
-    gobjects.splice(gobjects.end(), map_loader->LoadMap("./data/map.cfg"));
+    map_loader = new MapLoader("data/config");
+    gobjects.splice(gobjects.end(), map_loader->LoadMap("data/map.cfg"));
     
     
     //loading projectiles
     projectiles = new Projectile*[10];     // Creating 10 projectile pointers as arbitrary value
     for(int i=0; i<3; i++){
-        projectiles[i] = new Projectile("./data/graphics/effect.png", 23, 4, 16, 14, 24, 1);
+        projectiles[i] = new Projectile("data/graphics/effect.png", 23, 4, 16, 14, 24, 1);
         gobjects.push_back(projectiles[i]);
     }
     
     effects = new Effect*[3];
-    effects[0] = new Effect("./data/graphics/effect.png", 23, 4, 16, 14, 24, 1);
+    effects[0] = new Effect("data/graphics/effect.png", 23, 4, 16, 14, 24, 1);
     effects[0]->SetEffectType(GUN);
-    effects[1] = new Effect("./data/graphics/effect2.png", 10, 7, 34, 29, 11, 1);
+    effects[1] = new Effect("data/graphics/effect2.png", 10, 7, 34, 29, 11, 1);
     effects[1]->SetEffectType(MAGNET);
-    effects[2] = new Effect("./data/graphics/effect3.png", 59, 1, 60, 60, 8, 1);
+    effects[2] = new Effect("data/graphics/effect3.png", 59, 1, 60, 60, 8, 1);
     effects[2]->SetEffectType(SECONDBALL);
     
     
@@ -132,13 +132,13 @@ void PlayingState::InitState(){
 }
 
 void PlayingState::SaveHighscores(){
-    ofstream file;
-    file.open("./data/highscores");
+   /* ofstream file;
+    file.open("data/highscores");
     
     for(list<pair<string, int>>::iterator iter=highsco_list.begin(); iter != highsco_list.end(); iter++)
         file << iter->first << ", " << iter->second << endl;
     
-    file.close();
+    file.close();*/
 };
 
 void PlayingState::LaunchSecondBall(){

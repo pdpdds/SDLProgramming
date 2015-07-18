@@ -49,12 +49,12 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Dev\prebuilt\vld\include;../../../../SDL2_Module/SDL2/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer;../../../../external;../../../../SDL2_Module/SDL2_image</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>VLD_DEFINE;_CRT_SECURE_NO_WARNINGS;_DEBUG;WIN32;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/x86/lib</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>../../../../SDL2_Module/prebuilt/win32/x86/lib;D:\Dev\prebuilt\vld\lib\Win32</AdditionalLibraryDirectories>
       <EntryPointSymbol>
       </EntryPointSymbol>
     </Link>
