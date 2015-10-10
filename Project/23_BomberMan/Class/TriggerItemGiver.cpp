@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "TriggerItemGiver.h"
 #include "TextureManager.h"
 #include "Game.h"

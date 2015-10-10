@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "BreakableLayer.h"
 
 BreakableLayer::BreakableLayer(int tileSize, int mapWidth, int mapHeight, const std::vector<Tileset>& tilesets)

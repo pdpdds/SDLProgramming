@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "Wall.h"
 #include "Game.h"
 #include "InputHandler.h"

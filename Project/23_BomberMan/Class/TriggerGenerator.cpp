@@ -1,4 +1,4 @@
-#include "stdafx.h"
+//#include "stdafx.h"
 #include "TriggerGenerator.h"
 #include "TriggerItemGiver.h"
 #include "GameObject.h"

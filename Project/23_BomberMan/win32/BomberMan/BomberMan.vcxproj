@@ -147,7 +147,6 @@
     <ClCompile Include="..\..\Class\TriggerItemGiver.cpp" />
     <ClCompile Include="..\..\Class\Vector2D.cpp" />
     <ClCompile Include="..\..\Class\Wall.cpp" />
-    <ClCompile Include="stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Class\AnimatedGraphic.h" />
@@ -250,7 +249,6 @@
     <ClInclude Include="..\..\Class\Vector2D.h" />
     <ClInclude Include="..\..\Class\Wall.h" />
     <ClInclude Include="..\..\Class\Wall2D.h" />
-    <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
