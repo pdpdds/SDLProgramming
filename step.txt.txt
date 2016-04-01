@@ -1,0 +1,4 @@
+ndk-build
+android update project -p ./ --subprojects -t 7
+buider.bat
+ant debug
