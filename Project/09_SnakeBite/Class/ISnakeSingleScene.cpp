@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	ISnakeSingleScene.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	Sanke °ÔÀÓ¿¡¼­ ½Ì±Û¸ğµåÀÇ Stage ¿¡ ´ëÇÑ Ãß»óÅ¬·¡½º
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	Sanke ê²Œì„ì—ì„œ ì‹±ê¸€ëª¨ë“œì˜ Stage ì— ëŒ€í•œ ì¶”ìƒí´ë˜ìŠ¤
 */
 
 #include "StdAfx.h"
@@ -17,12 +17,12 @@
 #include "TextFieldFactory.h"
 
 /**
-	@brief ¹®ÀÚ¿­+¼ıÀÚ ÇüÅÂÀÇ ¹®ÀÚ¿­À» È­¸é¿¡ ±×·ÁÁÖ´Â ÇÔ¼ö.
-	@param screen ±×·ÁÁú È­¸é(SDL_Surface)ÀÇ Æ÷ÀÎÅÍ
-	@param label »Ñ·ÁÁú ¹®ÀÚ¿­
-	@param value »Ñ·ÁÁú ¼ıÀÚ
-	@param posx »Ñ·ÁÁú È­¸éÀÇ ÁÂÇ¥ x
-	@param posy »Ñ·ÁÁú È­¸éÀÇ ÁÂÇ¥ y
+	@brief ë¬¸ìì—´+ìˆ«ì í˜•íƒœì˜ ë¬¸ìì—´ì„ í™”ë©´ì— ê·¸ë ¤ì£¼ëŠ” í•¨ìˆ˜.
+	@param screen ê·¸ë ¤ì§ˆ í™”ë©´(SDL_Surface)ì˜ í¬ì¸í„°
+	@param label ë¿Œë ¤ì§ˆ ë¬¸ìì—´
+	@param value ë¿Œë ¤ì§ˆ ìˆ«ì
+	@param posx ë¿Œë ¤ì§ˆ í™”ë©´ì˜ ì¢Œí‘œ x
+	@param posy ë¿Œë ¤ì§ˆ í™”ë©´ì˜ ì¢Œí‘œ y
 */
 void ISnakeSingleScene::DrawTextFiledLabelWithValue(SDL_Surface* screen, std::string label, int value, int posx, int posy)
 {
@@ -34,9 +34,9 @@ void ISnakeSingleScene::DrawTextFiledLabelWithValue(SDL_Surface* screen, std::st
 }
 
 /**
-	@brief Scene ÀÇ ÀÔ·ÂÀ» Ã³¸®ÇÏ´Â ÇÔ¼ö \n
-		   Å°ÀÔ·ÂÀ¸·Î ¹ìÀÇ ¿òÁ÷ÀÓÀ» Ã³¸®ÇÑ´Ù.
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì…ë ¥ì„ ì²˜ë¦¬í•˜ëŠ” í•¨ìˆ˜ \n
+		   í‚¤ì…ë ¥ìœ¼ë¡œ ë±€ì˜ ì›€ì§ì„ì„ ì²˜ë¦¬í•œë‹¤.
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void ISnakeSingleScene::Input(Game* owner)
 {	
@@ -62,7 +62,7 @@ void ISnakeSingleScene::Input(Game* owner)
 		}
 		break;
 		case SDL_KEYUP: 
-			if(event.key.keysym.sym == SDLK_UP) ///< snake ¿òÁ÷ÀÓ
+			if(event.key.keysym.sym == SDLK_UP) ///< snake ì›€ì§ì„
 			{
 				snake->SetDir(Snake::kUP);
 			}
@@ -79,7 +79,7 @@ void ISnakeSingleScene::Input(Game* owner)
 				snake->SetDir(Snake::kRIGHT);
 			}
 			 
-			if(event.key.keysym.sym == SDLK_ESCAPE) ///< °ÔÀÓ Á¾·á
+			if(event.key.keysym.sym == SDLK_ESCAPE) ///< ê²Œì„ ì¢…ë£Œ
 			{
 				exit(1);
 			}
@@ -89,8 +89,8 @@ void ISnakeSingleScene::Input(Game* owner)
 }
 
 /**
-	@brief Scene ÀÌ °¡Áö°í ÀÖ´Â °´Ã¼µéÀÇ °»½ÅÀ» Ã³¸®ÇÏ±â À§ÇÑ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì´ ê°€ì§€ê³  ìˆëŠ” ê°ì²´ë“¤ì˜ ê°±ì‹ ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void ISnakeSingleScene::Update(Game* owner)
 {
@@ -100,8 +100,8 @@ void ISnakeSingleScene::Update(Game* owner)
 }
 
 /**
-	@brief Scene ÀÌ °¡Áö°í ÀÖ´Â °´Ã¼µéÀÇ ·»´õ¸µÀ» Ã³¸®ÇÏ±â À§ÇÑ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì´ ê°€ì§€ê³  ìˆëŠ” ê°ì²´ë“¤ì˜ ë Œë”ë§ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void ISnakeSingleScene::Rendder(Game* owner)
 {

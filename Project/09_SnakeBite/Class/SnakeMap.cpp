@@ -1,17 +1,17 @@
-/** 
+ï»¿/** 
 	@file	SnakeMap.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	°ÔÀÓÀÇ ¸ğµç ¿ÀºêÁ§Æ®°¡ ÂüÁ¶ÇÒ Å¸ÀÏÀÇ Á¤º¸¸¦ °¡Áö°í ÀÖ´Â Å¬·¡½º
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	ê²Œì„ì˜ ëª¨ë“  ì˜¤ë¸Œì íŠ¸ê°€ ì°¸ì¡°í•  íƒ€ì¼ì˜ ì •ë³´ë¥¼ ê°€ì§€ê³  ìˆëŠ” í´ë˜ìŠ¤
 */
 
 #include "StdAfx.h"
 #include "SnakeMap.h"
 
 /**
-	@brief »ı¼ºÀÚ. 
-	@param width Å¸ÀÏÀÇ ³Êºñ
-	@param height Å¸ÀÏÀÇ ³ôÀÌ
+	@brief ìƒì„±ì. 
+	@param width íƒ€ì¼ì˜ ë„ˆë¹„
+	@param height íƒ€ì¼ì˜ ë†’ì´
 */
 
 SnakeMap::~SnakeMap()
@@ -22,7 +22,7 @@ SnakeMap::~SnakeMap()
 SnakeMap::SnakeMap(int width, int height)
 	: width_(width), height_(height), tilesInfo_(NULL)
 {
-	for(int h=0; h<height_; h++)	///< Å¸ÀÏÀ» ¸ğµÎ ' ;(°ø¹é) À¸·Î ÃÊ±âÈ­
+	for(int h=0; h<height_; h++)	///< íƒ€ì¼ì„ ëª¨ë‘ ' ;(ê³µë°±) ìœ¼ë¡œ ì´ˆê¸°í™”
 	{
 		std::vector<char> horizontal_info;
 		for(int w=0; w<width_; w++)
@@ -34,10 +34,10 @@ SnakeMap::SnakeMap(int width, int height)
 }
 
 /**
-	@brief x, y ÁÂÇ¥ Å¸ÀÏÀÇ ¹®ÀÚÀ» Á¶»çÇÑ´Ù.
-	@param xÁÂÇ¥
-	@param yÁÂÇ¥
-	@return x, y ÁÂÇ¥ Å¸ÀÏÀÇ ¹®ÀÚ
+	@brief x, y ì¢Œí‘œ íƒ€ì¼ì˜ ë¬¸ìì„ ì¡°ì‚¬í•œë‹¤.
+	@param xì¢Œí‘œ
+	@param yì¢Œí‘œ
+	@return x, y ì¢Œí‘œ íƒ€ì¼ì˜ ë¬¸ì
 */
 char SnakeMap::TilesInfoOfIndex(int x, int y) const
 {
@@ -45,10 +45,10 @@ char SnakeMap::TilesInfoOfIndex(int x, int y) const
 }
 
 /**
-	@brief x, y ÁÂÇ¥ Å¸ÀÏÀÇ ¹®ÀÚÀ» ¼³Á¤ÇÑ´Ù.
-	@param x xÁÂÇ¥ 
-	@param y yÁÂÇ¥
-	@param ch ¼³Á¤ÇÒ ¹®ÀÚ
+	@brief x, y ì¢Œí‘œ íƒ€ì¼ì˜ ë¬¸ìì„ ì„¤ì •í•œë‹¤.
+	@param x xì¢Œí‘œ 
+	@param y yì¢Œí‘œ
+	@param ch ì„¤ì •í•  ë¬¸ì
 */
 void SnakeMap::SetTilesInfoOfIndex(int x, int y, char ch)
 {
@@ -56,8 +56,8 @@ void SnakeMap::SetTilesInfoOfIndex(int x, int y, char ch)
 }
 
 /**
-	@brief Å¸ÀÏÀÇ ³Êºñ¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
-	@return Å¸ÀÏÀÇ ³Êºñ
+	@brief íƒ€ì¼ì˜ ë„ˆë¹„ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
+	@return íƒ€ì¼ì˜ ë„ˆë¹„
 */
 int SnakeMap::Width() const
 {
@@ -65,8 +65,8 @@ int SnakeMap::Width() const
 }
 
 /**
-	@brief Å¸ÀÏÀÇ ³ôÀÌ¸¦ ¹İÈ¯ÇÏ´Â ÇÔ¼ö.
-	@return Å¸ÀÏÀÇ ³ôÀÌ
+	@brief íƒ€ì¼ì˜ ë†’ì´ë¥¼ ë°˜í™˜í•˜ëŠ” í•¨ìˆ˜.
+	@return íƒ€ì¼ì˜ ë†’ì´
 */
 int SnakeMap::Height() const
 {

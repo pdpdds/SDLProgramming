@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	PvPStageScene.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	Sanke °ÔÀÓ¿¡¼­ ´ëÀü¸ğµåÀÇ Scene Å¬·¡½º
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	Sanke ê²Œì„ì—ì„œ ëŒ€ì „ëª¨ë“œì˜ Scene í´ë˜ìŠ¤
 */
 
 #include "StdAfx.h"
@@ -16,30 +16,30 @@
 #include "TextFieldFactory.h"
 
 /**
-	@brief Scene ÀÇ ÃÊ±âÈ­ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì´ˆê¸°í™” í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void PvPStageScene::Init(Game* owner)
 {
 	snakeMap = new SnakeMap(30, 20);
 
-	wall = new Wall("stage01.txt");	///< º® »ı¼º
+	wall = new Wall("stage01.txt");	///< ë²½ ìƒì„±
 	wall->SetScreen(owner->Screen());
 	wall->SetSnakeMap(snakeMap);
 	wall->Init();
 
-	itemMgr = new ItemManager(); ///< ¾ÆÀÌÅÛ »ı¼º
+	itemMgr = new ItemManager(); ///< ì•„ì´í…œ ìƒì„±
 	itemMgr->SetScreen(owner->Screen());
 	itemMgr->SetSnakeMap(snakeMap);
 	itemMgr->Init();
 
-	snake_1p = new Snake(3, 3);	 ///< 1p ¹ì »ı¼º	
+	snake_1p = new Snake(3, 3);	 ///< 1p ë±€ ìƒì„±	
 	snake_1p->SetSnakeMap(snakeMap);
 	snake_1p->SetItemManager( itemMgr );
 	snake_1p->SetScreen(owner->Screen());
 	snake_1p->Init();
 
-	snake_2p = new Snake(10, 3); ///< 2p ¹ì »ı¼º	
+	snake_2p = new Snake(10, 3); ///< 2p ë±€ ìƒì„±	
 	snake_2p->SetSnakeMap(snakeMap);
 	snake_2p->SetItemManager( itemMgr );
 	snake_2p->SetScreen(owner->Screen());
@@ -47,8 +47,8 @@ void PvPStageScene::Init(Game* owner)
 }
 
 /**
-	@brief Scene ÀÇ °»½Å ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ê°±ì‹  í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void PvPStageScene::Execute(Game* owner)
 {
@@ -57,16 +57,16 @@ void PvPStageScene::Execute(Game* owner)
 	this->Rendder(owner);
 
 
-	if( snake_1p->IsArrive() == false ) ///< 1p ¹ìÀÌ Á×À¸¸é..
+	if( snake_1p->IsArrive() == false ) ///< 1p ë±€ì´ ì£½ìœ¼ë©´..
 	{}
-	if( snake_2p->IsArrive() == false ) ///< 2p ¹ìÀÌ Á×À¸¸é..
+	if( snake_2p->IsArrive() == false ) ///< 2p ë±€ì´ ì£½ìœ¼ë©´..
 	{}
 }
 
 /**
-	@brief Scene ÀÇ Á¾·á ÇÔ¼ö.\n
-		   ÁÖ·Î ¸É¹ö º¯¼öÀÇ ¸Ş¸ğ¸® Á¤¸®¸¦ ÇÑ´Ù.
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì¢…ë£Œ í•¨ìˆ˜.\n
+		   ì£¼ë¡œ ë§´ë²„ ë³€ìˆ˜ì˜ ë©”ëª¨ë¦¬ ì •ë¦¬ë¥¼ í•œë‹¤.
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void PvPStageScene::Exit(Game* owner) 
 {
@@ -78,9 +78,9 @@ void PvPStageScene::Exit(Game* owner)
 }
 
 /**
-	@brief Scene ÀÇ ÀÔ·ÂÀ» Ã³¸®ÇÏ´Â ÇÔ¼ö\n
-	       µÎ ÇÃ·¹ÀÌ¾îÀÇ Å° ÀÔ·ÂÀ¸·Î ¹ì ¿òÁ÷ÀÓÀ» Ã³¸®ÇÑ´Ù.
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì…ë ¥ì„ ì²˜ë¦¬í•˜ëŠ” í•¨ìˆ˜\n
+	       ë‘ í”Œë ˆì´ì–´ì˜ í‚¤ ì…ë ¥ìœ¼ë¡œ ë±€ ì›€ì§ì„ì„ ì²˜ë¦¬í•œë‹¤.
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void PvPStageScene::Input(Game* owner)
 {
@@ -122,7 +122,7 @@ void PvPStageScene::Input(Game* owner)
 				snake_2p->SetDir(Snake::kRIGHT);
 			}
 
-			if(event.key.keysym.sym == SDLK_ESCAPE) ///< Á¾·á
+			if(event.key.keysym.sym == SDLK_ESCAPE) ///< ì¢…ë£Œ
 			{
 				exit(1);
 			}
@@ -132,8 +132,8 @@ void PvPStageScene::Input(Game* owner)
 }
 
 /**
-	@brief Scene ÀÌ °¡Áö°í ÀÖ´Â °´Ã¼µéÀÇ °»½ÅÀ» Ã³¸®ÇÏ±â À§ÇÑ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì´ ê°€ì§€ê³  ìˆëŠ” ê°ì²´ë“¤ì˜ ê°±ì‹ ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void PvPStageScene::Update(Game* owner)
 {

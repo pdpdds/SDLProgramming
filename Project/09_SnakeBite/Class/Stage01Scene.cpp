@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	Stage01Scene.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	Sanke °ÔÀÓ¿¡¼­ Stage 1 ÀÇ Scene Å¬·¡½º
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	Sanke ê²Œì„ì—ì„œ Stage 1 ì˜ Scene í´ë˜ìŠ¤
 */
 
 #include "stdafx.h"
@@ -18,36 +18,36 @@
 #include "TextFieldFactory.h"
 
 /**
-	@brief Scene ÀÇ ÃÊ±âÈ­ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì´ˆê¸°í™” í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 
 void Stage01Scene::Init(Game* owner)
 {
-	snakeMap = new SnakeMap(30, 20); ///< Å¸ÀÏ Á¤º¸ »ı¼º
+	snakeMap = new SnakeMap(30, 20); ///< íƒ€ì¼ ì •ë³´ ìƒì„±
 
-	wall = new Wall("stage01.txt");	///< º® »ı¼º
+	wall = new Wall("stage01.txt");	///< ë²½ ìƒì„±
 	wall->SetScreen(owner->Screen());
 	wall->SetSnakeMap(snakeMap);
 	wall->Init();
 
-	itemMgr = new ItemManager(); ///< ¾ÆÀÌÅÛ »ı¼º
+	itemMgr = new ItemManager(); ///< ì•„ì´í…œ ìƒì„±
 	itemMgr->SetScreen(owner->Screen());
 	itemMgr->SetSnakeMap(snakeMap);
 	itemMgr->Init();
 
-	snake = new Snake(3, 3); ///< ¹ì »ı¼º	
+	snake = new Snake(3, 3); ///< ë±€ ìƒì„±	
 	snake->SetSnakeMap(snakeMap);
 	snake->SetItemManager( itemMgr );
 	snake->SetScreen(owner->Screen());
 	snake->Init();
 
-	clear_tailCount = 20; ///< Å¬¸®¾î ²¿¸® °¹¼ö
+	clear_tailCount = 20; ///< í´ë¦¬ì–´ ê¼¬ë¦¬ ê°¯ìˆ˜
 }
 
 /**
-	@brief Scene ÀÇ °»½Å ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ê°±ì‹  í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void Stage01Scene::Execute(Game* owner)
 {
@@ -55,29 +55,29 @@ void Stage01Scene::Execute(Game* owner)
 	this->Update(owner);
 	this->Rendder(owner);
 	
-	if(clear_tailCount < snake->BodyCount()) ///< Å¬¸®¾î ¸ñÇ¥¸¦ ´Ş¼ºÇÏ¸é
+	if(clear_tailCount < snake->BodyCount()) ///< í´ë¦¬ì–´ ëª©í‘œë¥¼ ë‹¬ì„±í•˜ë©´
 	{ 
-		owner->FSM()->ChangeState( Stage02Scene::Shaerd() ); ///< Stage2 ·Î ³Ñ¾î°¨
+		owner->FSM()->ChangeState( Stage02Scene::Shaerd() ); ///< Stage2 ë¡œ ë„˜ì–´ê°
 		return;
 	}
 
-	if( snake->IsArrive() == false ) ///< ¹ìÀÌ Á×À¸¸é
+	if( snake->IsArrive() == false ) ///< ë±€ì´ ì£½ìœ¼ë©´
 	{
-		owner->SetLife( owner->Life()-1 ); ///< life 1 °¨¼Ò
+		owner->SetLife( owner->Life()-1 ); ///< life 1 ê°ì†Œ
 		int life = owner->Life();
 
-		if(life == 0 ) ///< ¸ñ¼ûÀÌ 0°³¸é °ÔÀÓ¿À¹ö
+		if(life == 0 ) ///< ëª©ìˆ¨ì´ 0ê°œë©´ ê²Œì„ì˜¤ë²„
 			owner->FSM()->ChangeState( GameOverScene::Shaerd() );
 
-		else ///< ¸ñ¼ûÀÌ ³²¾ÒÀ¸¸é ½ºÅ×ÀÌÁö ´Ù½Ã ½ÃÀÛ
+		else ///< ëª©ìˆ¨ì´ ë‚¨ì•˜ìœ¼ë©´ ìŠ¤í…Œì´ì§€ ë‹¤ì‹œ ì‹œì‘
 			owner->FSM()->ChangeState( Stage01Scene::Shaerd() );
 	}
 }
 
 /**
-	@brief Scene ÀÇ Á¾·á ÇÔ¼ö.\n
-		   ÁÖ·Î ¸É¹ö º¯¼öÀÇ ¸Ş¸ğ¸® Á¤¸®¸¦ ÇÑ´Ù.
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì¢…ë£Œ í•¨ìˆ˜.\n
+		   ì£¼ë¡œ ë§´ë²„ ë³€ìˆ˜ì˜ ë©”ëª¨ë¦¬ ì •ë¦¬ë¥¼ í•œë‹¤.
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void Stage01Scene::Exit(Game* owner) 
 {

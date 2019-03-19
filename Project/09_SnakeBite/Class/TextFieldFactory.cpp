@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	TextFieldFactory.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	SDL ¶óÀÌºê·¯¸®¿¡¼­ TextÆ² ¶ç¿ì±â À§ÇÑ Surface¸¦ ¸¸µé¾îÁÖ´Â ½Ì±ÛÅæ Å¬·¡½º.
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	SDL ë¼ì´ë¸ŒëŸ¬ë¦¬ì—ì„œ Textí‹€ ë„ìš°ê¸° ìœ„í•œ Surfaceë¥¼ ë§Œë“¤ì–´ì£¼ëŠ” ì‹±ê¸€í†¤ í´ë˜ìŠ¤.
 */
 
 #include "StdAfx.h"
@@ -11,8 +11,8 @@
 #include <sstream>
 
 /**
-	@brief	½Ì±ÛÅæ ÇÔ¼ö. ÀÚ±â ÀÚ½ÅÀÇ °´Ã¼ ¹İÈ¯
-	@return ÀÚ½ÅÀÇ °´Ã¼
+	@brief	ì‹±ê¸€í†¤ í•¨ìˆ˜. ìê¸° ìì‹ ì˜ ê°ì²´ ë°˜í™˜
+	@return ìì‹ ì˜ ê°ì²´
 */
 TextFieldFactory* TextFieldFactory::Shared()
 {
@@ -24,13 +24,13 @@ TextFieldFactory* TextFieldFactory::Shared()
 
 
 /**
-	@brief SDL_Surface¿¡ »Ñ·ÁÁú TTF¸¦ »ı¼ºÇØÁÖ´Â ÇÔ¼ö
-	@param text »Ñ·ÁÁú ¹®ÀÚ¿­
-	@param fontsize ÆùÆ® Å©±â
-	@param r ÆùÆ® »ö r
-	@param g ÆùÆ® »ö g
-	@param b ÆùÆ® »ö b
-	@return ÀÎÀÚ°ªÀ¸·Î ¼³Á¤µÈ SDL_Surface
+	@brief SDL_Surfaceì— ë¿Œë ¤ì§ˆ TTFë¥¼ ìƒì„±í•´ì£¼ëŠ” í•¨ìˆ˜
+	@param text ë¿Œë ¤ì§ˆ ë¬¸ìì—´
+	@param fontsize í°íŠ¸ í¬ê¸°
+	@param r í°íŠ¸ ìƒ‰ r
+	@param g í°íŠ¸ ìƒ‰ g
+	@param b í°íŠ¸ ìƒ‰ b
+	@return ì¸ìê°’ìœ¼ë¡œ ì„¤ì •ëœ SDL_Surface
 */
 SDL_Surface* 
 TextFieldFactory::CreateTextFieldSurface(char* text, int fontsize, int r, int g, int b)
@@ -43,16 +43,16 @@ TextFieldFactory::CreateTextFieldSurface(char* text, int fontsize, int r, int g,
 	color.b = b;
 
 	unsigned short unicode[128];
-	han2unicode(text ,unicode); ///< char* ¸¦ unicode·Î º¯È¯
+	han2unicode(text ,unicode); ///< char* ë¥¼ unicodeë¡œ ë³€í™˜
 
 	return TTF_RenderUNICODE_Blended(font, unicode, color);
 }
 
 /**
-	@brief "¹®ÀÚ¿­" ¼ıÀÚ°ª ÇüÅÂÀÇ ¹®ÀÚ¿­À» ¸¸µé¾îÁÖ´Â ÇÔ¼ö.
-	@param str ¹®ÀÚ¿­
-	@param number ¼ıÀÚ°ª
-	@return ¹®ÀÚ¿­ ¼ıÀÚ°ª ÀÌ ÀÌ¾îÁø ÇüÅÂÀÇ ¹®ÀÚ¿­
+	@brief "ë¬¸ìì—´" ìˆ«ìê°’ í˜•íƒœì˜ ë¬¸ìì—´ì„ ë§Œë“¤ì–´ì£¼ëŠ” í•¨ìˆ˜.
+	@param str ë¬¸ìì—´
+	@param number ìˆ«ìê°’
+	@return ë¬¸ìì—´ ìˆ«ìê°’ ì´ ì´ì–´ì§„ í˜•íƒœì˜ ë¬¸ìì—´
 */
 std::string 
 TextFieldFactory::StringAndInt(std::string str, int number)

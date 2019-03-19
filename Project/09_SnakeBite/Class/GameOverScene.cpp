@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	GameOverScene.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	°ÔÀÓ¿À¹ö Scene Å¬·¡½º.
+	@author ì‹¬ì¬í™˜(sim436@gmail.com)
+	@brief	ê²Œì„ì˜¤ë²„ Scene í´ë˜ìŠ¤.
 */
 
 #include "stdafx.h"
@@ -11,8 +11,8 @@
 #include "Game.h"
 
 /**
-	@brief Scene ÀÇ ÃÊ±âÈ­ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì´ˆê¸°í™” í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene::Init(Game* owner)
 {
@@ -25,8 +25,8 @@ GameOverScene::GameOverScene()
 }
 
 /**
-	@brief Scene ÀÇ °»½Å ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ê°±ì‹  í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene::Execute(Game* owner)
 {
@@ -36,9 +36,9 @@ void GameOverScene::Execute(Game* owner)
 }
 
 /**
-	@brief Scene ÀÇ Á¾·á ÇÔ¼ö.\n
-		   ÁÖ·Î ¸É¹ö º¯¼öÀÇ ¸Ş¸ğ¸® Á¤¸®¸¦ ÇÑ´Ù.
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì¢…ë£Œ í•¨ìˆ˜.\n
+		   ì£¼ë¡œ ë§´ë²„ ë³€ìˆ˜ì˜ ë©”ëª¨ë¦¬ ì •ë¦¬ë¥¼ í•œë‹¤.
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene:: Exit(Game* owner) 
 {
@@ -47,15 +47,15 @@ void GameOverScene:: Exit(Game* owner)
 }
 
 /**
-	@brief Scene ÀÇ ÀÔ·ÂÀ» Ã³¸®ÇÏ´Â ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì˜ ì…ë ¥ì„ ì²˜ë¦¬í•˜ëŠ” í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene::Input(Game* owner)
 {
 	if(SDL_PollEvent(&event)) {
 		switch(event.type) {
 		case SDL_QUIT: break;
-		case SDL_KEYUP: ///< ¾Æ¹«Å°³ª ´©¸£¸é ¸Ş´º È­¸éÀ¸·Î µ¹¾Æ°¨
+		case SDL_KEYUP: ///< ì•„ë¬´í‚¤ë‚˜ ëˆ„ë¥´ë©´ ë©”ë‰´ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°
 			owner->FSM()->ChangeState(IntroScene::Shaerd());
 			break;
 		case SDL_FINGERUP:
@@ -70,15 +70,15 @@ void GameOverScene::Input(Game* owner)
 }
 
 /**
-	@brief Scene ÀÌ °¡Áö°í ÀÖ´Â °´Ã¼µéÀÇ °»½ÅÀ» Ã³¸®ÇÏ±â À§ÇÑ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì´ ê°€ì§€ê³  ìˆëŠ” ê°ì²´ë“¤ì˜ ê°±ì‹ ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene::Update(Game* owner)
 {}
 
 /**
-	@brief Scene ÀÌ °¡Áö°í ÀÖ´Â °´Ã¼µéÀÇ ·»´õ¸µÀ» Ã³¸®ÇÏ±â À§ÇÑ ÇÔ¼ö
-	@param owner SceneÀ» °ü¸®ÇÏ´Â StateMachineÀ» °¡Áö°íÀÖ´Â Game °´Ã¼
+	@brief Scene ì´ ê°€ì§€ê³  ìˆëŠ” ê°ì²´ë“¤ì˜ ë Œë”ë§ì„ ì²˜ë¦¬í•˜ê¸° ìœ„í•œ í•¨ìˆ˜
+	@param owner Sceneì„ ê´€ë¦¬í•˜ëŠ” StateMachineì„ ê°€ì§€ê³ ìˆëŠ” Game ê°ì²´
 */
 void GameOverScene::Rendder(Game* owner)
 {

@@ -1,8 +1,8 @@
-/** 
+ï»¿/** 
 	@file	sanke_SDL.cpp
 	@date	2013-03-03
-	@author ½ÉÀçÈ¯(sim436@gmail.com)
-	@brief	ÄÜ¼Ö ÀÀ¿ë ÇÁ·Î±×·¥¿¡ ´ëÇÑ ÁøÀÔÁ¡À» Á¤ÀÇÇÕ´Ï´Ù.
+	@author ì‹¬ìž¬í™˜(sim436@gmail.com)
+	@brief	ì½˜ì†” ì‘ìš© í”„ë¡œê·¸ëž¨ì— ëŒ€í•œ ì§„ìž…ì ì„ ì •ì˜í•©ë‹ˆë‹¤.
 */
 
 #include "stdafx.h"
@@ -29,19 +29,19 @@ extern "C" int SDL_main(int argc, char *argv[])
 	if (false == SDLSingleton::GetInstance()->InitSystem())
 		return 0;
 
-	TTF_Init();					///< TTF ÃÊ±âÈ­
+	TTF_Init();					///< TTF ì´ˆê¸°í™”
 
 	Game *pGame = new Game(SDLSingleton::GetInstance()->GetSurface());
 
 	while(1) {
-		pGame->Update();	///< °ÔÀÓ °»½Å
-		SDL_Delay(10);		///< 10ms µô·¹ÀÌ
+		pGame->Update();	///< ê²Œìž„ ê°±ì‹ 
+		SDL_Delay(10);		///< 10ms ë”œë ˆì´
 	}
 
-	SDL_Quit();	///< SDL Á¾·á
-	TTF_Quit();	///< TTF Á¾·á
+	SDL_Quit();	///< SDL ì¢…ë£Œ
+	TTF_Quit();	///< TTF ì¢…ë£Œ
 
-	delete pGame; ///< Game °´Ã¼ Á¤¸®
+	delete pGame; ///< Game ê°ì²´ ì •ë¦¬
 	pGame = NULL;
 
 	return 0;
