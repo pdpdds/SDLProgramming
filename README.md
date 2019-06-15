@@ -1,14 +1,14 @@
 SDL 2.0 Programming
 =============
 
-SDL 2.0 프로그래밍과 관련된 예제를 모은 프로젝트입니다.
-멀티플랫폼에서 동작하는 SDL 샘플 프로젝트를 구현하는 것을 목표로 하고 있으며
-게임, 멀티미디어, 유틸리티 관련 코드를 다루고 있습니다.
+This project is a collection of examples related to SDL 2.0 programming.
+The goal is to implement a multi-platform SDL sample project.
+It handles Game, multimedia, and utility related code.
 
-C/C++를 메인 언어로 사용해서 시간이 흘러도 플랫폼과  OS에 종속되지 않고
-오랫동안 살아남는 코드의  작성을 목표로 합니다.
+By using C/C ++ as the main language, 
+we aim to write code that will survive long without being dependent on the platform and OS over time.
 
-Windows - Visual Studio 2013
+Windows - Visual Studio 2017
 Android -  ADT-20131030
 
-안드로이드의 경우 IDE를 추후 Android Studio로 변경할 예정입니다.
+For Android, we plan to change the IDE to Android Studio later.
