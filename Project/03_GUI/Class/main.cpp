@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <tchar.h>
 #endif
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <stdlib.h>
 #include <iostream>
 
@@ -10,9 +10,6 @@
 #include "WidgetsContainer.h"
 
 #ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_image.lib")
 #pragma comment(lib, "guichan.lib")
 #endif
 

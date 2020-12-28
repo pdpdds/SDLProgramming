@@ -2,8 +2,8 @@
 #include <Windows.h>
 #include <tchar.h>
 #endif
-#include "SDL.h"
-#include "SDL_Mixer.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
 #include <stdlib.h>
 #include <iostream>
 
@@ -11,10 +11,6 @@
 #include "WidgetsContainer.h"
 
 #ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_mixer.lib")
-#pragma comment(lib, "SDL2_image.lib")
 #pragma comment(lib, "guichan.lib")
 #pragma comment(lib, "IMSLibrary.lib")
 #pragma comment(lib, "BaseLib.lib")

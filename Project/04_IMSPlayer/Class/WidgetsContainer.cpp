@@ -1,6 +1,6 @@
 #include "WidgetsContainer.h"
 #include "GUIManager.h"
-#include "SDL_Mixer.h"
+#include <SDL2/SDL_mixer.h>
 #include "IMSLibrary/IMSManager.h"
 
 extern IMSManager* g_pManager;

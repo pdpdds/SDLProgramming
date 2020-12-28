@@ -2,13 +2,9 @@
 #include <Windows.h>
 #include <tchar.h>
 #endif
-#include "SDL.h"
+#include <SDL2/SDL.H>
 #include <stdlib.h>
 #include <iostream>
-
-#ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#endif
 
 #ifdef WIN32
 int _tmain(int argc, _TCHAR* argv[])
