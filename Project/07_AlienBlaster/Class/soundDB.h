@@ -20,8 +20,8 @@
 #ifndef SOUND_DB_HH
 #define SOUND_DB_HH
 
-#include "SDL.h"
-#include "SDL_mixer.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mIxer.h>
 #include <map>
 #include <string>
 #include <functional>

@@ -1,5 +1,5 @@
 #pragma once
-#include <SDL.h>
+#include <SDL2/SDL.h>
 
 #define SDL_RATIO_X(width) width * ((float)SDLSingleton::GetInstance()->getGameWidth() / (float)320)
 #define SDL_RATIO_Y(height) height * ((float)SDLSingleton::GetInstance()->getGameHeight() / (float)200)

@@ -20,7 +20,7 @@
 #ifndef SMOKE_PUFF_H
 #define SMOKE_PUFF_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "geometry.h"
 #include "global.h"
 #include <string>

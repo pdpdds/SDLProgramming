@@ -20,7 +20,7 @@
 #ifndef WRECK_H
 #define WRECK_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "geometry.h"
 #include <string>
 #include "global.h"

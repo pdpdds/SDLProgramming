@@ -20,7 +20,7 @@
 #ifndef RACER_HH
 #define RACER_HH
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "geometry.h"
 #include <string>
 #include "global.h"

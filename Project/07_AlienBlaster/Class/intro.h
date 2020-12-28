@@ -21,7 +21,7 @@
 #define INTRO_H
 
 #include <string>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SdlForwardCompat.h"
 #include "game.h"
 

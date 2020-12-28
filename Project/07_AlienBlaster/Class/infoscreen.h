@@ -20,7 +20,7 @@
 #ifndef INFOSCREEN_H
 #define INFOSCREEN_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <string>
 #include "item.h"
 

@@ -19,20 +19,13 @@
 ***************************************************************************/
 #include "game.h"
 #include "surfaceDB.h"
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <stdlib.h>
 #ifdef ANDROID
 #include <android/log.h>
 #endif
 
 using namespace std;
-
-#ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_mixer.lib")
-#pragma comment(lib, "SDL2_image.lib")
-#endif
 
 static void appPutToBackground()
 {

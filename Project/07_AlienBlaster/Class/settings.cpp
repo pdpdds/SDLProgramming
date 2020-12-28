@@ -25,7 +25,7 @@ using namespace std;
 #ifndef _WIN32
 #include <android/log.h>
 #endif
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "options.h"
 #include "settings.h"
 #include "global.h"

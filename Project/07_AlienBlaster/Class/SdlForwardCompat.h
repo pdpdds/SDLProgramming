@@ -5,9 +5,9 @@
 #ifndef __SDL_FORWARD_COMPAT_H__
 #define __SDL_FORWARD_COMPAT_H__
 
-#include <SDL.h>
-#include <SDL_video.h>
-#include <SDL_version.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_video.h>
+#include <SDL2/SDL_version.h>
 #ifdef _WIN32
 #include <memory.h>
 #endif

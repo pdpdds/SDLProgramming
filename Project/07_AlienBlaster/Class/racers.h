@@ -21,7 +21,7 @@
 #define RACER_H
 
 #include <vector>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "settings.h"
 
 class Racer;

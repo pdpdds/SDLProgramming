@@ -19,7 +19,7 @@
 #include "file.h"
 #include "opentyr.h"
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <errno.h>
 
 #ifdef _WIN32

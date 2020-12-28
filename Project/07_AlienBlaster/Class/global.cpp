@@ -21,7 +21,7 @@
 #include "options.h"
 #include "asstring.h"
 #include <iostream>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "surfaceDB.h"
 
 using namespace std;

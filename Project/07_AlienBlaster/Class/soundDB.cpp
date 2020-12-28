@@ -20,7 +20,7 @@
 using namespace std;
 
 #include "soundDB.h"
-#include "SDL_mixer.h"
+#include <SDL2/SDL_mixer.h>
 #ifdef ANDROID
 #include <android/log.h>
 #endif

@@ -19,10 +19,10 @@
 #ifndef FILE_H
 #define FILE_H
 
-#include "SDL_endian.h"
+#include <SDL2/SDL_endian.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "sdl.h"
+#include <SDL2/SDL.h>
 extern const char *custom_data_dir;
 
 #ifdef TARGET_MACOSX

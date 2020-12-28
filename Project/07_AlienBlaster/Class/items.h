@@ -20,7 +20,7 @@
 #ifndef ITEMS_H
 #define ITEMS_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <vector>
 
 class Item;

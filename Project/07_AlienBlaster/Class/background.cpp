@@ -20,7 +20,7 @@
 #include "background.h"
 #include "global.h"
 #include "surfaceDB.h"
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <iostream>
 
 using namespace std;

@@ -47,7 +47,7 @@
 #include "video.h"
 #include "video_scale.h"
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SDLSingleton.h"
 
 #include <assert.h>
@@ -85,14 +85,6 @@ const int menu_item_destruct = 3;
 #endif
 
 using namespace std;
-
-#ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_mixer.lib")
-#pragma comment(lib, "SDL2_image.lib")
-#pragma comment(lib, "SDL2_net.lib")
-#endif
 
 /* zero-terminated strncpy */
 char *strnztcpy( char *to, const char *from, size_t count )

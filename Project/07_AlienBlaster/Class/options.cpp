@@ -26,7 +26,7 @@ using namespace std;
 #include <iostream>
 #include <string>
 #include <sstream>
-#include <sdl.h>
+#include <SDL2/SDL.h>
 
 char * SDL_RWgets(char* s, int n, SDL_RWops* stream)
 {

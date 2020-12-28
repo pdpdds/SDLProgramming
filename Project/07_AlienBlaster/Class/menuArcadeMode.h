@@ -20,7 +20,7 @@
 #ifndef MENU_ARCADE_MODE_H
 #define MENU_ARCADE_MODE_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "game.h"
 #include <string>
 

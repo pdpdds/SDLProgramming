@@ -22,7 +22,7 @@ using namespace std;
 #include "surfaceDB.h"
 #include <fstream>
 #include <iostream>
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 #ifdef ANDROID
 #include <android/log.h>
 #endif

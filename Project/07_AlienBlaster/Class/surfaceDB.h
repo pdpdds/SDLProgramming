@@ -21,7 +21,7 @@
 #define SURFACE_DB_HH
 
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SdlForwardCompat.h"
 
 #include <string>

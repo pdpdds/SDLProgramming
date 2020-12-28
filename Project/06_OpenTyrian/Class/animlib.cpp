@@ -32,7 +32,7 @@
 #include <string.h>
 #endif
 
-#include "SDL.H"
+#include <SDL2/SDL.h>
 
 /*** Structs ***/
 /* The actual header has a lot of fields that are basically useless to us since

@@ -20,7 +20,7 @@
 #ifndef BANNER_H
 #define BANNER_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <string>
 #include "geometry.h"
 #include "global.h"

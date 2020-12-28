@@ -21,7 +21,7 @@
 #define ENEMYS_H
 
 #include <vector>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 
 
 class Enemy;

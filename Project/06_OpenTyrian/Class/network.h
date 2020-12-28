@@ -21,8 +21,8 @@
 
 #include "opentyr.h"
 
-#include "SDL.h"
-#include "SDL_net.h"
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_net.h>
 
 
 #define PACKET_ACKNOWLEDGE   0x00    // 

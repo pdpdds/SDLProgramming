@@ -57,7 +57,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>../../../../SDL2_Module/SDL2/include;../../../../external/guichan/include;../../../../SDL2_Module/SDL2_ttf;../../../../SDL2_Module/SDL2_mixer</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../../../../external/guichan/include</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
     </ClCompile>
     <Link>

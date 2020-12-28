@@ -21,7 +21,7 @@
 #define SHOTS_H
 
 #include <vector>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "geometry.h"
 #include "SdlForwardCompat.h"
 

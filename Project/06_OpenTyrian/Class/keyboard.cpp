@@ -24,7 +24,7 @@
 #include "video.h"
 #include "video_scale.h"
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SDLSingleton.h"
 
 

@@ -20,7 +20,7 @@
 #ifndef SHOT_H
 #define SHOT_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "geometry.h"
 #include <string>
 #include "global.h"

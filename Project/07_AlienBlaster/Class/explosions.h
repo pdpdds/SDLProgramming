@@ -21,7 +21,7 @@
 #define EXPLOSIONS_H
 
 #include <vector>
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SdlForwardCompat.h"
 
 class Explosion;

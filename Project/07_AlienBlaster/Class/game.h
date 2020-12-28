@@ -20,7 +20,7 @@
 #ifndef GAME_HH
 #define GAME_HH
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "SdlForwardCompat.h"
 #include <string>
 

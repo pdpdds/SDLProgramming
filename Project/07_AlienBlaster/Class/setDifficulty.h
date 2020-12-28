@@ -20,7 +20,7 @@
 #ifndef SET_DIFFICULTY_H
 #define SET_DIFFICULTY_H
 
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include "game.h"
 #include <string>
 

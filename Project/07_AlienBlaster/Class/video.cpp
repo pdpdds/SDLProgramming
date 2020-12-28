@@ -18,14 +18,14 @@
   Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
 ***************************************************************************/
 #include "video.h"
-#include "SDL.h"
+#include <SDL2/SDL.h>
 #include <stdlib.h>
 #include "global.h"
 #include "surfaceDB.h"
 #ifndef _WIN32
 #include <android/log.h>
 #endif
-#include <SDL_image.h>
+#include <SDL2/SDL_image.h>
 
 using namespace std;
 
