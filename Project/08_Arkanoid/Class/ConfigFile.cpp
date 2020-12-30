@@ -9,7 +9,7 @@
 #include "ConfigFile.h"
 #include <algorithm>
 #include <string>
-#include <sdl.h>
+#include <SDL2/sdl.h>
 #include <vector>
 
 ConfigFile::ConfigFile(string filename){

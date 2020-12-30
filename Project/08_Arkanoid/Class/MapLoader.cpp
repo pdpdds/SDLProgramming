@@ -46,6 +46,9 @@ list<GameObject*> MapLoader::LoadMap(string filename){
     // iterating through lines of map file
 	while (1 == SDL_RWread(file, &ch, sizeof(char), 1))
 	{
+        if (ch == '\r')
+            continue;
+
 		if (ch == '\n')
 		{
 			std::string line(horizontal.begin(), horizontal.end());

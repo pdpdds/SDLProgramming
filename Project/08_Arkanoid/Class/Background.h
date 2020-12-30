@@ -10,7 +10,7 @@
 #define __Arkanoid__Background__
 
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "scaler.h"
 #include "Game.h"
 

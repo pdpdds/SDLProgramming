@@ -105,6 +105,9 @@ Options::Options(const string lFilename) {
 		  if (!val.empty() && val[val.length() - 1] == '\n') {
 			  val.erase(val.length() - 1);
 		  }
+		  if (!val.empty() && val[val.length() - 1] == '\r') {
+			  val.erase(val.length() - 1);
+		  }
 		  keymap[key] = val;
 	  }
   }

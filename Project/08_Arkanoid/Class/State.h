@@ -10,7 +10,7 @@
 #define __Arkanoid__State__
 
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include <list>
 
 using namespace std;

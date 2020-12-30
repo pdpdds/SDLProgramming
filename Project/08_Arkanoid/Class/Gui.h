@@ -10,7 +10,7 @@
 #define __Arkanoid__Gui__
 
 #include <iostream>
-#include <SDL.h>
+#include <SDL2/SDL.h>
 #include "Game.h"
 
 class Gui {

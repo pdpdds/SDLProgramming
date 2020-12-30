@@ -9,8 +9,8 @@
 #ifndef Arkanoid_scaler_h
 #define Arkanoid_scaler_h
 
-#include <SDL.h>
-#include <SDL_image.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_image.h>
 #include <iostream>
 
 

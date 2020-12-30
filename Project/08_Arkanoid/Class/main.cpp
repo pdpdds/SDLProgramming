@@ -5,14 +5,6 @@
 
 #include "Game.h"
 
-
-#ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_mixer.lib")
-#pragma comment(lib, "SDL2_image.lib")
-#endif
-
 #ifdef WIN32
 //int main(int argc, char **argv)
 int _tmain(int argc, _TCHAR* argv[])
