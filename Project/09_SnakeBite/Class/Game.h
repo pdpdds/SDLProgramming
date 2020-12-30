@@ -6,7 +6,7 @@
 */
 
 #pragma once
-#include <sdl.h>
+#include <SDL2/sdl.h>
 #include "StateMachine.h"
 
 class Game

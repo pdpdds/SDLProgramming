@@ -30,6 +30,11 @@ Wall::Wall(const char* mapFileName)
 	std::vector<char> horizontal;	 ///< 맵의 가로한줄의 정보를 담기위한 벡터 지역변수.
 	while (1 == SDL_RWread(file, &ch, sizeof(char), 1))
 	{
+		if (ch == '\r')
+		{
+			continue;
+		}
+
 		if(ch=='\n') ///< 줄바꿈이 나오면,
 		{
 			h++;	 ///< 타일정보의 다음줄로 넘어가고
