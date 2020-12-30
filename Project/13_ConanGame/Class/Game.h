@@ -7,7 +7,7 @@
 #ifndef __SDL_Game_Programming_Book__Game__
 #define __SDL_Game_Programming_Book__Game__
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "GameStateMachine.h"
 //#include "SDL_mixer.h"
 #include "Vector2D.h"

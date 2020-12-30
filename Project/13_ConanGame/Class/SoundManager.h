@@ -12,7 +12,7 @@
 #include <iostream>
 #include <map>
 #include <string>
-#include "SDL_Mixer.h"
+#include "SDL2/SDL_Mixer.h"
 
 enum sound_type
 {

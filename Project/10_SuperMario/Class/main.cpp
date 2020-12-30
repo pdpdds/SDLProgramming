@@ -49,12 +49,6 @@ SDL_Surface *window = NULL;
 SDL_Event event;
 
 #ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_image.lib")
-#endif
-
-#ifdef WIN32
 int _tmain(int argc, _TCHAR* argv[])
 #else
 extern "C" int SDL_main(int argc, char *argv[])

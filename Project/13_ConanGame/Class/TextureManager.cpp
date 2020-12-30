@@ -6,8 +6,8 @@
 //  Copyright (c) 2012 shaun mitchell. All rights reserved.
 //
 #include "TextureManager.h"
-#include "../../SDL2_IMAGE/SDL_image.h"
-#include "SDL.h"
+#include "SDL2//SDL_image.h"
+#include "SDL2/SDL.h"
 #include "Game.h"
 
 TextureManager* TextureManager::s_pInstance = 0;
@@ -52,6 +52,9 @@ void TextureManager::draw(std::string id, int x, int y, int width, int height, S
 
 void TextureManager::drawFrame(std::string id, int x, int y, int width, int height, int currentRow, int currentFrame, SDL_Renderer *pRenderer, double angle, int alpha, SDL_RendererFlip flip)
 {
+    if (m_textureMap[id] == 0)
+        return;
+
     SDL_Rect srcRect;
     SDL_Rect destRect;
     srcRect.x = width * currentFrame;

@@ -28,9 +28,9 @@ void apply_image(SDL_Surface *image, SDL_Surface *currentWindow, SDL_Rect * clip
 #ifndef MSDL_H
 #define MSDL_H
 
-#include"SDL.h"		//sdl base library
-#include"SDL_image.h"	//sdl library to deal with functions
-#include"SDL_ttf.h"		//sdl library to deal with text on the screen
+#include "SDL2/SDL.h"		//sdl base library
+#include "SDL2/SDL_image.h"	//sdl library to deal with functions
+#include "SDL2/SDL_ttf.h"		//sdl library to deal with text on the screen
 //#include"SDL/SDL_mixer.h"
 #include<string>		//stl library to allow for use of strings
 using namespace std;

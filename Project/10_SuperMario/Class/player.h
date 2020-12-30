@@ -16,9 +16,9 @@ Progammers:
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include"SDL_image.h"
-#include<string>
-#include"character.h"
+#include "SDL2/SDL_image.h"
+#include <string>
+#include "character.h"
 #include "block.h"
 #include "enemy.h"
 using namespace std;

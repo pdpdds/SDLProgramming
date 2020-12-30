@@ -2,7 +2,7 @@
 #include <Windows.h>
 #include <tchar.h>
 #endif
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include <stdlib.h>
 #include <iostream>
 #include "SDLSingleton.h"
@@ -11,10 +11,6 @@
 const int FPS = 60;
 const int DELAY_TIME = 1000.0f / FPS;
 
-#ifdef WIN32
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_image.lib")
-#endif
 
 #ifdef WIN32
 int _tmain(int argc, _TCHAR* argv[])

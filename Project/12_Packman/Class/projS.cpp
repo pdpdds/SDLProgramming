@@ -1,7 +1,7 @@
 #include "SDLSingleton.h"
-#include <SDL.h>
-#include <SDL_mixer.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
+#include <SDL2/SDL_mixer.h>
+#include <SDL2/SDL_ttf.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -9,16 +9,6 @@
 #ifdef WIN32
 #include <Windows.h>
 #include <tchar.h>
-#pragma comment(lib, "SDL2.lib")
-#pragma comment(lib, "SDL2_ttf.lib")
-#pragma comment(lib, "SDL2_mixer.lib")
-#endif
-
-#ifdef WIN32
-#ifdef VLD_DEFINE
-#include <vld.h>
-#pragma comment(lib, "vld.lib")
-#endif
 #endif
 
 const char *CAPTION = "CSCI X070 - projS - jiva";

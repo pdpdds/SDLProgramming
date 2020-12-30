@@ -12,7 +12,7 @@
 #include <iostream>
 #include <vector>
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "Vector2D.h"
 
 enum mouse_buttons

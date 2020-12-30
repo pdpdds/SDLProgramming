@@ -9,7 +9,7 @@
 #ifndef SDL_Game_Programming_Book_Header_h
 #define SDL_Game_Programming_Book_Header_h
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "Vector2D.h"
 
 const static int s_buffer = 4;
