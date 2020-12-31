@@ -29,9 +29,9 @@
 
 #include <guichan/font.hpp>
 #ifndef __APPLE__
-#include <SDL_ttf.h>
+#include <SDL2/SDL_ttf.h>
 #else
-#include <SDL_ttf.h>
+#include <SDL2/SDL_ttf.h>
 #endif
 
 #include "../core/resource.h"

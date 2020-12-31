@@ -44,7 +44,7 @@
 #ifndef GCN_SDLGRAPHICS_HPP
 #define GCN_SDLGRAPHICS_HPP
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 #include "guichan/color.hpp"
 #include "guichan/graphics.hpp"

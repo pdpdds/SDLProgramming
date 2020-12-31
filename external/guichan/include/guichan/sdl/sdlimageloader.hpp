@@ -47,7 +47,7 @@
 #include "guichan/imageloader.hpp"
 #include "guichan/platform.hpp"
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 namespace gcn
 {

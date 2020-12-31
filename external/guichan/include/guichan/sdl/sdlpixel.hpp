@@ -6,11 +6,11 @@
  * /______/ //______/ //_/ //_____/\ /_/ //_/ //_/ //_/ //_/ /|_/ /
  * \______\/ \______\/ \_\/ \_____\/ \_\/ \_\/ \_\/ \_\/ \_\/ \_\/
  *
- * Copyright (c) 2004 - 2008 Olof Naessén and Per Larsson
+ * Copyright (c) 2004 - 2008 Olof Naess? and Per Larsson
  *
  *
  * Per Larsson a.k.a finalman
- * Olof Naessén a.k.a jansem/yakslem
+ * Olof Naess? a.k.a jansem/yakslem
  *
  * Visit: http://guichan.sourceforge.net
  *
@@ -44,7 +44,7 @@
 #ifndef GCN_SDLPIXEL_HPP
 #define GCN_SDLPIXEL_HPP
 
-#include "SDL.h"
+#include "SDL2/SDL.h"
 #include "guichan/color.hpp"
 
 namespace gcn
