@@ -6,8 +6,6 @@
 
 #include "GUIWidgets.h"
 
-#pragma comment(lib, "sdl2.lib")
-
 #pragma comment(lib, "avcodec.lib")
 #pragma comment(lib, "swscale.lib")
 #pragma comment(lib, "avdevice.lib")

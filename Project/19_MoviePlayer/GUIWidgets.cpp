@@ -1,9 +1,9 @@
 #include "stdafx.h"
 #include "GUIWidgets.h"
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 #ifdef _DEBUG
-#pragma comment(lib, "balor_debug.lib")
+//#pragma comment(lib, "balor_debug.lib")
 #else
 #pragma comment(lib, "balor.lib")
 #endif

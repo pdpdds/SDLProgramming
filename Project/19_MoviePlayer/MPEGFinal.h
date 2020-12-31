@@ -10,7 +10,7 @@ extern "C"
 #include "libswscale/swscale.h"  
 #include "libavutil/time.h"  
 	// SDL  
-#include "SDL.h"  
-#include "SDL_thread.h"  
+#include "SDL2/SDL.h"  
+#include "SDL2/SDL_thread.h"  
 #include <ao/ao.h>
 };
